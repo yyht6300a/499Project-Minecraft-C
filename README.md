@@ -1,1 +1,5 @@
 # 499Project-Minecraft-C
+
+***What would teaching AI and ML to middle schoolers look like?***
+
+Teaching middle schoolers AI and ML topics with Minecraft Education will help introduce students to the world of computer science. Minecraft Education is available on many different platforms, such as Windows, MacOS, ChromeOS, iPadOS, and Android, which many students have access to in North America. The middle school age is a great time to teach students Python, instead of block-based programs like Scratch. Students will use Python to interact with the world around them and apply general AI and ML topics to solve problems that matter to them. They will play in their own worlds, with their teacher around to offer them guidance. The math skills of middle schoolers are mostly limited to trigonometry and algebra, and so the lessons will not go too deep into AI and ML concepts. Importantly, the goal is not to have students write full AI and ML programs from scratch, but rather to introduce them to AI and ML topics and terminologies.
