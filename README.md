@@ -9,3 +9,5 @@ Game aspect: The user wants to kills monsters at night to protect their characte
 AI and ML are based on computer science and programming, but the student in middle school may not know what python is, and in elementary school there are a lot of students using Block-base programming language like Scratch. Therefore, how to help middle school students to switch from Scratch to Python can be a good point in our project.
 
 translate the block-based code to python code. E.g. make the python code as a password of a treasure box in the game and set the block code as password prompt. user can find the comparison table for block code and python code somewhere in the game.
+
+Minecraft Education Edition is a good platform to provide an introductory tutorial. This game will be more like a learning tool or a textbook that makes students have an understanding on the basic concepts of AI and Python. The most important is to build students' algorithm thinking. We can separate the knowledges into several chapters from easy to difficult.
