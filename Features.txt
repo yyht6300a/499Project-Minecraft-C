@@ -6,4 +6,6 @@ the information on the slate (can be some programming game). Once they decipher 
 
 Explore the world: There are some Ancient ruins in Minecraft world and player can explore the ruins and get some information about the Ancient Slates (some programming knowledges)
 
+A game should have a Rational and continuous story, for example a NPC would have some tasks for the player, and when the player finished the task, NPC can give some rewards to the player, for example some useful information or some weapons.
+
 for detials please go to this link:https://docs.google.com/document/d/1s-NdT8oiwoHu_fbYuArrNaK_NDtK2O9WpMRjfDayISs/edit?usp=sharing
