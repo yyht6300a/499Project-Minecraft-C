@@ -1,0 +1,10 @@
+Tech Stack
+
+Currently, the tech stack is limited to what is compatible with Minecraft Education. This means that the primary languages used will be C++ and Python. 
+
+Also know: Azure Notebook, classroom mode (web based, electron app), azure
+
+Consider: tensorflow, pytorch
+
+TODO: Label the pros and cons of Tensorflow and PyTorch
+
