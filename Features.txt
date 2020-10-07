@@ -1,0 +1,5 @@
+Enchant weapon: There could be some elemental monster or Boss monster during the adventure, 
+and players can enchant their weapons to attack monsters more effectively. (enchant can be done by some simple programming games)
+Next level: Players can complete the game by finding some Ancient Slates in Minecraft world and decipher 
+the information on the slate (can be some programming game). Once they decipher all information, they can get a key and go to the next level of the game.
+for detials please go to this link:https://docs.google.com/document/d/1s-NdT8oiwoHu_fbYuArrNaK_NDtK2O9WpMRjfDayISs/edit?usp=sharing
