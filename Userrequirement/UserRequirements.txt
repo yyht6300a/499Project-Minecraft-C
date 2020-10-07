@@ -1,0 +1,37 @@
+Teacher:
+	Providing a useful tool for instructors who are trying to teach their students AI and ML. Based on 
+students of different ages, there are appropriate curriculums for them.
+Students:
+	Elementary school students: 
+Most of users in this group will be 6-12 years old. To inspire their creative thinking of computer science via 
+playing Minecraft Education Edition.
+
+	Middle school students & High school students:
+In this group, students are able to accept some basic concepts of AI. They have the ability to understand 
+how simple codes work and explore how to design algorithms. They will directly use Python to make progress in the game.
+
+
+Teacher Requirements:
+	Attraction:
+As a game, it needs to be attractive to students. To stimulate students’ interest, features are required, 
+e.g. a reward system after students finish each task, a well-design curriculums process.
+	Tracking system:
+It allows teachers to track the progress that a student made. Teachers can review students’ work for 
+giving feedback and leave comments. 
+	Communication system:
+Teachers can communicate with students in the game via this system. For helping students better, teachers 
+can respond to students either by text and voice. Also posting video about instruction.
+	Variance of difficulty:
+As a teaching tool, it needs to fit students from different ages. For elementary school students, it 
+will provide a none coding game process. Everything will be done in building a structure with given modularized 
+codes, like Scratch. For elder students who are able to understand the algorithm thinking, providing a basic Python 
+tutorial for AI.
+
+
+Student Requirement:
+	Reward mechanisms:
+Students need reward mechanisms to inspire their motivation to explore more knowledge from the game. 
+	Help request:
+It allows students asking for help from their teacher, and also get hints by system.
+	
+	
