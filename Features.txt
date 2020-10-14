@@ -1,3 +1,5 @@
+CV: The player can find some pictures in the game and label them(monster and ores), then use the picture to train the model. 
+If the label is wrong the robot will attack the villagers or ignore the monster. After the training the robot can act as guard and protect the village.
 Enchant weapon: There could be some elemental monster or Boss monster during the adventure, 
 and players can enchant their weapons to attack monsters more effectively. (enchant can be done by some simple programming games)
 
