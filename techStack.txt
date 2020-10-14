@@ -1,0 +1,8 @@
+Currently, the tech stack is limited to what is compatible with Minecraft Education. This means that the primary languages used will be C++, Python, and JSON. The students will use Python in their lessons to learn AI/ML concepts. To create the lessons in Minecraft Education, we will use Everglade: an add-on to Minecraft Education’s Codebuilder used to teach Python. Lessons will be created with a JSON file and a Jupyter Notebook file.
+
+
+An example of Everglade in Minecraft Education. https://meecode.blob.core.windows.net/everglade/ci/index.html?lesson=https://meecode.blob.core.windows.net/everglade/content/row/master/tutorials/tutorials/Agent_Build/Agent_Build.json
+
+
+Consider: Tensorflow/Pytorch/Keras; or Azure/Google Cloud/AWS?
+
