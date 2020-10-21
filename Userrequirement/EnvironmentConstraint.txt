@@ -6,6 +6,8 @@ It is much faster as compared to PyCharm.
 This link is for us to set up environment, pleas have a look:
 https://github.com/Nick-McGee/MinecraftGroups/tree/main/Electron
 
+
 Time constraint:
+
 Since we changed our goal from the beginning one, 
 we have only two weeks for us to finish building firt prototype. 
