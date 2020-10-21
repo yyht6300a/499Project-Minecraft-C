@@ -1,5 +1,23 @@
+Milestone 1/Peer test 1:
 Milestone description: In this milestone we will primarily focus on the environment of the lesson. The deliverable in peer test 1 is a lesson prototype based on Minecraft platform. 
 In this prototype, User should be able to load our lesson in Minecraft Education (Map and lesson tasks), and they should be able to communicate with Non-player characters (NPC) and get a simple task. 
 Users should be able to write and run python code in the build-in code editor. Due to the time constraint, we can only finish a part of the linear regression scenario. In this part we will teach users some basic knowledge of linear regression.
+
+1. User can access the course in Minecraft Education
+	a. Design the map and Non-player character (NPC) in the game and save as a Json file.
+ 	b. Store different tasks in different NPCs
+2. User can finish some simple tasks by python
+	a. Bind the Python Notebook to the code editor in the game
+	b. User can get task and hint by communicate with NPC
+3. Linear regression scenario (part of)
+	a. Detailed Course plan (which python model we are going to use in this lesson and the background knowledge we want to teach)
+	b. Users can understand the basics of Linear regression
+
+Milestone 2/ Peer test 2:
+
+Milestone description: In this milestone we will continue to build the linear regression scenario. We will create some tasks that are related to linear regression, and users can use python to finish the tasks. 
+After the linear regression scenario we will introduce the K-means clustering scenario to the user. 
+The deliverable in this milestone is a complete lesson that can teach student linear regression and K-Means clustering and python programming.
+
 
 please check https://docs.google.com/document/d/1TcZFzKSNql2EcHjvOGZz4wbK-XfrdZJWwkNLB19VtN4/edit?usp=sharing for detail
