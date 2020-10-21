@@ -1,0 +1,4 @@
+For now, we will do our coding in VSCode:
+Visual Studio Code is a streamlined code editor with support for development operations 
+like debugging, task running, and version control.
+It is much faster as compared to PyCharm.
