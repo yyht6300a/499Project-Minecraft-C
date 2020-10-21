@@ -1,0 +1,5 @@
+Milestone description: In this milestone we will primarily focus on the environment of the lesson. The deliverable in peer test 1 is a lesson prototype based on Minecraft platform. 
+In this prototype, User should be able to load our lesson in Minecraft Education (Map and lesson tasks), and they should be able to communicate with Non-player characters (NPC) and get a simple task. 
+Users should be able to write and run python code in the build-in code editor. Due to the time constraint, we can only finish a part of the linear regression scenario. In this part we will teach users some basic knowledge of linear regression.
+
+please check https://docs.google.com/document/d/1TcZFzKSNql2EcHjvOGZz4wbK-XfrdZJWwkNLB19VtN4/edit?usp=sharing for detail
