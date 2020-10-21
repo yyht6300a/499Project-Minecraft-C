@@ -1,0 +1,8 @@
+Timeline for high school 
+October 27th – When we want our new requirements document to be done
+October 28th – Start coding prototype 
+November 4th – Requirements are due 
+Milestone 1 – Coded prototype with basic features any AI or ML is mocked 
+Milestone 2 – Basics AI or ML using libraries + lesson is coded and functional 
+Final milestone – Polishing, AI/ML is finishes, all testing and bugs have been taken care of 
+
