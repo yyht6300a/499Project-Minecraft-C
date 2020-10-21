@@ -1,0 +1,78 @@
+October 16, 2020 Client Meeting
+Time: 50 minutes
+Just Nick and other Liaisons in attendance 
+
+My Questions:
+What sort of tools do teachers need? Analytics, supervision? Any additional material so they know the concepts that are being taught?
+Story driven, or more ‘classroom’ like?
+Should the length of the lesson be similar to the other lessons found in Minecraft Education? Like the Learn to Code lessons.
+Bring up Andy’s ideas (https://docs.google.com/document/d/1s-NdT8oiwoHu_fbYuArrNaK_NDtK2O9WpMRjfDayISs/edit?usp=sharing ):
+Linear Regression and K-Means Clustering.
+Should we have more ideas, or try to flesh out our current two?
+
+Notes:
+
+Project totally changed, we are now focused on high school and one topic.
+Need to have timeline 
+Rossetta stone 
+The goal is to introduce AI in a way that they are confident in it, they want to explore it more, and they see how they can apply it to more areas.
+
+
+There is a websocket
+Any app that is capable of making web calls?
+Look up Code Connection on the wiki, done as an electron app
+Classroom mode is a C# application, look up on wiki
+Jeff wouldn’t mind if we went with the Java Mod path, but it’s not as valuable to him - no support from him.
+
+Not really worried about the students who are for sure pursuing CS, they want to get the ones who aren’t sure if they want to pursue CS 	
+
+Look at Kaggle.com
+
+
+
+
+
+
+
+
+
+
+
+Two options:
+Create the platform to enable AI lessons on Minecraft
+Leverage platform features to deliver a lesson
+Elementary/Middle School problem (Didn’t meet the reqs of the class)
+
+Goals:
+Get students interested in AI/ML, “This is interesting, this is fun, I can do this, this is useful”
+Focus on the 80% case - not the top or bottom 10%
+Approach:
+Training the agent
+Survive the night (detect and kill mobs) - P1
+Find resources - P2
+Path find home - P2
+
+Core Idea:
+Kids like Minecraft
+There are different play styles
+
+Storyboard
+Start a lesson (world) where you have the agent.
+Agent introduces himself to you
+The agent follows you
+User teaches the agent
+Agent performs actions (that can lead to negative or positive outcomes)
+
+
+
+
+Logging event data from the game
+Positive events (mob killed, health increased)
+Negative events (health decrease, villager killed)
+Environment data - day/night, light level, location, nether/overworld.
+How do you detect what is a good/bad mob?
+Computer vision?
+Entity data - comes with event log from the game
+
+
+	
