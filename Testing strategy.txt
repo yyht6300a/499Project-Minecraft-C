@@ -1,13 +1,29 @@
 Testing strategy
-1. Unit testing
-Every feature should have its associated unit tests (test-driven development) 
-Part of the acceptance criteria for each PR
-Not every piece of code is unit testable if the code the group member is working on does not allow for unit test that person should explain in their PR why they cannot provide unit tests
-2. Functional testing
-Each PR should have a list of functionalities (associated with the feature)
-When code is merged the 3 group members that did not code the feature should pull the code and test if the functionalities are all working as described in the PR. 
-If something is not working the way intended the testers should issue a bug.
-3. Performance testing 
-Starts 2 weeks before each milestone (likely to only be for final milestone) 
-Record metrics like time to complete certain task, loading time and such. 
-Game can be complex and have a heavy back end but if performance are bad the user won’t want to play we should ensure good performance. 
+
+Tools:
+1. Electron App (client provided for testing)
+2. GitHub for Integration testing
+
+Unit Testing
+1. Our lesson will have a notebook-like user interface (like Jupyter notebook), and each cell in the notebook is a smallest unit in our project.
+When we design a small part of a lesson (an unit), we should test the unit in the Minecraft code builder (a built-in code editor in the Minecraft Education)
+to see if the game can run our code properly.
+
+2. We may need to change or add some functions in the built-in python code in the game, each time when we have some changes,
+we should test the function and related functions in the code editor to make sure that change will not crash the game. 
+
+
+Peer Functional Testing
+1. When a  feature is implemented, we should include a list of functionalities (associated with the feature) in the pull request. 
+When code is merged, other 3 group members should pull the code and test in game to see if the functionalities are all working as described in the pull request.
+
+2. If anyone needs to change the built-in python code in the game,
+everyone in the group should pull the new code to test if the change has any conflict with their own works.
+
+
+Integration Testing and Regression Testing
+1. Everyone should perform an integration test for every five small units. This test should be done manually in the code builder.
+
+2. Github will be used for continuous integration. (when each lesson is done, every member should pull the whole lesson and test for bug and functionality)
+ 
+3. Regression testing should be performed manually. Each time we merge our code, we should run the code in the game to check the bug and functionality.
