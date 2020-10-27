@@ -1,10 +1,12 @@
 Testing strategy
 
 Tools:
+
 1. Electron App (client provided for testing)
 2. GitHub for Integration testing
 
 Unit Testing
+
 1. Our lesson will have a notebook-like user interface (like Jupyter notebook), and each cell in the notebook is a smallest unit in our project.
 When we design a small part of a lesson (an unit), we should test the unit in the Minecraft code builder (a built-in code editor in the Minecraft Education)
 to see if the game can run our code properly.
@@ -14,6 +16,7 @@ we should test the function and related functions in the code editor to make sur
 
 
 Peer Functional Testing
+
 1. When a  feature is implemented, we should include a list of functionalities (associated with the feature) in the pull request. 
 When code is merged, other 3 group members should pull the code and test in game to see if the functionalities are all working as described in the pull request.
 
@@ -22,6 +25,7 @@ everyone in the group should pull the new code to test if the change has any con
 
 
 Integration Testing and Regression Testing
+
 1. Everyone should perform an integration test for every five small units. This test should be done manually in the code builder.
 
 2. Github will be used for continuous integration. (when each lesson is done, every member should pull the whole lesson and test for bug and functionality)
