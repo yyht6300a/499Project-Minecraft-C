@@ -1,8 +1,50 @@
-Currently, the tech stack is limited to what is compatible with Minecraft Education. This means that the primary languages used will be C++, Python, and JSON. The students will use Python in their lessons to learn AI/ML concepts. To create the lessons in Minecraft Education, we will use Everglade: an add-on to Minecraft Education’s Codebuilder used to teach Python. Lessons will be created with a JSON file and a Jupyter Notebook file.
+Tech Stack
 
-Additionally, we will use the Code Connection API for Minecraft Education, which gives us in-game commands for the world and agent. We additonally have full documentation for this API, which will greatly help us with creating the agent finding diamonds lesson.
+Summary
+
+Currently, the tech stack is limited to what is compatible with Minecraft Education. This means that the primary language used will be Python. The students will use Python in their lessons to learn AI/ML concepts, in conjunction with a ML Python Library. We currently have two paths to create lessons in Minecraft Education. The first, and best option, is to create the lessons in Minecraft Education with Everglade, an add-on to Minecraft Education’s Codebuilder used to teach Python. Lessons will be created with a JSON file and a Jupyter Notebook file. If this can’t be achieved due to technical limitations with Minecraft Education we will instead use an outside editor, such as Azure Notebooks, that will be connected to the game. This will be a website that will be hosted on the web.
+
+
+ML Python Library Considerations
+
+PyTorch
+Pros
+Pythonic (easy to read syntax). This may be less confusing for students who are new to Python.
+Fast runtime.
+Good visualization tools, which is a request from the client.
+Great at creating models for smaller, personal use.
+Uses standard Python debugger.
+One of our teammates already has experience with PyTorch. Additionally, other teams are using PyTorch, which helps the client support us with technical problems.
+
+Cons
+Newer, and therefore less tutorials and online discussion.
+Not as good at deploying models into production at a larger scale.
+
+
+TensorFlow
+Pros
+Very popular, with lots of tutorials and documentation.
+Good visualization tools, which is a request from the client.
+Best at deploying models to production.
+Many, smaller libraries for specific use cases such as mobile or the web.
+
+Cons
+Sometimes complicated syntax.
+Have to learn the TensorFlow debugger to debug code.
+Slower runtime compared to PyTorch.
+
+
+Keras
+Pros
+Very popular, with lots of resources.
+Very easy to use, as it’s a higher-level library.
+Builds on top of libraries like TensorFlow.
+
+Cons
+Being too simple may not allow us to teach the students everything we want to teach them.
+Not the best debugging.
+Slowest out of the three.
+
+
 
 An example of Everglade in Minecraft Education. https://meecode.blob.core.windows.net/everglade/ci/index.html?lesson=https://meecode.blob.core.windows.net/everglade/content/row/master/tutorials/tutorials/Agent_Build/Agent_Build.json
-
-Due to the change in our project, we will now have to consider using an outside API to teach the students AI/ML topics. This is still being debated.
-Consider: Tensorflow/Pytorch/Keras; or Azure/Google Cloud/AWS?
