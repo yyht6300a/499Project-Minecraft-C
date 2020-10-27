@@ -1,0 +1,68 @@
+October 21, 2020 Client Meeting
+
+Time: 40 Minutes. 
+Only Nick from Team C in attendance.
+
+Storyboard - Convert the agent to an assistant.
+Start a lesson (world) survival where you have the agent
+The agent introduces himself to you
+The agent follows you and records data
+Agent recommends obvious suggestions
+I noticed this event happened - mob spawned, player died, mob killed, item acquired.
+
+User teaches the agent
+How? Jupyer notebook - REPL coding style (Read, eval, print, loop) See wikipedia article.
+Sees a list of events (data visualization)
+Level 1: Expert rules - if, then
+Start coding some simple if then rules. 
+Level 2: Classifies events - night is bad, mob spawned is bad (for some mods), player died is bad, player getting hungry. How?
+Use an unknown even to see if the model works.
+Agent performs actions (that can lead to negative or positive outcomes)
+Player is encouraged to maximize good, minimize bad
+Example: New mob type is spawned, agent defaults to some behaviour and the player is penalized if it is wrong the action.
+Think about ways to use positive reinforcement - agent gives you a gift.
+Game loop for maximizing the agent value (predict wha you are going to need, find resources, path find home)
+Would be great to share your assistant.
+
+Scenarios
+Training the agent
+Survive the night (detect and kill mobs) - P1
+How do you detect what is a good/bad mob?
+This should be in JSON entity log
+Computer vision
+Screenshot? Look up on kaggle the mob data set.
+Find resources - P2
+Path find home - P2
+
+
+
+UBC TODO:
+Create an app outside the game
+Electron app based on code connection - Done (on my repo)
+App acts like a proxy to the ML system.
+What are all the events that Minecraft fires to the connection app?
+What is missing (platform asks for the team)?
+How do you control the game - move the agent, spawn mobs, change the world?
+
+Implement Agent Behaviour
+How does the agent follow the player? Moves where the player moves, turns when you turn.
+
+Logging event data in the game
+Positive events (mob killed, health increase)
+Negative events (health decrease, villager killed)
+Environment data - day/night, lightness level, location, dimension (nether/overworld/end)
+How does it log data?
+How does the user access data?
+
+App has a method for interacting with the student
+REPL style
+Suggest jupyter notebook - like kaggle exercise (look at Jeff’s file).
+Give access to view
+
+Ultimate goal is to have the kids write code, ie write code to warn me if there is a hostile mob nearby. Collecting data, implementing data, using data for something meaningful.
+
+We may need to create a dataset.
+
+Step1) Set up your own little website, and try and get it into the game. Create a communication channel between Minecraft and the jupyter runtime.
+
+

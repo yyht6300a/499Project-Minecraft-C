@@ -1,0 +1,44 @@
+October 23, 2020 Client Meeting
+Time: 1 hour
+Attendance: Just Nick from Team C
+
+First section is Python and being able to communicate from the game, getting the data.
+We can do this with the Python system already built in place.
+See if that Python library can run our data models. If not, it’ll have to run outside the game.
+
+The problem with the electron app is it is hard to connect to the game, and doesn’t have Python in it -> it doesn’t work with Azure Notebooks.
+
+Yash will give us more details about Minecraft Builtins Python Library.
+
+Know about Encryption with web sockets.
+The game will drop the commands if they aren’t queued, we can’t just send a continuous stream.
+
+Go through the Electron app and understand how it’s working. Another meeting Wednesday to go through it and get a deeper understanding.
+
+Try and collect the data and use it
+
+Quick note: Check this out C:\Program Files (x86)\Microsoft Studios\Minecraft Education Edition\data\python\minecraft_builtins.zip
+
+Look at Execute Command
+Familiarize ourselves with the Python API
+Yash might give us a dev build that is more ‘open’ and lets us use libraries, file access, web.
+
+We need to send Yash the libraries and system access you need (file, web).
+
+
+
+Yosh’s Notes:
+“Get some simple scenario working E2E and then start iteratively adding to the system. 
+In this world they would do the following:
+Understand how commands flow between the app and the game (you can use the Electron app)
+Play with the Python app in the game (from the Azure Notebook integration) - Yash to send more details
+Create a python application that connects to the game through websockets.
+Use our library (which we already have), to send messages to the game and subscribe for events - Yash to give more details on Minecraft Builtins Python library.
+Pass these to some kind of modeling system. Eg. If you wanted to check when a particular mob spawns, you would create a simple regression model of when a mob spawned and the time it did.
+ 
+At this point they have learned the basics of communication:
+How to communicate with the game through our command system
+Subscribing for events from the system
+Featurizing the data and transforming it for a model.
+Running a model with the data
+“
