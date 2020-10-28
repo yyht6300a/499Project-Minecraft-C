@@ -15,8 +15,8 @@ DFD level 1
 
 3.In the world players can access the lesson library in the code builder window. They can browse all lessons in the lesson library and choose a lesson they would like to learn.
 
-4.Each lesson in our game is actually a website hosted online or locally. When user select a lesson in the lesson library, the library will request the data from the website
+4.Each lesson in our game is actually a website hosted online or locally. When user select a lesson in the lesson library, the library will request the data from the website.
 
 5.When the game gets the tasks from the website, it will display the tasks in the code builder inside the game and players can use python language as input to play the game.
 
-6.The code builder will handle the python input and change it to game command and communicate with the game. And game will run the command and show the change to players
+6.The code builder will handle the python input and change it to game command and communicate with the game. And game will run the command and show the change to players.
