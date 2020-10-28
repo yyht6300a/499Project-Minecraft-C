@@ -66,18 +66,31 @@ We will be creating the content of the project ourselves.
 That is because of the nature of the lesson, they require technical knowledge to be created. 
 At first the plan was to use Fiddler but since we will now be coding there will be no prototype. 
 How do you guys ensure the security of the program? Any tools used to make sure the continuous integration?
-Are you having middle school students program computer vision all within minecraft? Or is it more so covering the topics? If it is the former that seems like a tough one to teach people who don't have years of coding experience.
-Will you be building executable (.exe) files using python or just sticking to .json files? Also, for your user group, will you be implementing differently for younger students as compared to younger adults (hs students). Will it be more complex for the older target groups?
+Are you having middle school students program computer vision all within minecraft? 
+Or is it more so covering the topics? 
+If it is the former that seems like a tough one to teach people who don't have years of coding experience.
+Will you be building executable (.exe) files using python or just sticking to .json files? 
+Also, for your user group, will you be implementing differently for younger students as compared to younger adults (hs students). 
+Will it be more complex for the older target groups?
 Will you have end users (students) test the program?
 Will there be resources for the teacher who wants to introduce their students to AI, but do not have a background in programming themselves?
-Your milestones don't refer to any coding until the final milestone. Is there a reason that the code has to be left so late?
-Who are the creators of the lesson plans and are they a user group? do teachers have to create the lesson plan and tasks themselves?
- when exactly will you begin coding this project? after peer 1 or peer 2?
-If I understand correctly, development will not start until the final milestone. Will that be enough time to finish the system?
- It seems unrealistic to do all the coding between milestone 2 and 3 (approximately 1- 1.5 months). What efforts have you taken to scope and schedule your project in order to assure your client that this timeline can be met? This seems like an enormous amount of work to leave to the end.
-1.Why is the minecraft education slide all caps? 2. Are you missing a user group? What about the children's parents if they want to keep track of their children's progress? This was unclear. 3. What does NPC mean? (in non-func slides) 4. How do you plan on dealing with children's data? how are you making sure this is kept safe?
+Your milestones don't refer to any coding until the final milestone. 
+Is there a reason that the code has to be left so late?
+Who are the creators of the lesson plans and are they a user group? 
+do teachers have to create the lesson plan and tasks themselves?
+ when exactly will you begin coding this project? 
+after peer 1 or peer 2?
+If I understand correctly, development will not start until the final milestone. 
+Will that be enough time to finish the system?
+ It seems unrealistic to do all the coding between milestone 2 and 3 (approximately 1- 1.5 months). 
+What efforts have you taken to scope and schedule your project in order to assure your client that this timeline can be met? This seems like an enormous amount of work to leave to the end.
+1.Why is the minecraft education slide all caps? 
+2. Are you missing a user group? What about the children's parents if they want to keep track of their children's progress? 
+This was unclear. 
+3. What does NPC mean? (in non-func slides) 4. How do you plan on dealing with children's data? how are you making sure this is kept safe?
  What is the learning arc between the three school groups?
-To what degree are you planning to teach computer vision to small kids? As much as the buzz word deep learning stuff is cool, I still think it would be better to teach them the basics of AI including the non-machine-learning stuff.
+To what degree are you planning to teach computer vision to small kids? 
+As much as the buzz word deep learning stuff is cool, I still think it would be better to teach them the basics of AI including the non-machine-learning stuff.
  Where is more information on this Everglade API?
 Who creates or adjusts the scenarios after handoff?
  What library will you be using for unit testing?
@@ -85,21 +98,44 @@ How much experience with programming and AI is expected of the teachers and stud
  In reference to the timeline, how do you plan to balance the project so that developing the actual program is not a last minute project?
 What kinds of tasks will the student have to solve using machine learning algorithms? Regarding data security, will the data be stored locally on the student's computer or sent to a database? Will the data be encrypted?
 Do you include the functional requirements in the slide?
-What kind of database server will your project use? Heard you mentioned database in the video but did not talk about it.
+What kind of database server will your project use? 
+Heard you mentioned database in the video but did not talk about it.
 What is the order that the students will learn the concepts?
 el 1 DFD is hard to understand
 What features do you plan to implement in order to make coding easy to understand for kids?
-How will you be managing the performance testing between different devices? Do you have access to low-power devices like Chromebooks that schools use?
+How will you be managing the performance testing between different devices? 
+Do you have access to low-power devices like Chromebooks that schools use?
 Could you maybe explain more of what the UI for students will look like?
-Are you teaching AI? Or are you teaching them what AI can do and you program the functionality of AI within Minecraft? Will it be assumed the students know how to program in Python before they begin, or will you teach them python within Minecraft?
+Are you teaching AI? Or are you teaching them what AI can do and you program the functionality of AI within Minecraft? 
+Will it be assumed the students know how to program in Python before they begin, or will you teach them python within Minecraft?
 How you test your program within the game?
 How will you ensure that your scenarios you make are effective and the proper difficulty for students?
-What assumptions are you making on kids knowledge (i.e how are you deciding what concepts are assumed as possessed knowledge by students )?
+What assumptions are you making on kids knowledge 
+(i.e how are you deciding what concepts are assumed as possessed knowledge by students )?
 Does the "usability" non-functional requirement cover the ease with which the students can grasp the content of the lesson through your program - i.e. the "quality" of your teaching?
-Will you not be doing any coding until after the Peer 2 testing deadline? If so, could you explain more about the reasoning behind this?
+Will you not be doing any coding until after the Peer 2 testing deadline? 
+If so, could you explain more about the reasoning behind this?
 Will you be automating any part of the testing process?
+This is a great point.
+We did not plan on it.
+However, the group evaluation hinted that we should. 
+So, we decided to add some level of automation.
 did you guys choose the tech?
-At 1:22, what is that scratch-like coding interface I see in the background? Is that a prototype you guys made?
- I am wondering what the notations of DFD mean
+Yes and no. 
+Technically it was not forced on us and we had many discussion with the client about what would work best. 
+However, the API ended up being the only viable option so we had to go with that.
+At 1:22, what is that scratch-like coding interface I see in the background?
+Yes, this was just an image from another project. 
+We will not be using that project but it's a good reference frame. 
+Something similar was implemented for coding. 
+Our role is to replicate it with ML and AI.
+Is that a prototype you guys made?
+No, there is no prototype at this point
+I am wondering what the notations of DFD mean
 If the tech stack is not required by your client, what are the options (at least 3) you provide?
-Do you have a flowchart of how the system works? Is there any environmental constraints for accessing the program?
+This project is really researched based.
+It's our job to decide how we are going to implement it. 
+At the time of the presentation the choices were between the source code and the API. 
+Now, we are going with the API as we cannot have access to the source code.
+Do you have a flowchart of how the system works? 
+Is there any environmental constraints for accessing the program?
