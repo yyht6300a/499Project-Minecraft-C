@@ -1,0 +1,29 @@
+Q: What kind of Minecraft scenario would students use AI/ML in?
+A: Students can use AI/ML for scenarios such as detecting mobs, and making a decision on how to interact with the mob based on their properties. 
+
+Q: Why is security important for non functional requirement?
+A: Since we are dealing with children and schools, their privacy and data must be protected. If there were some vulnerabilities, student's data may get leaked. Additionally, it's just good practice to always protect user data.
+
+Q:Will your team have to learn AI to teach it? Will they also have to learn how to teach to younger user groups?
+A: Yes, we will to have to learn AI. And yes, the idea is to teach high school students AI/ML topics, which we will also have to learn.
+
+Q: How does Minecraft help this project to improve the quality of teaching?
+A: Using Minecraft, or games in general, in the classroom has shown to increase engagement in the classroom among students. Additionally, since so many kids are familiar with Minecraft, by applying AI/ML topics to Minecraft they will be able to see value in the topic.
+
+Q: Did you guys have choice of program stack or was it provided by Mojang / Microsoft?
+A: For the most part the stack was chosen by Mojang / Microsoft due to technical limitations. We do have a choice of the ML library, and where to host anything we need.
+
+Q: Will you be conducting any heuristic evaluations to gain teacher and student feedback? Will the game be able to operate under poor internet and/or old technology (some rural schools may not have fast speed internet or updated technology)?
+A: We currently don't have any contacts to have teacher/student feedback. The game should be able to operate under poor internet conditions. The most strain on the internet will be the initial download of the game. Minecraft Education runs on many devices, and doesn't have demanding requirements (most smartphones can run it).
+
+Q: How do you guys ensure the security of the program? Any tools used to make sure the continuous integration?
+A: There is built-in encryption that we will use. We will use GitHub actions for continuous integration.
+
+Q: Are you having middle school students program computer vision all within minecraft? Or is it more so covering the topics? If it is the former that seems like a tough one to teach people who don't have years of coding experience.
+A: The idea to get the students to just have an understanding of the topics. Most coding projects will be set up for them, in a 'fill-in-the-blanks' scenario.
+
+Q: Will you have end users (students) test the program?
+A: Currently we don't have that.
+
+Q: Who are the creators of the lesson plans and are they a user group? do teachers have to create the lesson plan and tasks themselves?
+A: No, we will be creating the lessons. The teachers will be there to help the students with the lesson plan if they run into problems.
