@@ -1,0 +1,25 @@
+Q: I am wondering what the notations of DFD mean?
+A: the rectangle represent entity and circle represent  process and double line represent datastore
+
+Q: Is there any environmental constraints for accessing the program?
+A: Because we will not access the source code of the game, so we cannot create anything new,
+we will use the python library that client provided to make some interesting lessons.
+
+
+Q: Will you be automating any part of the testing process?
+A: We will not use any automation tools for testing, we will use python library that client provided and test the code in the game manually.
+
+Q: How much experience with programming and AI is expected of the teachers and students using the program?
+A: Teachers and students don’t need any AI experience, but they should know the basics of Python e.g. define a function, using for loop…
+
+Q: Could you maybe explain more of what the UI for students will look like?
+A: The UI should look like a Jupyter Notebook now. 
+Some cells in the notebook will teach the AI knowledge and some cells are for coding, the UI will display in a window in the game. 
+
+Q: Who are the creators of the lesson plans and are they a user group? Do teachers have to create the lesson plan and tasks themselves?
+A: We will create the lesson plan and make a lesson. 
+Teachers will be able to check the lessons in the lesson library then they can choose a lesson they want to use for teaching.
+
+Q: How does Minecraft help this project to improve the quality of teaching?
+A: In the game students will use python code to control their agent to finish some tasks.
+Minecraft would make students more engaged in programming instead of seeing it as a boring task. 
