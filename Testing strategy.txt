@@ -30,4 +30,11 @@ Integration Testing and Regression Testing
 
 2. Github will be used for continuous integration. (when each lesson is done, every member should pull the whole lesson and test for bug and functionality)
  
-3. Regression testing should be performed manually. Each time we merge our code, we should run the code in the game to check the bug and functionality.
+3. Regression testing should be performed manually. Each time we merge our code, 
+we should rerun the whole lesson in the game and check if the new code conflicts with the old one or generate a new bug.
+
+
+About automation testing
+
+1. We will not use any automation test tool in our project since we will use a built-in python library in the game.
+It’s easier to run our code in the game directly and test for bug and functionality 
