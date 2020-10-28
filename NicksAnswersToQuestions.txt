@@ -1,0 +1,14 @@
+Q: What kind of Minecraft scenario would students use AI/ML in?
+A: Students can use AI/ML for scenarios such as detecting mobs, and making a decision on how to interact with the mob based on their properties. 
+
+Q: Why is security important for non functional requirement?
+A: Since we are dealing with children and schools, their privacy and data must be protected. If there were some vulnerabilities, student's data may get leaked. Additionally, it's just good practice to always protect user data.
+
+Q:Will your team have to learn AI to teach it? Will they also have to learn how to teach to younger user groups?
+A: Yes, we will to have to learn AI. And yes, the idea is to teach high school students AI/ML topics, which we will also have to learn.
+
+Q: How does Minecraft help this project to improve the quality of teaching?
+A: Using Minecraft, or games in general, in the classroom has shown to increase engagement in the classroom among students. Additionally, since so many kids are familiar with Minecraft, by applying AI/ML topics to Minecraft they will be able to see value in the topic.
+
+Q: Did you guys have choice of program stack or was it provided by Mojang / Microsoft?
+A: For the most part the stack was chosen by Mojang / Microsoft due to technical limitations. We do have a choice of the ML library, and where to host anything we need.
