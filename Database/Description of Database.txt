@@ -1,0 +1,29 @@
+Description of Database UML:
+
+
+Users can register their account using a unique Name and password
+
+Each user can have one or more items, the item table will store items data that users collected in the game. 
+(user can collect some items and teach the robot to collect same item)
+
+Each user can have one or more blocks, the block table will store blocks data that users collected in the game.
+(when user break some block in the game, they can collect the data to train their robot, like automining)
+
+Each user can have one or more mobs, the mob table will store mobs data that users collected in the game.
+(when user kill zombie they can collect the data and train their robot to kill zombie)
+
+
+
+Relational Schema:
+
+User({uname},password)
+uname is the primary key
+
+Items({uname},{ID},{LessonID},Name,NumOfItem)
+uname,ID and LessonID are the primary of this entity
+
+Blocks({uname},{ID},{LessonID},Name,NumOfBlock)
+uname,ID and LessonID are the primary of this entity
+
+Mobs({uname},{ID},{LessonID},Name,NumOfMobs)
+uname,ID and LessonID are the primary of this entity
