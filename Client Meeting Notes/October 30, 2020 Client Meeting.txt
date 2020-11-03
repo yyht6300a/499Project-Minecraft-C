@@ -1,0 +1,15 @@
+October 30, 2020
+Time in meeting: 40 minutes
+In attendance: Nick from Team C, other members of other groups.
+
+Websocket allows us to communicate in and out of the game. Check it out. It doesn’t currently queue up commands.
+
+Online database? Have to pay for hosting. Easier if it’s local -> Start as a log file. Maybe use SQLite. The data goes back and forth between the game is JSON
+
+We should have some test data. We don’t want them to have to play Minecraft for three hours to build up a dataset.
+
+Innovation week in 2 weeks, w/ 20 developers. They may hop on board and help us.
+
+What events that we want that we aren’t getting?
+
+Check out creator tools on the wiki to make a pet that follows you.
