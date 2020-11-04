@@ -6,6 +6,8 @@ Environmental constraints
 Time limitation:
 
 
+
+
 Because our group reoriented the first milestones to build a website outside the game, 
 we don’t have too much time left to finish coding. In the next three weeks, 
 we need to create a website that contains our lessons, a database for users to store their 
@@ -24,6 +26,8 @@ need to consider more for meetings to find a time that fits everyone’s work an
 
 
 Source-code limitation:
+
+
 
 
 We do not have access to the source code of Minecraft Education Edition. Therefore, 
