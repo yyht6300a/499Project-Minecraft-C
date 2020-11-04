@@ -1,4 +1,7 @@
+Description of Data Flow Diagram
+
 DFD level 0
+
 
 briefly shown the data flow in the game
 
@@ -7,16 +10,22 @@ briefly shown the data flow in the game
 2.Teachers will basically do the same thing as a student, they can login to the game and check the content of the lesson, and decide which lesson they want to use to teach their students.
 
 
+
 DFD level 1
 
-1.In this diagram we show our system in detail
 
-2.Player can choose a world in the game (different map)
+Player can choose a world in the game (different map)
 
-3.In the world players can access the lesson library in the code builder window. They can browse all lessons in the lesson library and choose a lesson they would like to learn.
+Players can access the lesson library on our website. They can browse all lessons in the lesson library and choose a lesson they would like to learn.
 
-4.Each lesson in our game is actually a website hosted online or locally. When user select a lesson in the lesson library, the library will request the data from the website.
+Each lesson is actually a jupyter notebook hosted on the website. When users select a lesson in the lesson library, they can access the notebook and get tasks and tutorials.
 
-5.When the game gets the tasks from the website, it will display the tasks in the code builder inside the game and players can use python language as input to play the game.
+Users can follow the tutorial and use python language as input to control their agent and finish tasks.
 
-6.The code builder will handle the python input and change it to game command and communicate with the game. And game will run the command and show the change to players.
+We will use a websocket to keep the communication between notebook and game, the python code will be converted to game command and sent to game. And game will run the command and show the change to players.
+
+This data flow diagram shows the data flow between the whole system, but Minecraft is a fully developed system, and most of the functionality shown above are already developed.
+In this project our goal is to use the python library that client provided, to develop more lessons which will teach students some AI knowledge.
+Therefore, we only develop the website and some lessons, and we will use those processes to test our lesson in the game.
+(For Peer test #1 we will have a basic website that allow user signin and choose lessons, and for Peer test #2 We will have a fully developed website and some lessons.
+In final deliverable we will deliver more different lessons about AI knowledge)

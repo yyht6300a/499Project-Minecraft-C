@@ -4,6 +4,7 @@ Tools:
 
 1. Electron App (client provided for testing)
 2. GitHub for Integration testing
+3. Story Player(PHP)
 
 Unit Testing
 
@@ -34,7 +35,7 @@ Integration Testing and Regression Testing
 we should rerun the whole lesson in the game and check if the new code conflicts with the old one or generate a new bug.
 
 
-About automation testing
+Website Testing
 
-1. We will not use any automation test tool in our project since we will use a built-in python library in the game.
-It’s easier to run our code in the game directly and test for bug and functionality 
+1. We want to use an Automatic testing software (Story Player) for unit testing of our PHP and javaScript part.
+This is a free testing software which can help us to increase the efficiency and coverage during software testing. 
