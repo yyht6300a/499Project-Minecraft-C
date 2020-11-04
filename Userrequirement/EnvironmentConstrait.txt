@@ -1,18 +1,31 @@
 Environmental constraints
 
+
+
+
 Time limitation:
+
+
 Because our group reoriented the first milestones to build a website outside the game, 
 we don’t have too much time left to finish coding. In the next three weeks, 
 we need to create a website that contains our lessons, a database for users to store their 
 data and test the connection between web and Minecraft.  
 
+
+
 Communication limitation:
+
+
 Due to Covid-19, our way to communication was limited. Only remote meetings are 
 available and most of the discussion will be done through Discord. We are also 
 facing a problem that group members are in different time zones which means we 
 need to consider more for meetings to find a time that fits everyone’s work and rest.
 
+
+
 Source-code limitation:
+
+
 We do not have access to the source code of Minecraft Education Edition. Therefore, 
 we can not directly write codes of any in-game features. We will use Electron to 
 transfer code from the website into the game. It may lead to many issues when we 
