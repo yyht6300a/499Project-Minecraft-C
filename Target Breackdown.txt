@@ -1,0 +1,17 @@
+Breakdown of the Targets
+
+Peer Testing-1/ 2020-Nov-25: 
+      Basic Prototype 
+* Website main page, database with 1 sample user, jupyter notebook on installation, available locally. Users should be able to use a Python script to communicate with the game.
+
+Peer Testng-2/ 2021-Feb-24: 
+      Elaborated prototype
+* Users should be able to use jupyter notebook to communicate with game (get some data from game and use python code to control their robot)
+* Two lessons about AI knowledge
+
+Final/ 2021-Apr-08: 
+Final Product
+* One more lesson about neural network 
+* All bugs are resolved, website appearance is polished, database is filled with users, available online/hosted.
+* Bonus: if time allows, we can add two more courses about ML and computer vision.
+
