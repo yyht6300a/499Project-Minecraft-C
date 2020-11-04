@@ -1,8 +1,26 @@
-Timeline for high school 
-October 27th – When we want our new requirements document to be done
-October 28th – Start coding prototype 
-November 4th – Requirements are due 
-Milestone 1 – Coded prototype with basic features any AI or ML is mocked 
-Milestone 2 – Basics AI or ML using libraries + lesson is coded and functional 
-Final milestone – Polishing, AI/ML is finishes, all testing and bugs have been taken care of 
+Breakdown of the Targets
+
+Peer Testing-1/ 2020-Nov-25: 
+Basic Prototype 
+There is a website with one page: the main page (introduction, links to notebooks).
+There is a database that stores users' profiles with one sample user, hosted locally. 
+There is an Everglade notebook about the installation process.
+Users should be able to use a Python script to communicate with the game.
+
+
+Peer Testing-2/ 2021-Feb-24: 
+Elaborated prototype
+Users should be able to use Everglade notebook to communicate with the game (get some data from the game and use python code to control their robot).
+There are two lessons about AI knowledge.
+The website contains user profiles. 
+Bugs are filed after testing.
+
+
+Final/ 2021-Apr-08: 
+Final Product
+There is a lesson about neural networks. 
+All bugs are resolved. 
+Website appearance is polished.
+Database is filled with users, available online/hosted.
+Bonus: if time allows, we will add two more courses about ML and computer vision.
 
