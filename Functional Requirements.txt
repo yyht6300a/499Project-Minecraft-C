@@ -1,6 +1,163 @@
 Functional Requirements
 
-RequirementNotion ExplanationNumber1DescriptionEach unit in the notebook should include a written paragraph explaining the concept the user is learning from this particular notebook.RationalThe user who understand a concept before coding it will have a stronger base and understand the code they are writingSuccess criteriaEach notebook contains an introduction paragraph about the concept, different parts that break down the notion into manageable pieces and a paragraph explaining the sub notice taught in each part. Level of importantHighRequirement Units Number2DescriptionThe website should include units of learning. Each unit builds on the previous one and grows the student's understanding of AI and ability to code basic AI concepts. (Like a cell in Jupyter Notebook)RationalHaving lessons broken down into units make the course more manageable and provide a sense of accomplishment everytime the student completes a unit. Separating the subject also allow the teaching to be more organizedSuccess criteriaBreak tasks to small units. Users can get feedback after running any small unit. After running all units, user should get a expected final output  Level of importanceHighRequirement InstallationNumber 3DescriptionThe user should be able to install Python3, JupyterNotebook and Pytorch locallyRationalThe goal of this project is for students to eventually be able to move out of the game and code basic AI concept. Having everything they will learn in the class locally will allow them to explore. Success CriteriaThe first unit includes a link to Python3, JupyterNotebook and Pytorch as well as explanation and test command so the student can make sure the installation is successful. ImportanceHighRequiremement OutputsNumber4DescriptionEach time the user is asked to produce code there should be feedback through 
-output either from the console or through the game.RationalIf the user doesn’t see output they cannot be sure whether or not their code was correct. Sometimes seeing the intended output playout in the game makes sense for other concept printing in the console makes more sense.Success CriteriaEverytime there is space for the user to input code, if the code is correct the console prints output (the user will be explicitly asked to write something that will trigger the writing to the console) or the game pops out and something happens in the game. If the code is incorrect an error is printed in the console. ImportanceHighRequiremement DatabaseNumber5DescriptionThere should be a database saving user profiles, preferences and progressRationalWe want the user to not have to start from the first unit everytime they connect, we want them to be able to change some profile element like email and password as well as delete their profileSuccess Criteria There is an SQL database that has a row for each user and stores name, email, password, progress (as Json blob). 
-When a student creates a profile, they are prompt for the element above and the database is automatically completed. 
-When the user deletes their profile, their row is automatically deleted. Rows are identified through unique usernames. When the user makes a change to their profile, the database is updatesImportanceMediumRequirementUI needsNumber6DescriptionThere should be a login, sign, profile button, there should be an introduction page with a navigation menu. The menu should include the home page, a link to the different units. The UI should follow GUI guidelinesRationalThe user should be able to easily find how to create or access their profile and the lessons. Those UI elements should follow industry guidelines. Success criteriasThe login, sign in buttons and menu options are on the main page and easy to find. GUI guidelines are respected ImportanceMediumRequirement User profileNumber7Description The user should be able to see their own information and make changes if they wish to. RationalIf the user wishes to change their email or password or delete their profile they should be able to. This is a critical step of user retention. Success criteriaWhen the user clicks on a user profile their email, encoded password (stars) and an option to delete their profile appears. If the user selects “edit” they are asked for a new email or password, that change is updated in the database. If they click on “delete” they are asked for confirmation if they choose “yes” their profile is deleted in the database if they choose “no” no changes are made.ImportanceLowRequirementCommunication with the gameNumber8DescriptionThe user should be able to create code in an external editor, and send commands to the game. Additionally, all events from the game should be logged to the user’s system.RationalDue to technical limitations, we cannot use the in game code editor. Therefore, we must be able to create our own code editor outside of the game. Furthermore, we need to be able log in-game data to the user’s system to create a features dataset for PyTorch.Success criteriaThe user is able to connect their notebook to the game, and be able to run and send commands in the game. The game is able to save and append data to a features dataset on the user’s computer.ImportanceHigh
+Requirement
+Notion Explanation
+Number
+1
+Description
+Each unit in the notebook should include a written paragraph explaining the concept the user is learning from this particular notebook.
+Rational
+A user who understand a concept before coding it will have a stronger base and understand the code they are writing.
+Success criteria
+Each notebook contains an introduction paragraph about the concept, different parts that break down the notion into manageable pieces and a paragraph explaining the sub notice taught in each part. 
+Level of important
+High
+
+
+
+
+Requirement 
+Units 
+Number
+2
+Description
+The website should include units of learning. Each unit builds on the previous one and grows the student's understanding of AI and ability to code basic AI concepts. (Like a cell in Jupyter Notebook).
+Rational
+Having lessons broken down into units make the course more manageable and provide a sense of accomplishment everytime the student completes a unit. Separating the subject also allows the teaching to be more organized.
+Success criteria
+Break tasks to small units. Users can get feedback after running any small unit. After running all units, the user should get an expected final output.
+Level of importance
+High
+
+
+
+
+Requirement 
+Installation
+Number 
+3
+Description
+The user should be able to install Python3, JupyterNotebook and Pytorch locally.
+Rational
+The goal of this project is for students to eventually be able to move out of the game and code basic AI concept. Having everything they will learn in the class locally will allow them to explore. 
+Success Criteria
+The first unit includes a link to Python3, JupyterNotebook and Pytorch as well as explanation and test command so the student can make sure the installation is successful. 
+Importance
+Moderate
+
+
+
+
+Requiremement 
+Outputs
+Number
+4
+Description
+Each time the user is asked to produce code there should be feedback through 
+output either from the console or through the game.
+Rational
+If the user doesn’t see output they cannot be sure whether or not their code was correct. Sometimes seeing the intended output playout in the game makes sense for other concept printing in the console makes more sense.
+Success Criteria
+Everytime there is space for the user to input code, if the code is correct the console prints output (the user will be explicitly asked to write something that will trigger the writing to the console) or the game pops out and something happens in the game. If the code is incorrect an error is printed in the console. 
+Importance
+High
+
+
+
+
+Requiremement 
+Database
+Number
+5
+Description
+There should be a database saving user profiles, preferences and progres.
+Rational
+We want the user to be able to change some profile elements like email and password as well as delete their profile.
+Success Criteria 
+There is an SQL database that has a row for each user and stores name, email, password and files. 
+When a student creates a profile, they are prompt for the element above and the database is automatically completed. 
+When the user deletes their profile, their row is automatically deleted. Rows are identified through unique usernames. When the user makes a change to their profile, the database is updated.
+Importance
+Medium
+
+
+
+
+Requirement
+Uploading files
+Number
+6
+Description
+The user should be able to upload their Everglade notebook once they are done with a certain unit. Professors should be able to access the uploaded files and grade the students as well as give feedback.
+Rational
+The users are working on their everglade notebooks locally. Therefore, all of their progress is stored on their own machine. However, once they want their professor to check their work, they should be able to show their work in some way hence, the uploaded files section on their profile.
+Success Criteria
+The user profile has a files section. There is an upload button, when the user uploads the file from their local machine, a link to the file is added to the database. 
+Importance
+Low
+
+
+
+
+Requirement
+UI needs
+Number
+7
+Description
+There should be a login, sign, profile button, there should be an introduction page with a navigation menu. The menu should include the home page, a link to the different units. The UI should follow GUI guidelines.
+Rational
+The user should be able to easily find how to create or access their profile and the lessons. Those UI elements should follow industry guidelines. 
+Success criterias
+The login, sign in buttons and menu options are on the main page and easy to find. GUI guidelines are respected.
+Importance
+Medium
+
+
+
+
+Requirement 
+User profile
+Number
+8
+Description 
+The user should be able to see their own information and make changes if they wish to. 
+Rational
+If the user wishes to change their username, email or password or delete their profile they should be able to. This is a critical step of user retention. 
+Success criteria
+When the user clicks on a user profile their username, email, encoded password (stars) and an option to delete their profile appears. If the user selects “edit” they are asked for a new email or password, that change is updated in the database. If they click on “delete” they are asked for confirmation if they choose “yes” their profile is deleted in the database if they choose “no” no changes are made.
+Importance
+Low
+
+
+
+
+Requirement
+User profile - Teachers
+Number 
+9
+Description
+The teacher profile should be a modified version of a regular user profile so they can have access to students files (their completed Everglade Notebook).
+Rational
+We want teachers to be able to access and grade those files. 
+Success criteria
+The user profile has a boolean variable telling the database whether or not they have a teacher status. If they are a teacher then they have access to the students files. My teacher can see all files uploaded by the students.
+Importance
+Low
+
+
+
+
+
+
+Requirement
+Communication with the game
+Number
+10
+Description
+The user should be able to create code in an external editor, and send commands to the game. Additionally, all events from the game should be logged to the user’s system.
+Rational
+Due to technical limitations, we cannot use the in game code editor. Therefore, we must be able to create our own code editor outside of the game. Furthermore, we need to be able log in-game data to the user’s system to create a features dataset for PyTorch.
+Success criteria
+The user is able to connect their notebook to the game, and be able to run and send commands in the game. The game is able to save and append data to a features dataset on the user’s computer.
+Importance
+High
