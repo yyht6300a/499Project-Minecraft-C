@@ -66,7 +66,24 @@ a {
   font-family: 'Minecrafter';
   margin-bottom: 1.5rem;
 }
-
+.pyheading{
+  font-family: 'Minecrafter';
+  
+}
+.PyText{
+  
+  
+  display: flex;
+  flex-direction: column;
+  margin: 3em;
+  width: 70%;
+  padding: 1.5rem;
+  border-top: 3px solid var(--border-light);
+  border-right: 3px solid var(--border-light);
+  border-bottom: 3px solid var(--border-dark);
+  border-left: 3px solid var(--border-dark);
+  background: var(--card-background);
+}
 .lesson-img {
   width: 100%;
   
@@ -97,6 +114,11 @@ a {
 .lesson-desc {
   padding-top: 1.5rem;
   font-size: 18px;
+}
+.py-desc{
+  padding-top: 0.75rem;
+  font-size: 18px;
+  padding-bottom: 0.75rem;
 }
 
 .btn-play {
