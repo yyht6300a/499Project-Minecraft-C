@@ -1,0 +1,138 @@
+:root {
+  --primary-green: #34aa2f;
+  --lighter-green: #a1d69f;
+  --darker-green: #237b1f;
+  --border-light: lightslategray;
+  --border-dark: darkgray;
+  --card-background: lightgray
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Mojang';
+  src: url('../fonts/Mojang-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media all and (min-width: 905px) {
+  .lesson {
+    width: 25%;
+    max-width: 300px;
+  }
+
+  .lessons {
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 905px) {
+  .lesson {
+    width: 80%;
+    display: flex;
+    align-self: center;
+  }
+
+  .lessons {
+    flex-direction: column;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-image: url('../img/background.png');
+  background-size: 200px;
+  background-repeat: repeat;
+} 
+
+a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.btn {
+  font-family: 'Mojang';
+  font-size: 1.3em;
+  padding: 1rem;
+  width: 10em;
+  height: 2.5em;
+  background-color: var(--primary-green);
+  border-top: 3px solid var(--lighter-green);
+  border-right: 3px solid var(--lighter-green);
+  border-bottom: 3px solid var(--darker-green);
+  border-left: 3px solid var(--darker-green);
+  transition: 0.1s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+button {
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.lesson {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 3px solid var(--border-light);
+  border-right: 3px solid var(--border-light);
+  border-bottom: 3px solid var(--border-dark);
+  border-left: 3px solid var(--border-dark);
+  background: var(--card-background);
+}
+
+.lessons {
+  width: 100%;
+  display: flex;
+}
+
+.lesson-h1 {
+  font-family: 'Mojang';
+  margin-bottom: 1.5rem;
+  font-size: 2em;
+}
+
+.lesson-img {
+  width: 100%;
+}
+
+.lesson-desc {
+  padding-top: 1.5rem;
+  font-size: 1.2em;
+}
+
+.btn-play {
+  margin-top: 2rem;
+  align-self: center;
+}
+
+.main-nav {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  border-bottom: 3px solid rgba(255,255,255,.3);
+  -webkit-app-region: drag;
+}
+
+#logo {
+  width: 25%;
+  max-width: 400px;
+  min-width: 300px;
+  overflow: hidden;
+}

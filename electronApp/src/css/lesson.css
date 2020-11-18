@@ -1,0 +1,56 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.lesson-area {
+  margin: 1rem;
+  width: 80%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid var(--border-light);
+  border-right: 3px solid var(--border-light);
+  border-bottom: 3px solid var(--border-dark);
+  border-left: 3px solid var(--border-dark);
+  background: var(--card-background);
+}
+
+.lesson-area h1 {
+  font-family: 'Mojang';
+  margin-bottom: 1rem;
+  font-size: 3em;
+}
+
+.lesson-area h2 {
+  font-family: 'Mojang';
+  margin-top: 1rem;
+  font-size: 2em;
+}
+
+#coding-environment {
+  width: 100%;
+  height: 400px;
+  margin-top: 1rem;
+  align-self: center;
+  border-top: 3px solid var(--border-light);
+  border-right: 3px solid var(--border-light);
+  border-bottom: 3px solid var(--border-dark);
+  border-left: 3px solid var(--border-dark);
+}
+
+#output {
+  width: 100%;
+  height: 200px;
+  margin-top: 1rem;
+  align-self: center;
+  border-top: 3px solid var(--border-light);
+  border-right: 3px solid var(--border-light);
+  border-bottom: 3px solid var(--border-dark);
+  border-left: 3px solid var(--border-dark);
+}
+
+#button-group {
+  margin-top: 2rem;
+}
