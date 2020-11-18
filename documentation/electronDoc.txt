@@ -1,0 +1,11 @@
+Quick Summary of the Elctron app.
+
+Once Electron is started, run 'npm start' in the command line at the root folder.
+
+The CSS folder contains a CSS file for the base CSS and index page, and a CSS specific file for the lessons page.
+
+The JS folder contains JavaScript for each lesson HTML page.
+These initialize the Monaco-Editor by importing the saved lesson template into the editor. It also contains code to get the 'run' button and run the code in the output. These files need cleaning up.
+
+The lessonTemplates are basic python scripts that are loaded in by the lesson JS files.
+
