@@ -69,6 +69,29 @@ a {
 
 .lesson-img {
   width: 100%;
+  
+}
+.download{
+  float: left;
+  width:25%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  margin: 3em;
+  
+  padding: 1.5rem;
+  border-top: 3px solid var(--border-light);
+  border-right: 3px solid var(--border-light);
+  border-bottom: 3px solid var(--border-dark);
+  border-left: 3px solid var(--border-dark);
+  background: var(--card-background);
+  
+}
+.download-img{
+  width: 250px;
+  height:250px
+  
+  
 }
 
 .lesson-desc {
@@ -78,6 +101,14 @@ a {
 
 .btn-play {
   margin-top: 2rem;
+}
+.btn-download{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.download-desc {
+  padding-top: 1.5rem;
+  font-size: 18px;
 }
 
 #main-nav, #main-footer{
