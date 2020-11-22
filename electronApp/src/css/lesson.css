@@ -29,9 +29,8 @@
   font-size: 2em;
 }
 
-#coding-environment {
+.code {
   width: 100%;
-  height: 400px;
   margin-top: 1rem;
   align-self: center;
   border-top: 3px solid var(--border-light);
@@ -40,15 +39,12 @@
   border-left: 3px solid var(--border-dark);
 }
 
+#coding-environment {
+  height: 400px;
+}
+
 #output {
-  width: 100%;
   height: 200px;
-  margin-top: 1rem;
-  align-self: center;
-  border-top: 3px solid var(--border-light);
-  border-right: 3px solid var(--border-light);
-  border-bottom: 3px solid var(--border-dark);
-  border-left: 3px solid var(--border-dark);
 }
 
 #button-group {

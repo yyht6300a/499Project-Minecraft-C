@@ -2,12 +2,28 @@ const path = require('path');
 const fs = require('fs');
 var pythonShell = require('python-shell');
 const amdLoader = require('monaco-editor/min/vs/loader');
+const { ppid } = require('process');
 const amdRequire = amdLoader.require;
 var codeEnv = '';
 var output = '';
 
-
 // SETUP
+
+// Start server
+var serverShell = pythonShell.PythonShell;
+
+let options = {
+  mode: 'text',
+  pythonOptions: ['-u'], // get print results in real-time
+};
+
+serverShell.run("src/connection.py", options, function(err, results) {
+  if (err)
+    throw err;
+  
+  console.log("Server is running!")
+  console.log(results)
+});
 
 // Load in lesson
 var lessonText = 'error'
@@ -17,15 +33,9 @@ fs.readFile('src/lessonTemplates/lesson1.py', (err, data) => {
   
   lessonText = data.toString();
 }) 
-
 // Run lesson code
 var pyShell = pythonShell.PythonShell;
 var outputText = 'error'
-
-let options = {
-  mode: 'text',
-  pythonOptions: ['-u'], // get print results in real-time
-};
 
 pyShell.run("src/lessonTemplates/lesson1.py", options, function (err, results) {
   if (err) 
@@ -90,6 +100,5 @@ amdRequire(['vs/editor/editor.main'], function () {
       console.log(outputText);
       output.setValue(outputText);
     });
-
   });
 });
