@@ -40,13 +40,34 @@
 }
 
 #coding-environment {
-  height: 400px;
+  height: 800px;
 }
 
+#coding-environment_2 {
+  height: 230px;
+}
+
+#coding-environment_3 {
+  height: 230px;
+}
+
+
+
 #output {
+  height: 60px;
+}
+
+#output_2 {
   height: 200px;
 }
+
+#output_3 {
+  height: 200px;
+}
+
+
 
 #button-group {
   margin-top: 2rem;
 }
+

@@ -18,12 +18,173 @@
       <!-- Lesson intro and information -->
       <div class="lesson-area">
         <div class="intro">
-          <h1>Lesson 1</h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro corporis maxime omnis ratione numquam voluptates quaerat alias dolores unde harum, voluptatibus autem quos recusandae quae nisi ea nemo dicta debitis accusamus deserunt veritatis! Dolores minima itaque eveniet error numquam quas, tempora culpa quidem iste quisquam vero laborum pariatur perspiciatis porro recusandae, alias velit nesciunt optio quibusdam voluptatem sed. Aspernatur, dolorum. Pariatur quo modi porro in ad id vero reiciendis, repellendus aperiam quaerat laboriosam quos incidunt corporis vel repudiandae fuga hic ab dignissimos totam blanditiis. Autem distinctio dolores qui aliquid dicta, velit itaque fuga aspernatur commodi placeat optio at tempore dolorem atque quibusdam cupiditate molestias? Tempora facilis eius ipsam aliquid, sed blanditiis iste earum commodi? Pariatur animi neque illum nemo omnis. Quam repudiandae vel iste reprehenderit eligendi quasi non aspernatur molestias. Fugit officia excepturi voluptatibus laboriosam ab nulla nesciunt odit architecto in ut, quidem pariatur ex nam culpa tenetur voluptatem, natus sequi vitae quos id nemo mollitia. Temporibus quaerat placeat vel rerum architecto esse sint, explicabo earum quo repudiandae facere nam ipsum eum aliquam debitis fugiat neque exercitationem ex modi quam nostrum animi quis libero minus? Deserunt ut corporis minus, dolorem porro, tempore delectus placeat culpa doloremque unde beatae aut perspiciatis!</p>
+          <h1>Lesson 1-Gold Digger</h1>
+          <p>Hi welcome to the gold digger lesson. In this lesson you will program your robot to collect some gold blocks for you</p>
+          <p><br/>First click import button to import world of Gold Digger to your game</p>
+          <br/>
+          <img src="assets/import.png" width="500">
+          <br/>
+          <p>In the game you can press c to open the code builder and you should use this button for this lesson:</p>
+          <img src="assets/code_builder.png" width="500">
+          <h3>There are some functions you could use in this lesson:</h3>
+          <br/>
+
+          <p>1. agent.move(direction) [Valid directions are: forward, back, left, right, up, down]</p>
+          <br/>
+          <p>2. agent.turn(turn direction) [Valid direction are: left, right]</p>
+          <br/>
+          <p>3. agent.collect(item) [Collect all items of the given type near the agent] In this lesson you can collect "gold block"</p>
+          <br/>
+          <p>4. agent.teleport([location]) [Teleports the agent to a location if specified, or else to the player]</p>
+          <br/>
+          <p>5. agent.position [Gets or sets the location of the agent]</p>
+          <br/>
+          <p>6. agent.destroy(direction) [Destroys a block in the given direction]</p>
+          <br/>
+          <p>7. agent.get_item(slot number) [Return the name of the item in the agent's inventory slot]</p>
+          <br/>
+          <p>8. agent.get_item_count(slot number) [Returns the number of items in the agent's inventory slot]</p>
+          <br/>
+          
+          <h3>First you can try these functions by your self and see what happens in the game</h3>
+          <br/>
+          <br/>
+          <h2>Information &nbsp for &nbsp This &nbsp Lesson</h2>
+          <br/>
+          <h3>Background: </h3>
+          <p>Finding specific resources in Minecraft has always been a cumbersome and time-consuming task, but now you can program your agent to help you accomplish this task quickly. In this lesson we have set up three mines, each with different lengths, widths and depths(There is no more gold after specific depth). You can choose any of them to test your code.</p>
+          <h4>Let's see a demo first</h4>
+          <br/>
+          <iframe width="420" height="315"
+          src="https://www.youtube.com/embed/rlwiKkt7sKk" allowfullscreen>
+          </iframe>
+          <br/>
+          <br/>
+          <h4>Mine 1:</h4>
+          <img src="assets/mine1.png" width="500">
+          <p>strat position (pink glass):[-25 76 103] <br/> Depth: 2<br/>lengths(x length): 5<br/>widths(y length): 7<br/></p>
+          <br/>
+          <h4>Mine 2:</h4>
+          <img src="assets/mine2.png" width="500">
+          <p>strat position (red glass):[-27 76 101] <br/> Depth: 3<br/>lengths(x length): 4<br/>widths(y length): 11<br/></p>
+          <br/>
+          <h4>Mine 3:</h4>
+          <img src="assets/mine3.png" width="500">
+          <p>strat position (blue glass):[-38 76 108] <br/> Depth: 7<br/>lengths(x length): 7<br/>widths(y length): 8<br/></p>
+          <h3>Python Background Knowledge:</h3>
+          <br/>
+          <h4>For loop</h4>
+          <p>we can use for loop to iterate over a sequence e.g. a list or a string in python. Note: the indentation in python is very important because we use indentation to indicate a block of code in python.</p>
+          <br/>
+          <p>See example bleow:</p>
+          <br/>
+          <p><span style="color: #339966;">for</span> i <span style="color: #339966;">in range</span>(<span style="color: #339966;">3</span>):<br />&nbsp; &nbsp; <span style="color: #339966;">print</span>(i)<br />&nbsp; &nbsp; <span style="color: #339966;">print</span>(<span style="color: #993300;">"Hi"</span>)<br /><span style="color: #339966;">print</span>(<span style="color: #993300;">"end"</span>) <span style="color: #ff6600;">#this line is not in the block of for loop, therefore only printed once.</span></p>
+          <p>&nbsp;</p>
+          <br/>
+          <p>This is the wrong code:</p>
+          <br/>
+          <p><span style="color: #339966;">for</span> i <span style="color: #339966;">in range</span>(3): <span style="color: #ff6600;">#if you skip the indentation you will get an error.</span> <br /><span style="color: #339966;">print</span>(<span style="color: #993300;">"end"</span>)</p>
+          <br/>
+
+
+          <h3>Code Editor</h3>
+          <div id="coding-environment_2" class="code"></div>
+          <h3>Output</h3>
+          <div id="output_2" class="code"></div>
+  
+          <!-- Run button, and maybe other buttons -->
+          <div id="button-group">
+            <button class="btn" id="run_2">Run</button>
+          </div>
+          
+          <br/>
+
+          <h4>Nested for loop</h4>
+          <p>Of course you can use a loop inside a loop:</p>
+          <br/>
+          <p><span style="color: #339966;">for</span> i <span style="color: #339966;">in range</span> (<span style="color: #339966;">2</span>):<br />&nbsp; &nbsp; &nbsp; <span style="color: #339966;">print</span>(<span style="color: #993300;">"Hi"</span>)<br />&nbsp; &nbsp; &nbsp; <span style="color: #339966;">for</span> j <span style="color: #339966;">in range</span> (<span style="color: #339966;">3</span>):<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #339966;">print</span>(<span style="color: #993300;">"Good morning"</span>)</p>
+          <br/>
+          <h4>Define a function in python</h4>
+          <br/>
+          <p>A function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function. A function can return data as a result. (from w3schools.com)
+            <br/>
+            <br/>Function is very important in Python because in many cases you can reuse your code.
+            <br/>
+            <br/>Indentation is also important for function.</p>
+            <br/>
+            <br/>See example below:</p>
+            <br/>
+            <p><span style="color: #339966;">def</span> <span style="color: #3366ff;">printyourname</span>(name): <span style="color: #ff6600;">#this function will print your name twice</span> <br />&nbsp; &nbsp; &nbsp; <span style="color: #339966;">for</span> i <span style="color: #339966;">in range</span>(<span style="color: #339966;">2</span>):<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #339966;">print</span>(<span style="color: #993300;">"Hi "</span>+name)<br />printyourname(<span style="color: #993300;">"Bob"</span>)<br /><span style="color: #339966;">print</span>(<span style="color: #993300;">"end"</span>)</p>
+            <br/>
+            <p>example 2:</p>
+            <br/>
+            <p><span style="color: #339966;">def</span> <span style="color: #3366ff;">printyourname</span>(name): <br />&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #339966;">for</span> i <span style="color: #339966;">in range</span>(<span style="color: #339966;">2</span>):<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #339966;">print</span>(<span style="color: #993300;">"Hi "</span>+name)<br /><span style="color: #ff6600;"># if you don't call this function, it will not run</span></p>
+            <p><span style="color: #339966;">def</span> <span style="color: #3366ff;">complex_calculation</span>(x,y):<br />&nbsp; &nbsp; &nbsp; <span style="color: #339966;">print</span>(x+y*x+<span style="color: #339966;">10</span>)<br /> <br />complex_calculation(<span style="color: #339966;">3</span>,<span style="color: #339966;">2</span>)<br />complex_calculation(<span style="color: #339966;">6</span>,<span style="color: #339966;">1</span>)<span style="color: #ff6600;"># you only need to change the parameters to reuse your function</span><br /><span style="color: #339966;">print</span>(<span style="color: #993300;">"end"</span>)</p>
+            <br/>
+            <h3>Code Editor</h3>
+            <div id="coding-environment_3" class="code"></div>
+            <h3>Output</h3>
+            <div id="output_3" class="code"></div>
+    
+            <!-- Run button, and maybe other buttons -->
+            <div id="button-group">
+              <button class="btn" id="run_3">Run</button>
+            </div>
+
+            <br/>
+            <h3>Python in Game</h3>
+            <p>Because the game provides only the most basic commands like</p>
+            <p>agent.move("forward")</p>
+            <p>agent.destroy("down")</p>
+            <br/>
+            <p><strong>Therefore you can use for loop and function to run the command multiple times</strong></p>
+            <p><strong>for example:</strong></p>
+            <br/>
+            <p>this function will move your agent and destroy the block under your agent five times.</p>
+            <p><span style="color: #339966;">def</span> <span style="color: #3366ff;">move</span>(steps):</p>
+            <p>&nbsp; &nbsp; &nbsp; <span style="color: #339966;">for</span> i <span style="color: #339966;">in range</span> (steps):</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; agent.move(<span style="color: #993300;">"forward"</span>)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; agent.destroy(<span style="color: #993300;">"down"</span>)</p>
+            <p>move(5)</p>
+
+            <br/>
+            <p>Also, the game doesn't provide a turn back function but we can write our own.</p>
+            <p><span style="color: #339966;">def</span> <span style="color: #3366ff;">turnback</span>():</p>
+            <p>&nbsp; &nbsp; &nbsp;agent.turn(<span style="color: #993300;">"right"</span>)</p>
+            <p>&nbsp; &nbsp; &nbsp;agent.turn(<span style="color: #993300;">"right"</span>)</p>
+            <br/>
+            <h2>Let's &nbsp program &nbsp your &nbsp agent</h2>
+            <br/>
+            <h3>Task 1: Now let's set your robot to the star point (pink glass):</h3>
+            <p>Hint <br/>1. you can use agent.teleport to transfer your agent to a location.<br/>2. the position of start point in this lesson is [-25,76,103].</p>
+            <br/>
+            <h3>Task 2: Now your agent shoud on start point, you can start to write your mining function:</h3>
+            <p>We have many layers of gold (Depth), in this part our goal is collecting gold blocks in the first layer. <br/> Hint: <br/>This is the recommended route: </p>
+            <img src="assets/route.png" width="500">
+            <br/>
+            <p>1. you can use a nested for loop to keep moving your agent to destroy the block and collect gold.</p>
+            <p>2. you can use a nested for loop to keep moving your agent to destroy the block and collect gold.</p>
+            <br/>
+            <p>You can check the suggested answers at the bottom</p>
+            <br/>
+            <h3>some useful functions</h3>
+            <p>1. agent.destroy("down")<br/>2. agent.move("forward")<br/>3. agent.turn("left"/"right")<br/>4. agent.collect("gold block")<br/></p>
+            <br/>
+            <h3>Task 3: Now you should be able to collect gold bloks in first layer, let's dig a little deeper</h3>
+            <br/>
+            <p>Hint: you can use another for loop to run your mining function many times and each time teleport your agent to start point and use agent.move("down")</p>
+
+            <br/>
+            <h3>Task 4: Your agent can tells you how many resources has been collected</h3>
+            <br/>
+            <p>Hint: You can use a for loop to loop through agent's inventory slot, valid slot numbers are between 1 and 27, inclusive.</p>
+            <br/>
+            <h3>some useful functions</h3>
+            <p>1. agent.get_item_count(slot number))<br/>2. agent.get_item(slot number)<br/></p>
         </div>
 
         <!-- Lesson coding environment and output area -->
-        <h2 style='margin-top: 2rem'>Code Editor</h2>
+        <h2>Answer</h2>
         <div id="coding-environment" class="code"></div>
         <h2>Output</h2>
         <div id="output" class="code"></div>
