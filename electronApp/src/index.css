@@ -27,6 +27,11 @@ body {
   background-repeat: repeat;
 } 
 
+img{
+  width: 80%;
+
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -106,7 +111,7 @@ a {
 }
 .download-img{
   width: 250px;
-  height:250px
+  height:250px;
   
   
 }

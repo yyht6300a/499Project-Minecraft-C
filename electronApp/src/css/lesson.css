@@ -17,6 +17,9 @@
   background: var(--card-background);
 }
 
+img{
+  width: 80%;
+}
 .lesson-area h1 {
   font-family: 'Mojang';
   margin-bottom: 1rem;
