@@ -1,0 +1,23 @@
+1.
+Issue: User can not jump back when some link is clicked
+
+Severity: 4 (Usability catastrophe)
+
+Violation: User control and freedom problem
+
+Description:When this link is clicked, it will jump to external pages in the app with no return button and the user cannot return to the original page.
+
+Modification: when the link is clicked, open the page in a new window.
+
+2.
+Issue: The system will not show any error message when user have a wrong input
+
+Severity: 3 (major usability problem; important to fix)
+
+Violation: Visibility of System Status, Help User Recognize and Recover from Errors.
+
+Description: When users have an invalide input, the system will not show any error message, and the output will not not change.
+So users will not know what kind of mistakes they made, and it's hard to fix it.
+
+Modification: When python returns an error message, it should be displayed on the console.
+
