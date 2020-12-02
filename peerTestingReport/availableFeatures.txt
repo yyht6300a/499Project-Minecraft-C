@@ -1,0 +1,29 @@
+Home page
+	Lessons which the user can click ‘play’ on to start a lesson.
+	A navbar with a ‘Quick Start’ button to navigate to a quick start page.	
+Quick start page.
+	Contains download instructions for Minecraft Education and Python, both of which are required for the test.
+	A system requirements section for Minecraft Education.
+	A navbar with a ‘FAQS’ button, which directs to the Minecraft Education FAQ section online.
+	A navbar with a ‘Home’ button, which directs back to the home page.
+Lesson page (Gold Miner lesson)
+	Starts with instructions to import the demo world into Minecraft Education.
+	Shows some Minecraft Education Agent specific Python functions.
+	Shows the ‘Information for This Lesson’ pane:
+		A description of the lesson task.
+		A video demo of the task.
+		Coordinate information of the three mines.
+	Shows the ‘Python Background Knowledge’ pane
+		Features basic syntax for Python:
+			For loops.
+			Nested for loops.
+			Functions.
+			Using Agent commands.
+		All syntax demos feature a code editor, output area, and a run button for the user to play around with.
+	Programming the agent page:
+		Features several tasks which should help guide the user through the coding exercise:
+			Task 1: Get the agent on the starting spot.
+			Task 2: Have the agent mine and collect gold blocks in the first layer of the mine.
+			Task 3: Have the agent mine a specified depth.
+			Task 4: Have the agent output how many gold blocks they collected.
+	An answer pane with the full solution.
