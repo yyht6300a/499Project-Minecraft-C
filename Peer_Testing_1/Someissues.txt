@@ -32,3 +32,13 @@ Description: When users enter the page they should easily find the information t
 
 Modification: highlight the important information.
 
+4.
+Issue: An additional return button is required
+
+Severity: 1 (cosmetic problem)
+
+Violation: User control and freedom problem
+
+Description: When users finished the whole lesson, they have to scroll up to the top of the page to return the home page, rather than a simple click at the bottom of the page. 
+
+Modification: Add a new return button at the bottom of the page.
