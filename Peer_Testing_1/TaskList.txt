@@ -1,0 +1,42 @@
+User group:
+
+The high school student who want to learn Python and AI by Minecraft Education  
+
+
+
+Python and Minecraft Environment Setup:
+
+Task 1. Check the environment setup page (as a first-time user for Python and Minecraft) and see if the document is helpful. Check on each button.
+
+
+
+                                                                                                 Total:
+
+                                                                                                 about 5 minutes
+
+
+Gold Miner Lesson:
+
+Task 1. Familiar with the game environment and operation                    about 5 minutes
+
+Task 2. Read the Information about the lesson                               about 5 minutes
+
+Task 3. Read Python background knowledge (If the player know python already then this part can be skipped, 
+but they can still read the python tutorial about python in game to get some ideas about how to combine python with the game)
+                                                                            about 3 - 5 minutes
+
+Task 4. Program your agent task 1                                           about 2 minutes
+
+Task 5. Program your agent task 2                                           about 5 minutes
+
+Task 6. Program your agent task 3                                           about 5 minutes
+
+Task 7. Program your agent task 4                                           about 5 minutes
+
+Task 8. Repeat Task 4-7 for other Mine#  if time is enough
+
+
+
+                                                                                                 Total:
+
+                                                                                                 about 30-32 minutes

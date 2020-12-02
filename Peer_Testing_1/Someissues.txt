@@ -21,3 +21,14 @@ So users will not know what kind of mistakes they made, and it's hard to fix it.
 
 Modification: When python returns an error message, it should be displayed on the console.
 
+3.
+Issue: Some important information is not immediately noticeable
+
+Severity: 1 (cosmetic problem)
+
+Violation: Aesthetic design and Visibility
+
+Description: When users enter the page they should easily find the information they need. For example (click ‘import’ and press’c’ in the picture should be more visible )
+
+Modification: highlight the important information.
+
