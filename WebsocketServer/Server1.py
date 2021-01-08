@@ -140,6 +140,7 @@ async def on_response(response_str,websocket):
     response = json.loads(response_str)
     header = response["header"]
     body = response["body"]
+    print(response)
     if header.get("messagePurpose") == "event":
         event_name = body.get("eventName")
         subs = list(_SUBSCRIPTIONS.get(event_name) or [])
