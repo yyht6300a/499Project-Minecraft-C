@@ -12,7 +12,7 @@ Note: The node modules folder must be kept in the static folder.
 * [flask](https://flask.palletsprojects.com/en/1.1.x/)
 
 ## File Structure
-![file structure](/static/img/fileStructure.png?raw=True "File Structure")
+<img src ="static/img/fileStructure.png" width="50%">
 
 ### Root folder
 
