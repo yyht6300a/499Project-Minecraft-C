@@ -2,7 +2,7 @@
 
 ## Description
 Webserver is a Python Flask server. By running on port 3000 it can be opened in Minecraft Education. The website runs on only one HTML file, found in the templates folder. To start the project, flask must be installed with pip. It is recommended that this is placed in a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/), and then run `pip3 install flask` Additionally, node must be installed into the static folder with monaco-editor. [Example of starting node](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment#adding_dependencies) (do this in the static folder). Run `node install monaco-editor` after this.
-
+***
 ## Node Modules
 * [monaco-editor](https://microsoft.github.io/monaco-editor/)
 
@@ -11,8 +11,9 @@ Note: The node modules folder must be kept in the static folder.
 ## Python Modules
 * [flask](https://flask.palletsprojects.com/en/1.1.x/)
 
+***
 ## File Structure
-<img src ="static/img/fileStructure.png" width="50%">
+<img src ="static/img/fileStructure.png" width="50%" height="50%">
 
 ### Root folder
 
