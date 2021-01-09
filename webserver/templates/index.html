@@ -3,37 +3,37 @@
   <head>
     <meta charset="UTF-8">
     <title>Minecraft Machine Learning</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/editor.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/editor.css">
     <audio id="btn_press_sound">
-      <source src="assets/sounds/btn_press.wav" type="audio/wav">
+      <source src="../static/sounds/btn_press.wav" type="audio/wav">
     </audio>
   </head>
   <body>
     <!-- Homepage -->
     <div id="lesson-nav">
       <nav class="main-nav">
-        <img src="assets/img/logo.png" alt="Minecraft Education" id="logo">
+        <img src="../static/img/logo.png" alt="Minecraft Education" id="logo">
       </nav>    
 
       <div class="lessons">
         <div class="lesson">
           <h1 class="lesson-h1">Hello World</h1>
-          <img src="assets/img/lesson1.png" alt="lesson1" class="lesson-img">
+          <img src="../static/img/lesson1.png" alt="lesson1" class="lesson-img">
           <p class="lesson-desc">Learn the Python print statement to make your first Python program! Additionally, learn about how to create functions and how to call them.</p>
           <button class="btn btn-play" id="lesson1">Play</button>
         </div>
 
         <div class="lesson">
           <h1 class="lesson-h1">Lesson 2</h1>
-          <img src="assets/img/lesson2.png" alt="lesson2" class="lesson-img">
+          <img src="../static/img/lesson2.png" alt="lesson2" class="lesson-img">
           <p class="lesson-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur labore provident mollitia, id esse veritatis necessitatibus assumenda amet suscipit! Fugit.</p>
           <button class="btn btn-play" id="lesson2">Play</button>
         </div>
 
         <div class="lesson">
           <h1 class="lesson-h1">Lesson 3</h1>
-          <img src="assets/img/lesson3.png" alt="lesson2" class="lesson-img">
+          <img src="../static/img/lesson3.png" alt="lesson2" class="lesson-img">
           <p class="lesson-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur labore provident mollitia, id esse veritatis necessitatibus assumenda amet suscipit! Fugit.</p>
           <button class="btn btn-play" id="lesson3">Play</button>
         </div>
@@ -49,21 +49,21 @@
         </div>
         <div class="work-area">
           <div class="editor" id="editor"></div>
-          <div class="console">
+          <div class="console" id="console">
             <p>Console area</p>
           </div>
           <div class="btn-area">
             <div class="next-back" style="flex-shrink: 2;">
-              <button class="btn">Back</button>
-              <button class="btn btn-locked">Next
+              <button class="btn" id="back">Back</button>
+              <button class="btn btn-locked" id="next">Next
             </div>
-            <button class="btn">Run</button>
+            <button class="btn" id="run">Run</button>
           </div>
         </div>
       </div>
   
-    <script src="../node_modules/monaco-editor/min/vs/loader.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../static/node_modules/monaco-editor/min/vs/loader.js"></script>
+    <script src="../static/js/main.js"></script>
     
     </div>
   </body>

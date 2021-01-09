@@ -41,6 +41,8 @@
     color: white;
     font-family: 'Courier New', monospace;
     background-color: black;
+    border: 3px solid black;
+    transition: border 0.3s linear;
 }
 
 .btn-area {
