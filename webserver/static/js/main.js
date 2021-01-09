@@ -54,7 +54,10 @@ document.getElementById("lesson3").addEventListener('click', function() {
 
 
 // Helper functions
+// Calls the flask server with a GET request using the built in fetch function
+// TODO: Add some error handling
 async function getJSONData(lesson) {
+    // Default ERR in case of an error
     returnData = "ERR";
 
     await fetch("/lessonData" + lesson)
@@ -69,11 +72,12 @@ async function getJSONData(lesson) {
     return returnData;
 }
 
+// TODO: Create PUT request to save progress and code
 async function setJSONData(lesson, data) {
 
 }
 
-// Gets lesson data and inputs it into area
+// Gets lesson data and inputs it into instructions element and into Monaco-editor
 async function getLessonData(lesson, part) {
     var lessonData = await getJSONData(lesson);
     console.log("Returned lesson data: ");
@@ -90,6 +94,7 @@ function showLessonPage() {
     document.getElementById("lesson-page").style.top="0px";
 }
 
+// Run when code is successful
 async function success(lesson, part) {
     // Transition border and unlock next button
     document.getElementById("console").style.border="3px solid #34aa2f";
@@ -103,11 +108,13 @@ async function success(lesson, part) {
     setJSONData(lesson, lessonData);
 }
 
+// Run when code fails
 function fail() {
     document.getElementById("console").style.border="3px solid red";
     setTimeout(() => { document.getElementById("console").style.border="3px solid black"; }, 1000)
 }
 
+// Just plays the button click sound
 function playBtnClick() {
     document.getElementById("btn_press_sound").play();
 }
