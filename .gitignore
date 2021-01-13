@@ -1,0 +1,7 @@
+webserver/venv/
+webserver/static/node_modules/
+webserver/static/package-lock.json
+webserver/static/package.json
+webserver/__pycache__
+webserver/.DS_Store
+.DS_Store

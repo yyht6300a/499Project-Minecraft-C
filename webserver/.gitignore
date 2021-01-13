@@ -1,6 +1,0 @@
-venv/
-static/node_modules/
-static/package-lock.json
-static/package.json
-.DS_Store
-__pycache__
