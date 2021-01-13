@@ -1,3 +1,23 @@
+// Main page
+// Open lessons from main page
+var lesson1Part = 0;
+document.getElementById("lesson1").addEventListener('click', function() {
+    setLessonData(1, lesson1Part);
+    showLessonPage();
+});
+
+var lesson2Part = 0;
+document.getElementById("lesson2").addEventListener('click', function() {
+    setLessonData(2, lesson2Part);
+    showLessonPage();
+});
+
+var lesson3Part = 0;
+document.getElementById("lesson3").addEventListener('click', function() {
+    setLessonData(3, lesson3Part);
+    showLessonPage();
+});
+
 // Code for editor
 // Start the monaco-editor
 var editor = 0;
@@ -14,9 +34,13 @@ require(['vs/editor/editor.main'], function () {
     });
 });
 
-document.getElementById("run").addEventListener('click', function() {
+document.getElementById("run").addEventListener('click', async function() {
     playBtnClick();
-    success(1, 0);
+
+    const response = await fetch("/runLesson", {method: "POST", body: editor.getValue()});
+    const codeReturn = await response.text();
+
+    document.getElementById("console").textContent = codeReturn;
 });
 
 // Go back to homepage button
@@ -32,28 +56,8 @@ document.getElementById("next").addEventListener('click', function() {
     console.log("next");
 });
 
-// Main page
-// Open lessons from main page
-var lesson1Part = 0;
-document.getElementById("lesson1").addEventListener('click', function() {
-    getLessonData(1, lesson1Part);
-    showLessonPage();
-});
-
-var lesson2Part = 0;
-document.getElementById("lesson2").addEventListener('click', function() {
-    getLessonData(2, lesson2Part);
-    showLessonPage();
-});
-
-var lesson3Part = 0;
-document.getElementById("lesson3").addEventListener('click', function() {
-    getLessonData(3, lesson3Part);
-    showLessonPage();
-});
-
-
 // Helper functions
+
 // Calls the flask server with a GET request using the built in fetch function
 // TODO: Add some error handling
 async function getJSONData(lesson) {
@@ -61,29 +65,24 @@ async function getJSONData(lesson) {
     returnData = "ERR";
 
     await fetch("/lessonData" + lesson)
-    .then(function (response) {
-        return response.json();
-    }).then(function (lessonData) {
-        console.log('GET response:');
-        console.log(lessonData);
-        returnData = lessonData;
-    });
+    .then(response => response.json())
+    .then(lessonData => returnData = lessonData);
 
     return returnData;
 }
 
-// TODO: Create PUT request to save progress and code
+// Sends back JSON lesson file to the
 async function setJSONData(lesson, data) {
-
+    await fetch("/lessonData" + String(lesson), {method: "POST", body: JSON.stringify(data)});
 }
 
 // Gets lesson data and inputs it into instructions element and into Monaco-editor
-async function getLessonData(lesson, part) {
-    var lessonData = await getJSONData(lesson);
-    console.log("Returned lesson data: ");
-    console.log(lessonData);
+async function setLessonData(lesson, part) {
+    // Get the data from the server
+    var lessonData = await getJSONData(lesson);  
+    // Input it into the instructions and editor fields
     document.getElementById("instructions").textContent = lessonData[part].instructions;
-    editor.setValue(lessonData[part].starterCode);
+    editor.setValue(lessonData[part].code);
 }
 
 // Btn click and CSS to bring up lesson page
