@@ -18,7 +18,13 @@ Note: The node modules folder must be kept in the static folder.
 ### Root folder
 
 #### flaskServer.py
-flaskServer.py is a Python Flask server running on port 3000. It handles sending and retrieving all files of the website to the client. Notes on Flask: All HTML files must be kept in the 'templates' folder. All CSS, JS, fonts, images, etc. must be kept in the 'static' folder. 
+flaskServer.py is a Python Flask server running on port 3000. It handles sending and retrieving all files of the website to the client. Notes on Flask: All HTML files must be kept in the 'templates' folder. All CSS, JS, fonts, images, etc. must be kept in the 'static' folder. Currently handles POST and GET requests between main.js and itself. 
+
+TODO: Run Python code from GET request, send that back to main.js. 
+
+TODO: Figure out how to send agent commands to Minecraft from the server.
+
+TODO: Connect to database containing in game actions.
 ***
 ### /templates
 
@@ -29,8 +35,11 @@ Source of all HTML code. Includes both the homepage and the lesson editor area i
 
 #### /js
 ##### main.js
-Contains code for the homepage and editor. Homepage code is for the play buttons. Editor code starts the monaco editor, adds functionality to the buttons. Some helper functions are at the bottom.
+Contains code for the homepage and editor. Homepage code is for the play buttons. Editor code starts the monaco editor, adds functionality to the buttons. Some helper functions are at the bottom. Handles POST and GET requests to the server.
 
+TODO: Maybe some refactoring.
+
+TODO: Add in a functioning 'next' and 'back' button.
 #### /css
 ##### main.css
 Contains the majority of CSS, including helper CSS styles.
