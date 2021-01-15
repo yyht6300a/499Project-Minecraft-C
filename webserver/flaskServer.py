@@ -53,6 +53,8 @@ def getLesson1Info():
 def runLesson():
     data = request.data.decode('utf-8')    # Receive the data and decode it from bytes to string
 
+    # How I captured stdout: https://www.kite.com/python/answers/how-to-redirect-print-output-to-a-variable-in-python
+
     old_stdout = sys.stdout     # Store old stdout
     new_stdout = io.StringIO()  # Create buffer for new stdout
     sys.stdout = new_stdout     # Set current stdout to buffer
@@ -60,8 +62,8 @@ def runLesson():
     # Try to run the code
     # This exception handling code be better
     # This may have some errors
-    # TODO: Make sure the kids can't break anything.
-    # TODO: Make the ERROR text red, this may be on client side.
+    # TODO: Make sure the kids can't break anything - there may be some security flaws here.
+    # Docs on exec: https://www.programiz.com/python-programming/methods/built-in/exec
     try:
         exec(data)
     except Exception as e:
