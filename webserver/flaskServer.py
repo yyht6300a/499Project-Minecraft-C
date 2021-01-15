@@ -5,10 +5,14 @@ import io
 
 app = Flask(__name__)
 
+
 # Loads the main website
 @app.route('/')
 def website():
     return render_template('index.html')
+
+
+
 
 # Send and save lesson 1 JSON file
 @app.route('/lessonData1', methods = ['POST', 'GET'])
@@ -49,6 +53,9 @@ def getLesson1Info():
 #     elif request.method == 'POST':
 #         return "ECHO: POST\n"
 
+
+
+
 @app.route('/runLesson', methods=['POST'])
 def runLesson():
     data = request.data.decode('utf-8')    # Receive the data and decode it from bytes to string
@@ -73,6 +80,8 @@ def runLesson():
     sys.stdout = old_stdout         # Restore current stdout to old version
 
     return output
+
+
 
 
 # Helper functions
