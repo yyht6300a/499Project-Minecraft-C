@@ -1,18 +1,22 @@
+// Global variables
+var lesson1Part = 0;
+var lesson2Part = 0;
+var lesson3Part = 0;
+
+
+
 // Main page
 // Open lessons from main page
-var lesson1Part = 0;
 document.getElementById("lesson1").addEventListener('click', function() {
     setLessonData(1, lesson1Part);
     showLessonPage();
 });
 
-var lesson2Part = 0;
 document.getElementById("lesson2").addEventListener('click', function() {
     setLessonData(2, lesson2Part);
     showLessonPage();
 });
 
-var lesson3Part = 0;
 document.getElementById("lesson3").addEventListener('click', function() {
     setLessonData(3, lesson3Part);
     showLessonPage();
@@ -34,14 +38,15 @@ require(['vs/editor/editor.main'], function () {
     });
 });
 
+// Run button
 document.getElementById("run").addEventListener('click', async function() {
     playBtnClick();
 
-    const response = await fetch("/runLesson", {method: "POST", body: editor.getValue()});
-    const codeReturn = await response.text();
+    const response = await fetch("/runLesson", {method: "POST", body: editor.getValue()});  // Send monaco editor value to server
+    const codeReturn = await response.text();                      // Wait for the code to come back
 
-    document.getElementById("console").style.color = "white";
-    document.getElementById("console").textContent = codeReturn;
+    document.getElementById("console").style.color = "white";      // Set the text color back to white in case it was red due to an error
+    document.getElementById("console").textContent = codeReturn;   // Set text context of console
 
     // Call fail if there is an error.
     if(codeReturn.includes("ERROR!")) {
@@ -57,10 +62,15 @@ document.getElementById("homepage").addEventListener('click', function() {
     document.getElementById("lesson-page").style.top="40%";
 });
 
+// Next button
+// TODO: Make this functional so it actual goes to the next part of the lesson
 document.getElementById("next").addEventListener('click', function() {
     playBtnClick();
     console.log("next");
 });
+
+
+
 
 // Helper functions
 
@@ -77,10 +87,12 @@ async function getJSONData(lesson) {
     return returnData;
 }
 
+
 // Sends back JSON lesson file to the
 async function setJSONData(lesson, data) {
     await fetch("/lessonData" + String(lesson), {method: "POST", body: JSON.stringify(data)});
 }
+
 
 // Gets lesson data and inputs it into instructions element and into Monaco-editor
 async function setLessonData(lesson, part) {
@@ -91,6 +103,7 @@ async function setLessonData(lesson, part) {
     editor.setValue(lessonData[part].code);
 }
 
+
 // Btn click and CSS to bring up lesson page
 function showLessonPage() {
     playBtnClick()
@@ -98,6 +111,7 @@ function showLessonPage() {
     document.getElementById("lesson-page").style.opacity="1";
     document.getElementById("lesson-page").style.top="0px";
 }
+
 
 // Run when code is successful
 async function success(lesson, part) {
@@ -113,12 +127,14 @@ async function success(lesson, part) {
     setJSONData(lesson, lessonData);
 }
 
+
 // Run when code fails
 function fail() {
     document.getElementById("console").style.border = "3px solid orangered";
     setTimeout(() => { document.getElementById("console").style.border = "3px solid black"; }, 1000)
     document.getElementById("console").style.color = "orangered";
 }
+
 
 // Just plays the button click sound
 function playBtnClick() {
