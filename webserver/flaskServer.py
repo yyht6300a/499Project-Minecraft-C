@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify, render_template   
 import json
+import sys
+import io
 
 app = Flask(__name__)
 
@@ -51,13 +53,27 @@ def getLesson1Info():
 def runLesson():
     data = request.data.decode('utf-8')    # Receive the data and decode it from bytes to string
 
-    #TODO: Run Python Code HERE
-    # Will most likely use the built in exec() function in Python, but am looking at other options.
+    old_stdout = sys.stdout     # Store old stdout
+    new_stdout = io.StringIO()  # Create buffer for new stdout
+    sys.stdout = new_stdout     # Set current stdout to buffer
 
-    return 'This should be returned Python code.'
+    # Try to run the code
+    # This exception handling code be better
+    # This may have some errors
+    # TODO: Make sure the kids can't break anything.
+    # TODO: Make the ERROR text red, this may be on client side.
+    try:
+        exec(data)
+    except Exception as e:
+        print("ERROR!\n", e)
+
+    output = new_stdout.getvalue()  # Get value from stdout
+    sys.stdout = old_stdout         # Restore current stdout to old version
+
+    return output
 
 
-# Helper
+# Helper functions
 # Opens JSON lesson file and returns
 def getLessonInfo(lesson):
     print("Lesson GET Request")
