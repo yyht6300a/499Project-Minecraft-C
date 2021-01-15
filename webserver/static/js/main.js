@@ -40,7 +40,13 @@ document.getElementById("run").addEventListener('click', async function() {
     const response = await fetch("/runLesson", {method: "POST", body: editor.getValue()});
     const codeReturn = await response.text();
 
+    document.getElementById("console").style.color = "white";
     document.getElementById("console").textContent = codeReturn;
+
+    // Call fail if there is an error.
+    if(codeReturn.includes("ERROR!")) {
+        fail();
+    }
 });
 
 // Go back to homepage button
@@ -109,8 +115,9 @@ async function success(lesson, part) {
 
 // Run when code fails
 function fail() {
-    document.getElementById("console").style.border="3px solid red";
-    setTimeout(() => { document.getElementById("console").style.border="3px solid black"; }, 1000)
+    document.getElementById("console").style.border = "3px solid orangered";
+    setTimeout(() => { document.getElementById("console").style.border = "3px solid black"; }, 1000)
+    document.getElementById("console").style.color = "orangered";
 }
 
 // Just plays the button click sound
