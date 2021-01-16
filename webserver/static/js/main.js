@@ -1,4 +1,6 @@
 // Global variables
+var currentLesson = 0;
+
 var lesson1Part = 0;
 var lesson2Part = 0;
 var lesson3Part = 0;
@@ -8,16 +10,24 @@ var lesson3Part = 0;
 // Main page
 // Open lessons from main page
 document.getElementById("lesson1").addEventListener('click', function() {
+    currentLesson = 1;
     setLessonData(1, lesson1Part);
     showLessonPage();
+
+    if(lesson1Part == 0) 
+        disableBtn("back")
+    
+
 });
 
 document.getElementById("lesson2").addEventListener('click', function() {
+    currentLesson = 2;
     setLessonData(2, lesson2Part);
     showLessonPage();
 });
 
 document.getElementById("lesson3").addEventListener('click', function() {
+    currentLesson = 3;
     setLessonData(3, lesson3Part);
     showLessonPage();
 });
@@ -38,6 +48,15 @@ require(['vs/editor/editor.main'], function () {
     });
 });
 
+// Go back to homepage button
+document.getElementById("homepage").addEventListener('click', function() {
+    playBtnClick();
+    document.getElementById("lesson-page").style.visibility = "hidden";
+    document.getElementById("lesson-page").style.opacity = "0";
+    document.getElementById("lesson-page").style.top = "40%";
+});
+
+
 // Run button
 document.getElementById("run").addEventListener('click', async function() {
     playBtnClick();
@@ -52,25 +71,65 @@ document.getElementById("run").addEventListener('click', async function() {
     if(codeReturn.includes("ERROR!")) {
         fail();
     }
+
+    success();     // THIS IS JUST FOR TESTING. Only for testing next button
 });
 
-// Go back to homepage button
-document.getElementById("homepage").addEventListener('click', function() {
-    playBtnClick();
-    document.getElementById("lesson-page").style.visibility="hidden";
-    document.getElementById("lesson-page").style.opacity="0";
-    document.getElementById("lesson-page").style.top="40%";
-});
 
 // Next button
-// TODO: Make this functional so it actual goes to the next part of the lesson
+// TODO: Make sure lesson part can't go past the the last part
+// NOTE: Not thorougly tested
 document.getElementById("next").addEventListener('click', function() {
     playBtnClick();
-    console.log("next");
+
+    switch(currentLesson) {
+        case 1:
+            lesson1Part += 1;
+            setLessonData(currentLesson, lesson1Part);
+            unlockBtn("back");
+            break;
+        case 2:
+            lesson2Part += 1;
+            setLessonData(currentLesson, lesson2Part);
+            unlockBtn("back");
+            break;
+        case 3:
+            lesson3Part += 1;
+            setLessonData(currentLesson, lesson3Part);
+            unlockBtn("back");
+            break;
+    }
 });
 
+// Back button
+// NOTE: Not thoroughly tested
+document.getElementById("back").addEventListener('click', function() {
+    playBtnClick();
 
+    switch(currentLesson) {
+        case 1:
+            lesson1Part -= 1;
+            setLessonData(currentLesson, lesson1Part);
 
+            if(lesson1Part == 0) disableBtn("back");
+
+            break;
+        case 2:
+            lesson2Part -= 1;
+            setLessonData(currentLesson, lesson2Part);
+
+            if(lesson2Part == 0) disableBtn("back");
+
+            break;
+        case 3:
+            lesson3Part -= 1;
+            setLessonData(currentLesson, lesson3Part);
+
+            if(lesson3Part == 0) disableBtn("back");
+
+            break;
+    }
+});
 
 // Helper functions
 
@@ -107,17 +166,17 @@ async function setLessonData(lesson, part) {
 // Btn click and CSS to bring up lesson page
 function showLessonPage() {
     playBtnClick()
-    document.getElementById("lesson-page").style.visibility="visible";
-    document.getElementById("lesson-page").style.opacity="1";
-    document.getElementById("lesson-page").style.top="0px";
+    document.getElementById("lesson-page").style.visibility = "visible";
+    document.getElementById("lesson-page").style.opacity = "1";
+    document.getElementById("lesson-page").style.top = "0px";
 }
 
 
 // Run when code is successful
 async function success(lesson, part) {
     // Transition border and unlock next button
-    document.getElementById("console").style.border="3px solid #34aa2f";
-    document.getElementById("next").classList.remove("btn-locked");
+    document.getElementById("console").style.border = "3px solid #34aa2f";
+    unlockBtn("next");
 
     // Set next button as unlocked in JSON file to remember in the future
     var lessonData = await getJSONData(lesson);
@@ -139,4 +198,15 @@ function fail() {
 // Just plays the button click sound
 function playBtnClick() {
     document.getElementById("btn_press_sound").play();
+}
+
+
+// Disables buttons
+function disableBtn(btnID) {
+    document.getElementById(btnID).classList.add("btn-locked");
+}
+
+// Unlocks buttons
+function unlockBtn(btnID) {
+    document.getElementById(btnID).classList.remove("btn-locked");
 }
