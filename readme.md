@@ -20,7 +20,7 @@ Note: The node modules folder must be kept in the static folder.
 #### flaskServer.py
 flaskServer.py is a Python Flask server running on port 3000. It handles sending and retrieving all files of the website to the client. Notes on Flask: All HTML files must be kept in the 'templates' folder. All CSS, JS, fonts, images, etc. must be kept in the 'static' folder. Currently handles POST and GET requests between main.js and itself. 
 
-TODO: Run Python code from GET request, send that back to main.js. 
+TODO: Secure exec, make sure it can run outside modules.
 
 TODO: Figure out how to send agent commands to Minecraft from the server.
 

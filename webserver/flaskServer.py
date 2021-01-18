@@ -1,12 +1,18 @@
 from flask import Flask, request, jsonify, render_template   
 import json
+import sys
+import io
 
 app = Flask(__name__)
+
 
 # Loads the main website
 @app.route('/')
 def website():
     return render_template('index.html')
+
+
+
 
 # Send and save lesson 1 JSON file
 @app.route('/lessonData1', methods = ['POST', 'GET'])
@@ -47,17 +53,38 @@ def getLesson1Info():
 #     elif request.method == 'POST':
 #         return "ECHO: POST\n"
 
+
+
+
 @app.route('/runLesson', methods=['POST'])
 def runLesson():
     data = request.data.decode('utf-8')    # Receive the data and decode it from bytes to string
 
-    #TODO: Run Python Code HERE
-    # Will most likely use the built in exec() function in Python, but am looking at other options.
+    # How I captured stdout: https://www.kite.com/python/answers/how-to-redirect-print-output-to-a-variable-in-python
 
-    return 'This should be returned Python code.'
+    old_stdout = sys.stdout     # Store old stdout
+    new_stdout = io.StringIO()  # Create buffer for new stdout
+    sys.stdout = new_stdout     # Set current stdout to buffer
+
+    # Try to run the code
+    # This exception handling code be better
+    # This may have some errors
+    # TODO: Make sure the kids can't break anything - there may be some security flaws here.
+    # Docs on exec: https://www.programiz.com/python-programming/methods/built-in/exec
+    try:
+        exec(data)
+    except Exception as e:
+        print("ERROR!\n", e)
+
+    output = new_stdout.getvalue()  # Get value from stdout
+    sys.stdout = old_stdout         # Restore current stdout to old version
+
+    return output
 
 
-# Helper
+
+
+# Helper functions
 # Opens JSON lesson file and returns
 def getLessonInfo(lesson):
     print("Lesson GET Request")
