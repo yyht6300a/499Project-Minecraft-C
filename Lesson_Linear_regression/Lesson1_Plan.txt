@@ -1,0 +1,37 @@
+Lesson Goal:
+
+•	Learn the idea of Classification and Regression.
+
+•	Learn the idea of Linear regression.
+
+•	Learn how to use python matplotlib library to print and analyse data.
+
+•	what is a line (y=mx+b)
+
+•	what is best fit.
+
+•	what is Ordinary Least Squares.
+
+•	Learn how to use Python Skit-learn Library. 
+
+
+Background:
+
+There is a village that needs to build a chicken farm. There are now 87 chickens in the village, 
+but no one knows how big the farm should be. You are the builder of this chicken farm, 
+and you need to use your robot to build a proper chicken farm for the village. 
+The farm should not be too large (villagers do not want to waste money) or too small 
+(because it will affect the growth of the chickens). Therefore, you need to find a proper size by your self.
+Here are some data from other chicken farms, please use this data to predict the size of this farm and 
+help the villagers to build it.
+
+
+Sample Data:
+
+Farm size: [20,40,60,80,100,120,140,40,50,60,105,48,54,63,72,103,108,93,90,68,36,90,88]
+
+N of Chickens: [15,28,50,68,75,93,130,35,38,78,81,33,40,45,75,70,100,95,60,70,70,110,52]
+
+
+
+
