@@ -33,5 +33,35 @@ Farm size: [20,40,60,80,100,120,140,40,50,60,105,48,54,63,72,103,108,93,90,68,36
 N of Chickens: [15,28,50,68,75,93,130,35,38,78,81,33,40,45,75,70,100,95,60,70,70,110,52]
 
 
+Student Objectives:
+
+Use Python to find the line that best fits the sample data.
+
+Use your own model to predict the farm size for 87 chickens.
+
+Use your agent to help the villager to build a chicken farm with proper size.
+
+
+
+What is Classification:
+
+Classification is the process of finding or discovering a model or function which helps in separating
+the data into multiple categorical classes. For example, classify if an email is spam or not. (the output is discrete value)
+
+
+What is Regression:
+
+Regression is the process of finding a model or function for distinguishing the data
+into continuous real values instead of using classes or discrete values. For example, we have a dataset
+that contains some data on the price of a house vs. the size of a house. 
+Then we can predict the price of a new house based on the size. (the output is continuous)
+
+(GeeksforGeeks)
+
+
+Linear regression:
+This is one of the simplest Machine Learning model. We can use it to find the line that best fits the data.
+
+
 
 
