@@ -49,6 +49,7 @@ Classification is the process of finding or discovering a model or function whic
 the data into multiple categorical classes. For example, classify if an email is spam or not. (the output is discrete value)
 
 
+
 What is Regression:
 
 Regression is the process of finding a model or function for distinguishing the data
@@ -59,9 +60,52 @@ Then we can predict the price of a new house based on the size. (the output is c
 (GeeksforGeeks)
 
 
+
 Linear regression:
 This is one of the simplest Machine Learning model. We can use it to find the line that best fits the data.
 
 
 
+Squared Distance (Loss):
+
+In math, the equation of a straight line is Y=mx + b 
+(X and Y are the value on the axis, m= slope or gradient and b is the value of y when x=0 or intercept). 
+So, we should find the best m value and b value for our data, but what is the best and how to find the value?
+
+See graph SD
+
+In this graph, the red dots represent our data. 
+
+The blue line is the prediction line. 
+
+The purple points represent the corresponding Y value.
+
+The green line shows the distance between our data and the prediction line.
+
+We use loss to determine whether a model is good or bad. 
+In our graph the loss is the squared distance between red dots and the blue line. 
+And our goal is to find the best m and b value for the prediction line that minimizes our loss.
+
+
+
+Ordinary Least Squares:
+
+We call the process of finding the minimum loss value as optimization, in this lesson we will learn how to implement
+an algorithm called Ordinary Least Squares (OLS):
+
+To minimizes the loss, we need to minimize the mean squared error (MSE) of our model.
+
+Formula for mean squared error: MSE= 1/n Σ (y - y’)2
+N= number of elements in our dataset
+Y= The Y-intercept value corresponding to the given x value in the data (red dots in the previous graph)
+Y’= The Y-intercept value corresponding to the given x value on our prediction line. (purple dots in the previous graph)
+And there are equations to help us to find M and B
+M=(Mean(ΣX) - Mean(Σ(XY))) / (Mean(ΣX2) - (Mean(ΣX))2)
+B= Mean(ΣY) – M (Mean(ΣX))
+
+We’re not going to get into the math behind the formula in this lesson, 
+but if you’re interested check out this article: 
+https://www.freecodecamp.org/news/machine-learning-mean-squared-error-regression-line-c7dde9a26b93/
+
+Python implementation:...
 
