@@ -107,5 +107,10 @@ We’re not going to get into the math behind the formula in this lesson,
 but if you’re interested check out this article: 
 https://www.freecodecamp.org/news/machine-learning-mean-squared-error-regression-line-c7dde9a26b93/
 
+
+
 Python implementation:...
 
+
+Please check google doc for better view:
+https://docs.google.com/document/d/1ay__9wfrkNTJe1EysAcX1yB7Xpwp3WhYG3WujhghBeM/edit?usp=sharing
