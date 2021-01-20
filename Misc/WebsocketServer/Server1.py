@@ -83,6 +83,7 @@ async def handle_block_placed(response,websocket):
 
         
         await execute_command(websocket,"say "+"you placed a "+response["properties"]["Block"])
+        await execute_command(websocket,"agent move forward")
 
 
         
@@ -147,21 +148,68 @@ async def on_response(response_str,websocket):
         for evt_id, sub in subs:
             await sub(body,websocket)
 
+async def runCmd(websocket, cmd):
+    if "agent" in cmd:
+        if "move" in cmd:
+            if "forward" in cmd:
+                if  "*" in cmd:
+                    index=cmd[-1]
+                    for x in range[index]
+                    await execute_command(websocket,"agent move forward")
+                else: 
+                    await execute_command(websocket,"agent move forward")
+            if "back" in cmd:
+                if  "*" in cmd:
+                    index=cmd[-1]
+                    for x in range[index]
+                    await execute_command(websocket,"agent move back")
+                else: 
+                    await execute_command(websocket,"agent move back")
+            if "left" in cmd:
+                if  "*" in cmd:
+                    index=cmd[-1]
+                    for x in range[index]
+                    await execute_command(websocket,"agent move left")
+                else: 
+                    await execute_command(websocket,"agent move left")
+            if "right" in cmd:
+                if  "*" in cmd:
+                    index=cmd[-1]
+                    for x in range[index]
+                    await execute_command(websocket,"agent move right")
+                else: 
+                    await execute_command(websocket,"agent move right")
+            if "up" in cmd:
+                if  "*" in cmd:
+                    index=cmd[-1]
+                    for x in range[index]
+                    await execute_command(websocket,"agent move up")
+                else: 
+                    await execute_command(websocket,"agent move up")
+            if "down" in cmd:
+                if  "*" in cmd:
+                    index=cmd[-1]
+                    for x in range[index]
+                    await execute_command(websocket,"agent move down")
+                else: 
+                    await execute_command(websocket,"agent move down")
+    else: 
+        await execute_command(websocket,cmd)
 
 async def startup(websocket, path):
     print("Connection Established!")
-
+    
     # When a block is placed we get called.
     # Things we care about
     await subscribe_callback(websocket, "BlockBroken", handle_block_Broken)
-    #command=input("please type your command: ")
-    #await execute_command(websocket,command)
-    #await execute_command(websocket,"agent move forward")
+    
     await subscribe_callback(websocket, "BlockPlaced", handle_block_placed)
     await subscribe_callback(websocket,"MobKilled",handle_mob_killed)
 
     try:
         # Handle any message recieved.
+        cmd=input("Enter command here:")
+        await runCmd(websocket,cmd)
         async for message in websocket:
             await on_response(message,websocket)
             data = json.loads(message)
@@ -179,3 +227,5 @@ start_server = websockets.serve(
 
 asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever()
+
+
