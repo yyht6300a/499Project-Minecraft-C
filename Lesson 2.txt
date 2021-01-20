@@ -18,5 +18,6 @@ Going deeper from learning what linear regression is in the first lesson
 Also spent some time this week learning about this librairy, ressources:
 
 Note from feedback: 
+I should use sci-kit instead of pytorch, next week should be focused on game visualization of the lesson. 
 
  
