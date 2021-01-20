@@ -83,7 +83,7 @@ async def handle_block_placed(response,websocket):
 
         
         await execute_command(websocket,"say "+"you placed a "+response["properties"]["Block"])
-        await execute_command(websocket,"agent move forward")
+        
 
 
         
