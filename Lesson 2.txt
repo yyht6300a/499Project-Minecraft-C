@@ -1,0 +1,22 @@
+Lesson 2 – Ideas 
+1. Non linear regression 
+I think that would be a good idea because it follows Andy’s lesson on linear regression. 
+I’d like to re-use Andy’s chicken idea so the students are familiar with the concept and clearly understand the difference between linear and non linear regression. 
+However, I will have to learn more about it myself to make sure we can do that (which is most of what I did this week). 
+Non linear regression ressources: 
+OR
+2. Using pytorch for ML 
+I think learning to use a library and starting to see real things happen can be a really cool lesson too. The pro of going that route is to offer a variety of things within our 3 lessons delivered as our final report. In could be another way to go instead of doing the first 3 lesson of a machine learning course. I like this idea because it gives the user a better idea of using ML with just 3 lessons but it might be better to have a logical continuation (opinions are welcome!!!). 
+
+Using pytorch lesson would include:
+Tensors 2D and 3D
+Loading and manipulating datasets
+Prediction Linear degression with pytorch 
+Training linear regression with pytorch
+
+Going deeper from learning what linear regression is in the first lesson
+Also spent some time this week learning about this librairy, ressources:
+
+Note from feedback: 
+
+ 
