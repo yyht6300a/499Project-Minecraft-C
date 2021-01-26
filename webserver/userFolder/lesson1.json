@@ -2,15 +2,36 @@
     {
         "instructions": "Lets learn about the print() statement. Print will write anything you want to the console. To print words to the console, they must be enclosed in apostrophes. Try printing \"Hello World!\" to the console.",
         "starterCode": "print()",
-        "code": "print(Hi)",
+        "code": "print(\"Hi\")",
         "answer": "Hello World!",
-        "locked": false
+        "nextLocked": false
     },
     {
         "instructions": "This is loaded from JSON for lesson 1 part 2",
-        "starterCode": "print(\"Hello\" World from part 2!)",
-        "code": "Hello World!",
+        "starterCode": "print()",
+        "code": "print(\"Hello World!\")",
         "answer": "Hello World from part 2!",
-        "locked": true
+        "nextLocked": false
+    },
+    {
+        "instructions": "This is loaded from JSON for lesson 1 part 3",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "nextLocked": false
+    },
+    {
+        "instructions": "This is loaded from JSON for lesson 1 part 4",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World from part 2!",
+        "nextLocked": false
+    },
+    {
+        "instructions": "This is loaded from JSON for lesson 1 part 5 (final).",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "nextLocked": false
     }
 ]

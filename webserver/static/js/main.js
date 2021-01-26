@@ -1,10 +1,15 @@
 // Global variables
 var currentLesson = 0;
 
+// These store this session's current lesson part
 var lesson1Part = 0;
 var lesson2Part = 0;
 var lesson3Part = 0;
 
+// These store the max lessons -1 in a lesson
+let lesson1max = 4;
+let lesson2max = 6;
+let lesosn3max = 3;
 
 
 // Main page
@@ -16,8 +21,6 @@ document.getElementById("lesson1").addEventListener('click', function() {
 
     if(lesson1Part == 0) 
         disableBtn("back")
-    
-
 });
 
 document.getElementById("lesson2").addEventListener('click', function() {
@@ -61,8 +64,32 @@ document.getElementById("homepage").addEventListener('click', function() {
 document.getElementById("run").addEventListener('click', async function() {
     playBtnClick();
 
+    // This should be turned into a function later
+    // Lesson data might be turned into a global variable
+    // Save the code
+    switch(currentLesson) {
+        case 1:
+            lessonData = await getJSONData(1);
+            lessonData[lesson1Part].code = editor.getValue()
+            setJSONData(1, lessonData)
+            break;
+        case 2:
+            lessonData = await getJSONData(2);
+            lessonData[lesson1Part].code = editor.getValue()
+            setJSONData(2, lessonData)
+            break;
+        case 3:
+            lessonData = await getJSONData(3);
+            lessonData[lesson1Part].code = editor.getValue()
+            setJSONData(3, lessonData)
+            break;
+
+    }
+
+    // Run the code
     const response = await fetch("/runLesson", {method: "POST", body: editor.getValue()});  // Send monaco editor value to server
     const codeReturn = await response.text();                      // Wait for the code to come back
+    
 
     document.getElementById("console").style.color = "white";      // Set the text color back to white in case it was red due to an error
     document.getElementById("console").textContent = codeReturn;   // Set text context of console
@@ -72,7 +99,8 @@ document.getElementById("run").addEventListener('click', async function() {
         fail();
     }
 
-    success();     // THIS IS JUST FOR TESTING. Only for testing next button
+    success(currentLesson, lesson1Part);     // THIS IS JUST FOR TESTING. Only for testing next button
+
 });
 
 
@@ -86,17 +114,26 @@ document.getElementById("next").addEventListener('click', function() {
         case 1:
             lesson1Part += 1;
             setLessonData(currentLesson, lesson1Part);
+
             unlockBtn("back");
+            if(lesson1Part >= lesson1max) disableBtn("next")
+
             break;
         case 2:
             lesson2Part += 1;
             setLessonData(currentLesson, lesson2Part);
+
             unlockBtn("back");
+            if(lesson2Part >= lesson2max) disableBtn("next")
+
             break;
         case 3:
             lesson3Part += 1;
             setLessonData(currentLesson, lesson3Part);
+
             unlockBtn("back");
+            if(lesson2Part >= lesson2max) disableBtn("next")
+
             break;
     }
 });
@@ -147,9 +184,10 @@ async function getJSONData(lesson) {
 }
 
 
-// Sends back JSON lesson file to the
+// Sends back JSON lesson file to the server
 async function setJSONData(lesson, data) {
     await fetch("/lessonData" + String(lesson), {method: "POST", body: JSON.stringify(data)});
+    console.log("POST Request Sent")
 }
 
 
@@ -160,6 +198,12 @@ async function setLessonData(lesson, part) {
     // Input it into the instructions and editor fields
     document.getElementById("instructions").textContent = lessonData[part].instructions;
     editor.setValue(lessonData[part].code);
+
+    // Check to see if next button should be locked or not
+    if(lessonData[part].nextLocked == false)
+        unlockBtn("next")
+    else
+        disableBtn("next")
 }
 
 
@@ -176,11 +220,34 @@ function showLessonPage() {
 async function success(lesson, part) {
     // Transition border and unlock next button
     document.getElementById("console").style.border = "3px solid #34aa2f";
-    unlockBtn("next");
 
     // Set next button as unlocked in JSON file to remember in the future
     var lessonData = await getJSONData(lesson);
-    lessonData[part].locked = false;
+    lessonData[part].nextLocked = false;
+
+    switch(lesson) {
+        case 1:
+            if(lesson1Part >= lesson1max) 
+                disableBtn("next")
+            else
+                unlockBtn("next")
+            
+            break;
+        case 2:
+            if(lesson1Part >= lesson1max) 
+                disableBtn("next")
+            else
+                unlockBtn("next")
+        
+             break;
+        case 3:
+            if(lesson1Part >= lesson1max) 
+                disableBtn("next")
+            else
+                unlockBtn("next")
+        
+            break;
+    }
 
     // Save that to the JSON file
     setJSONData(lesson, lessonData);
@@ -205,6 +272,7 @@ function playBtnClick() {
 function disableBtn(btnID) {
     document.getElementById(btnID).classList.add("btn-locked");
 }
+
 
 // Unlocks buttons
 function unlockBtn(btnID) {
