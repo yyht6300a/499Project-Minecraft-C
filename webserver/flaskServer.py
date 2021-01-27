@@ -1,9 +1,15 @@
-from flask import Flask, request, jsonify, render_template   
+from flask import Flask, request, jsonify, render_template  
+from flask_socketio import SocketIO, emit, send 
 import json
 import sys
 import io
+import asyncio
+import json
+import uuid
+import typing
 
 app = Flask(__name__)
+socketio = SocketIO(app)
 
 
 # Loads the main website
@@ -16,10 +22,10 @@ def website():
 
 # Send and save lesson 1 JSON file
 @app.route('/lessonData1', methods = ['POST', 'GET'])
-def getLesson1Info():
+async def getLesson1Info():
     if request.method == 'GET':
+        # await execute_command(socketio,"agent move right")
         return getLessonInfo(1)
-
     # TODO: Add POST request to save JSON file
     elif request.method == 'POST':
         print('Post request recieved.')
@@ -32,8 +38,9 @@ def getLesson1Info():
         f = open('userFolder/lesson1.json', 'w')
         f.write(data)
         f.close()
-
+        # await execute_command(socketio,"agent move right")
         return 'POST request complete.'
+    
 
 # TODO: Add send and save functions for lesson 1 and 2. Maybe just turn this into 1 function? (idk how)
 
@@ -94,3 +101,49 @@ def getLessonInfo(lesson):
 
 if __name__ == '__main__':
     app.run(host = 'localhost', port = 3000, debug = True)
+
+def handle_message(message):
+    send(message, namespace='/chat')
+
+_SUBSCRIPTIONS: typing.Dict[str, typing.List[typing.Any]] = {}
+blockbrocken=[]
+
+async def subscribe_callback(socketio, event_name: str, callback,) -> str:
+    if not isinstance(event_name, str):
+        raise TypeError("expected 'str' for event_name")
+
+    evt_id = uuid.uuid4().hex
+
+    message = {
+        "header": {
+            "messagePurpose": "subscribe",
+            "messageType": "commandRequest",
+            "requestId": evt_id,
+            "version": 1,
+        },
+        "body": {"eventName": event_name, "version": 1},
+        }
+    await socketio.send(json.dumps(message))
+    _SUBSCRIPTIONS.setdefault(event_name, []).append((evt_id, callback))
+    print("for test---_SUBSCRIPTIONS.items()",_SUBSCRIPTIONS.items()) #JC
+    print("for test---evt_id",evt_id) #JC
+    return evt_id
+
+async def execute_command(socketio, command: str, *args):
+    if not isinstance(command, str):
+        raise TypeError("expected 'str' for command")
+    if args:
+        command += " " + " ".join(str(a) for a in args if a is not None)
+
+    req_id = uuid.uuid4().hex
+    message = {
+        "header": {
+            "messagePurpose": "commandRequest",
+            "messageType": "commandRequest",
+            "requestId": req_id,
+            "version": 1,
+        },
+        "body": {"commandLine": command, "version": 1},
+    }
+
+    await socketio.emit(json.dumps(message))
