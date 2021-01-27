@@ -1,0 +1,22 @@
+Non-Linear Regression
+	Lesson Goal:
+·       Understand what non-linear regression is.
+·       Understand the difference between linear and non-linear regression and when to use one versus the other
+·       Learn how to use python matplotlib to plot non-linear graphs and analysis data.
+·       Learn what logarithms and exponential functions are.
+·       Learn how to use logarithm to turn a nonlinear function into a linear function.
+·       Learn how to use Python Scikit-learn Library for non-linear regression.
+ 
+Background:
+In the previous lesson (on linear regression) the students calculated the perfect size for a farm of 87 chicken. In this lesson the village acquires 67 sea turtles and we want to build a circular pond for them to live. The farm should not be too large (villagers do not want to waste money) or too small (because the sea turtle should have enough space to grow). Below is some of the data used by other villages use this to determine the ideal pond size. Remember the pond should be circular. 
+Hint: The area of circle is calculated ?r^2
+
+Sample Data:
+Pond size: [ ]
+N of Fishes: [ ]
+ 
+Graph:
+ 
+Student Objectives:
+
+
