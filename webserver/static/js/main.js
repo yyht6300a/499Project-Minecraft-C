@@ -1,4 +1,5 @@
 // Global variables
+// Keep track of current lesson
 var currentLesson = 0;
 
 // These store this session's current lesson part
@@ -16,7 +17,7 @@ let lesosn3max = 3;
 // Open lessons from main page
 document.getElementById("lesson1").addEventListener('click', function() {
     currentLesson = 1;
-    setLessonData(1, lesson1Part);
+    displayLessonData(1, lesson1Part);
     showLessonPage();
 
     if(lesson1Part == 0) 
@@ -25,14 +26,20 @@ document.getElementById("lesson1").addEventListener('click', function() {
 
 document.getElementById("lesson2").addEventListener('click', function() {
     currentLesson = 2;
-    setLessonData(2, lesson2Part);
+    displayLessonData(2, lesson2Part);
     showLessonPage();
+
+    if(lesson1Part == 0) 
+        disableBtn("back")
 });
 
 document.getElementById("lesson3").addEventListener('click', function() {
     currentLesson = 3;
-    setLessonData(3, lesson3Part);
+    displayLessonData(3, lesson3Part);
     showLessonPage();
+
+    if(lesson1Part == 0) 
+        disableBtn("back")
 });
 
 // Code for editor
@@ -113,7 +120,7 @@ document.getElementById("next").addEventListener('click', function() {
     switch(currentLesson) {
         case 1:
             lesson1Part += 1;
-            setLessonData(currentLesson, lesson1Part);
+            displayLessonData(currentLesson, lesson1Part);
 
             unlockBtn("back");
             if(lesson1Part >= lesson1max) disableBtn("next")
@@ -121,7 +128,7 @@ document.getElementById("next").addEventListener('click', function() {
             break;
         case 2:
             lesson2Part += 1;
-            setLessonData(currentLesson, lesson2Part);
+            displayLessonData(currentLesson, lesson2Part);
 
             unlockBtn("back");
             if(lesson2Part >= lesson2max) disableBtn("next")
@@ -129,7 +136,7 @@ document.getElementById("next").addEventListener('click', function() {
             break;
         case 3:
             lesson3Part += 1;
-            setLessonData(currentLesson, lesson3Part);
+            displayLessonData(currentLesson, lesson3Part);
 
             unlockBtn("back");
             if(lesson2Part >= lesson2max) disableBtn("next")
@@ -146,21 +153,21 @@ document.getElementById("back").addEventListener('click', function() {
     switch(currentLesson) {
         case 1:
             lesson1Part -= 1;
-            setLessonData(currentLesson, lesson1Part);
+            displayLessonData(currentLesson, lesson1Part);
 
             if(lesson1Part == 0) disableBtn("back");
 
             break;
         case 2:
             lesson2Part -= 1;
-            setLessonData(currentLesson, lesson2Part);
+            displayLessonData(currentLesson, lesson2Part);
 
             if(lesson2Part == 0) disableBtn("back");
 
             break;
         case 3:
             lesson3Part -= 1;
-            setLessonData(currentLesson, lesson3Part);
+            displayLessonData(currentLesson, lesson3Part);
 
             if(lesson3Part == 0) disableBtn("back");
 
@@ -192,7 +199,7 @@ async function setJSONData(lesson, data) {
 
 
 // Gets lesson data and inputs it into instructions element and into Monaco-editor
-async function setLessonData(lesson, part) {
+async function displayLessonData(lesson, part) {
     // Get the data from the server
     var lessonData = await getJSONData(lesson);  
     // Input it into the instructions and editor fields
@@ -225,6 +232,7 @@ async function success(lesson, part) {
     var lessonData = await getJSONData(lesson);
     lessonData[part].nextLocked = false;
 
+    // Check if next button should be unlocked or not
     switch(lesson) {
         case 1:
             if(lesson1Part >= lesson1max) 
