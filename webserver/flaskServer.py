@@ -24,7 +24,7 @@ def website():
 @app.route('/lessonData1', methods = ['POST', 'GET'])
 async def getLesson1Info():
     if request.method == 'GET':
-        # await execute_command(socketio,"agent move right")
+        
         return getLessonInfo(1)
     # TODO: Add POST request to save JSON file
     elif request.method == 'POST':
@@ -38,7 +38,7 @@ async def getLesson1Info():
         f = open('userFolder/lesson1.json', 'w')
         f.write(data)
         f.close()
-        # await execute_command(socketio,"agent move right")
+        
         return 'POST request complete.'
     
 
