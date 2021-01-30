@@ -105,48 +105,48 @@ if __name__ == '__main__':
 def handle_message(message):
     send(message, namespace='/chat')
 
-_SUBSCRIPTIONS: typing.Dict[str, typing.List[typing.Any]] = {}
-blockbrocken=[]
+# _SUBSCRIPTIONS: typing.Dict[str, typing.List[typing.Any]] = {}
+# blockbrocken=[]
 
-async def subscribe_callback(socketio, event_name: str, callback,) -> str:
-    if not isinstance(event_name, str):
-        raise TypeError("expected 'str' for event_name")
+# async def subscribe_callback(socketio, event_name: str, callback,) -> str:
+#     if not isinstance(event_name, str):
+#         raise TypeError("expected 'str' for event_name")
 
-    evt_id = uuid.uuid4().hex
+#     evt_id = uuid.uuid4().hex
 
-    message = {
-        "header": {
-            "messagePurpose": "subscribe",
-            "messageType": "commandRequest",
-            "requestId": evt_id,
-            "version": 1,
-        },
-        "body": {"eventName": event_name, "version": 1},
-        }
-    await socketio.send(json.dumps(message))
-    _SUBSCRIPTIONS.setdefault(event_name, []).append((evt_id, callback))
-    print("for test---_SUBSCRIPTIONS.items()",_SUBSCRIPTIONS.items()) #JC
-    print("for test---evt_id",evt_id) #JC
-    return evt_id
+#     message = {
+#         "header": {
+#             "messagePurpose": "subscribe",
+#             "messageType": "commandRequest",
+#             "requestId": evt_id,
+#             "version": 1,
+#         },
+#         "body": {"eventName": event_name, "version": 1},
+#         }
+#     await socketio.send(json.dumps(message))
+#     _SUBSCRIPTIONS.setdefault(event_name, []).append((evt_id, callback))
+#     print("for test---_SUBSCRIPTIONS.items()",_SUBSCRIPTIONS.items()) #JC
+#     print("for test---evt_id",evt_id) #JC
+#     return evt_id
 
-async def execute_command(socketio, command: str, *args):
-    if not isinstance(command, str):
-        raise TypeError("expected 'str' for command")
-    if args:
-        command += " " + " ".join(str(a) for a in args if a is not None)
+# async def execute_command(socketio, command: str, *args):
+#     if not isinstance(command, str):
+#         raise TypeError("expected 'str' for command")
+#     if args:
+#         command += " " + " ".join(str(a) for a in args if a is not None)
 
-    req_id = uuid.uuid4().hex
-    message = {
-        "header": {
-            "messagePurpose": "commandRequest",
-            "messageType": "commandRequest",
-            "requestId": req_id,
-            "version": 1,
-        },
-        "body": {"commandLine": command, "version": 1},
-    }
+#     req_id = uuid.uuid4().hex
+#     message = {
+#         "header": {
+#             "messagePurpose": "commandRequest",
+#             "messageType": "commandRequest",
+#             "requestId": req_id,
+#             "version": 1,
+#         },
+#         "body": {"commandLine": command, "version": 1},
+#     }
 
-    await socketio.emit(json.dumps(message))
+#     await socketio.emit(json.dumps(message))
 
 # (document).ready(function(){
 #     var socket = io.connect('http://' + document.domain + ':' + location.port + '/test');
