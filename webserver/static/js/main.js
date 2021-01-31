@@ -10,6 +10,9 @@ var currentLesson;
 // These store this session's current lesson part, index matching to lesson
 var lessonPart = [0, 0, 0];
 
+// Comms object
+comms = new Comms();
+
 
 // Run on load
 window.onload = load();
