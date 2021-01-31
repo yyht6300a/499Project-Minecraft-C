@@ -32,7 +32,6 @@ def getLesson1Info():
         f = open('userFolder/lesson1.json', 'w')
         f.write(data)
         f.close()
-
         return 'POST request complete.'
 
 # TODO: Add send and save functions for lesson 1 and 2. Maybe just turn this into 1 function? (idk how)
