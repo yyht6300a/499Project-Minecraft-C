@@ -1,5 +1,5 @@
 class Comms{
-    ​
+
     constructor(){
         this.commandQueue = [];
         this.responseFcn = {};
@@ -11,7 +11,7 @@ class Comms{
     //	window.ipcRenderer.responseFromApp = function (str) {self.handleResponse (str)}
         window.ipcRenderer.on("responseFromApp", (e, str) => {self.handleEvent(e, str);});	
     }
-    ​
+
     handleEvent(e, str){
         let self  = this;
         
@@ -42,7 +42,7 @@ class Comms{
                 console.log ("not handled", header.messagePurpose )		
                 break;
         }
-        
+
         this.processQueue();
             
         function getWaitStatus (body)  {
@@ -51,16 +51,16 @@ class Comms{
             if ( body.statusMessage.indexOf("Agent getposition") > -1 ) return true;
             else return  body.statusMessage.toLowerCase().indexOf ("agent") != 0;
         }
-    ​
+
         function  executeCallback(id, str) {
         //	console.log (timer(), "executeCallback", id, str)
             let fcn = self.responseFcn[id];
             if (fcn) fcn(str);
             delete self.responseFcn[id];
         }	
-    ​
+
     }
-    ​
+
     queueCommand(cmd, whenDone){
         if (!window.ipcRenderer) whenDone ()
         else {
@@ -69,9 +69,9 @@ class Comms{
             this.processQueue();
         }
     }
-    ​
-    ​
-    ​
+
+
+
     processQueue(){
     //	console.log (timer(), "processQueue", this.commandInProgress, this.commandQueue.length)
         if (this.commandInProgress) return;
@@ -82,7 +82,7 @@ class Comms{
         if (next.command.purpose != "subscribe" ) this.commandInProgress = true;
         this.sendToMinecraft(next)
     }
-    ​
+
     sendToMinecraft(data){
         var cmd = data.command;
         var fcn = data.fcn;
@@ -99,9 +99,9 @@ class Comms{
     //	window.ipcRenderer.sendToHost('sendToMinecraft', json);
         window.ipcRenderer.sendToHost('sendToApp', json);
         //	window.ipcRenderer.send('sendToMinecraft', JSON.stringify(json));
-    ​
+
     }
-            
+
     getUUID(){
         var uuid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx"
         var time = Date.now().toString(16);
@@ -114,6 +114,6 @@ class Comms{
         uuid = uuid.replace(/y/, ychar) 
         return uuid; 
     } 
-    ​
-}    ​
+
+}
     
