@@ -1,46 +1,56 @@
 // Global variables
+var lessons;
+
+// This store the max lessons -1 in a lesson, index matches lesson
+let lessonMax;
+
 // Keep track of current lesson
-var currentLesson = 0;
+var currentLesson;
 
-// These store this session's current lesson part
-var lesson1Part = 0;
-var lesson2Part = 0;
-var lesson3Part = 0;
+// These store this session's current lesson part, index matching to lesson
+var lessonPart = [0, 0, 0];
 
-// These store the max lessons -1 in a lesson
-let lesson1max = 4;
-let lesson2max = 6;
-let lesosn3max = 3;
+
+// Run on load
+window.onload = load();
+
+async function load() {
+    // Load in lessons 
+    lesson1 = await getJSONData(1);
+    lesson2 = await getJSONData(2);
+    lesson3 = await getJSONData(3);
+
+    lessons = [lesson1, lesson2, lesson3];
+
+    // Set their max value to global vars
+    lesson1max = Object.keys(lesson1).length - 1;
+    lesson2max = Object.keys(lesson2).length - 1;
+    lesson3max = Object.keys(lesson3).length -1 ;
+
+    lessonMax = [lesson1max , lesson2max, lesson3max];
+}
 
 
 // Main page
 // Open lessons from main page
 document.getElementById("lesson1").addEventListener('click', function() {
-    currentLesson = 1;
-    displayLessonData(1, lesson1Part);
+    currentLesson = 0;
+    displayLessonData();
     showLessonPage();
-
-    if(lesson1Part == 0) 
-        disableBtn("back")
 });
 
 document.getElementById("lesson2").addEventListener('click', function() {
-    currentLesson = 2;
-    displayLessonData(2, lesson2Part);
+    currentLesson = 1;
+    displayLessonData();
     showLessonPage();
-
-    if(lesson1Part == 0) 
-        disableBtn("back")
 });
 
 document.getElementById("lesson3").addEventListener('click', function() {
-    currentLesson = 3;
-    displayLessonData(3, lesson3Part);
+    currentLesson = 2;
+    displayLessonData();
     showLessonPage();
-
-    if(lesson1Part == 0) 
-        disableBtn("back")
 });
+
 
 // Code for editor
 // Start the monaco-editor
@@ -58,6 +68,7 @@ require(['vs/editor/editor.main'], function () {
     });
 });
 
+
 // Go back to homepage button
 document.getElementById("homepage").addEventListener('click', function() {
     playBtnClick();
@@ -67,116 +78,62 @@ document.getElementById("homepage").addEventListener('click', function() {
 });
 
 
+// Next button
+document.getElementById("next").addEventListener('click', function() {
+    playBtnClick();
+    lessonPart[currentLesson]++;
+    displayLessonData();
+});
+
+
+// Back button
+document.getElementById("back").addEventListener('click', function() {
+    playBtnClick();
+    lessonPart[currentLesson]--;
+    displayLessonData();
+});
+
+
 // Run button
 document.getElementById("run").addEventListener('click', async function() {
     playBtnClick();
 
-    // This should be turned into a function later
-    // Lesson data might be turned into a global variable
-    // Save the code
-    switch(currentLesson) {
-        case 1:
-            lessonData = await getJSONData(1);
-            lessonData[lesson1Part].code = editor.getValue()
-            setJSONData(1, lessonData)
-            break;
-        case 2:
-            lessonData = await getJSONData(2);
-            lessonData[lesson1Part].code = editor.getValue()
-            setJSONData(2, lessonData)
-            break;
-        case 3:
-            lessonData = await getJSONData(3);
-            lessonData[lesson1Part].code = editor.getValue()
-            setJSONData(3, lessonData)
-            break;
+    // Save code in JSON and send that back to the server
+    lesson = lessons[currentLesson];
+    part = lessonPart[currentLesson];
+    lesson[part].code = editor.getValue();
+    sendJSONData();
 
-    }
 
     // Run the code
-    const response = await fetch("/runLesson", {method: "POST", body: editor.getValue()});  // Send monaco editor value to server
-    const codeReturn = await response.text();                      // Wait for the code to come back
+    // Send monaco editor value to server
+    // TODO: May need to change this to work with Yash's code, will see
+    const response = await fetch("/runLesson", {
+        method: "POST",
+        body: editor.getValue()
+    }); 
+    // Wait for the code to come back
+    const codeReturn = await response.text();                
     
 
-    document.getElementById("console").style.color = "white";      // Set the text color back to white in case it was red due to an error
-    document.getElementById("console").textContent = codeReturn;   // Set text context of console
+    // Set the text color back to white in case it was red due to an error
+    document.getElementById("console").style.color = "white";  
+    // Set text context of console
+    document.getElementById("console").textContent = codeReturn;  
 
     // Call fail if there is an error.
     if(codeReturn.includes("ERROR!")) {
         fail();
+    } else {
+        success();     // THIS IS JUST FOR TESTING. Only for testing next button
     }
-
-    success(currentLesson, lesson1Part);     // THIS IS JUST FOR TESTING. Only for testing next button
 
 });
 
 
-// Next button
-// TODO: Make sure lesson part can't go past the the last part
-// NOTE: Not thorougly tested
-document.getElementById("next").addEventListener('click', function() {
-    playBtnClick();
 
-    switch(currentLesson) {
-        case 1:
-            lesson1Part += 1;
-            displayLessonData(currentLesson, lesson1Part);
 
-            unlockBtn("back");
-            if(lesson1Part >= lesson1max) disableBtn("next")
-
-            break;
-        case 2:
-            lesson2Part += 1;
-            displayLessonData(currentLesson, lesson2Part);
-
-            unlockBtn("back");
-            if(lesson2Part >= lesson2max) disableBtn("next")
-
-            break;
-        case 3:
-            lesson3Part += 1;
-            displayLessonData(currentLesson, lesson3Part);
-
-            unlockBtn("back");
-            if(lesson2Part >= lesson2max) disableBtn("next")
-
-            break;
-    }
-});
-
-// Back button
-// NOTE: Not thoroughly tested
-document.getElementById("back").addEventListener('click', function() {
-    playBtnClick();
-
-    switch(currentLesson) {
-        case 1:
-            lesson1Part -= 1;
-            displayLessonData(currentLesson, lesson1Part);
-
-            if(lesson1Part == 0) disableBtn("back");
-
-            break;
-        case 2:
-            lesson2Part -= 1;
-            displayLessonData(currentLesson, lesson2Part);
-
-            if(lesson2Part == 0) disableBtn("back");
-
-            break;
-        case 3:
-            lesson3Part -= 1;
-            displayLessonData(currentLesson, lesson3Part);
-
-            if(lesson3Part == 0) disableBtn("back");
-
-            break;
-    }
-});
-
-// Helper functions
-
+// Network Functions
 // Calls the flask server with a GET request using the built in fetch function
 // TODO: Add some error handling
 async function getJSONData(lesson) {
@@ -192,25 +149,29 @@ async function getJSONData(lesson) {
 
 
 // Sends back JSON lesson file to the server
-async function setJSONData(lesson, data) {
-    await fetch("/lessonData" + String(lesson), {method: "POST", body: JSON.stringify(data)});
-    console.log("POST Request Sent")
+async function sendJSONData() {
+    await fetch("/lessonData" + String(currentLesson + 1), {
+        method: "POST",
+        body: JSON.stringify(lessons[currentLesson])
+    });
 }
 
 
-// Gets lesson data and inputs it into instructions element and into Monaco-editor
-async function displayLessonData(lesson, part) {
-    // Get the data from the server
-    var lessonData = await getJSONData(lesson);  
-    // Input it into the instructions and editor fields
-    document.getElementById("instructions").textContent = lessonData[part].instructions;
-    editor.setValue(lessonData[part].code);
 
-    // Check to see if next button should be locked or not
-    if(lessonData[part].nextLocked == false)
-        unlockBtn("next")
-    else
-        disableBtn("next")
+
+// Helper functions
+// Gets lesson data and inputs it into instructions element and into Monaco-editor
+async function displayLessonData() {
+    lesson = lessons[currentLesson];
+    part = lessonPart[currentLesson];
+
+    // Input data into editor and instructions area
+    document.getElementById("instructions").textContent = lesson[part].instructions;
+    editor.setValue(lesson[part].code);
+
+    // Check if back or next buttons should be locked or not
+    detectBackLock();
+    detectNextLock();
 }
 
 
@@ -224,41 +185,19 @@ function showLessonPage() {
 
 
 // Run when code is successful
-async function success(lesson, part) {
+async function success() {
     // Transition border and unlock next button
     document.getElementById("console").style.border = "3px solid #34aa2f";
 
-    // Set next button as unlocked in JSON file to remember in the future
-    var lessonData = await getJSONData(lesson);
-    lessonData[part].nextLocked = false;
+    // Unlock next button
+    lesson = lessons[currentLesson];
+    part = lessonPart[currentLesson];
+    lesson[part].nextLocked = false;
 
-    // Check if next button should be unlocked or not
-    switch(lesson) {
-        case 1:
-            if(lesson1Part >= lesson1max) 
-                disableBtn("next")
-            else
-                unlockBtn("next")
-            
-            break;
-        case 2:
-            if(lesson1Part >= lesson1max) 
-                disableBtn("next")
-            else
-                unlockBtn("next")
-        
-             break;
-        case 3:
-            if(lesson1Part >= lesson1max) 
-                disableBtn("next")
-            else
-                unlockBtn("next")
-        
-            break;
-    }
+    detectNextLock();
 
-    // Save that to the JSON file
-    setJSONData(lesson, lessonData);
+    // Save that to the JSON file to remember for the future
+    sendJSONData();
 }
 
 
@@ -270,6 +209,30 @@ function fail() {
 }
 
 
+// Will check if back button should be locked, and if so, lock/unlock it.
+function detectBackLock() {
+    // If first part of the lesson, lock back. Else, unlock it
+    if(lessonPart[currentLesson] == 0)
+        lockBtn("back");
+    else
+        unlockBtn("back");
+}
+
+
+// Will check if next button should be locked, and if so, lock/unlock it.
+function detectNextLock() {
+    lesson = lessons[currentLesson];
+    part = lessonPart[currentLesson];
+
+    // If next is unlocked in JSON, AND, not the last part of the lesson, then unlock next
+    if(lesson[part].nextLocked == false && part != lessonMax[currentLesson]) 
+        unlockBtn("next")
+    else 
+        lockBtn("next")
+    
+}
+
+
 // Just plays the button click sound
 function playBtnClick() {
     document.getElementById("btn_press_sound").play();
@@ -277,7 +240,7 @@ function playBtnClick() {
 
 
 // Disables buttons
-function disableBtn(btnID) {
+function lockBtn(btnID) {
     document.getElementById(btnID).classList.add("btn-locked");
 }
 

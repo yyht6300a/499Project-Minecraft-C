@@ -16,7 +16,7 @@
     {
         "instructions": "This is loaded from JSON for lesson 1 part 3",
         "starterCode": "print()",
-        "code": "print(hi)",
+        "code": "print()",
         "answer": "Hello World!",
         "nextLocked": true
     },
