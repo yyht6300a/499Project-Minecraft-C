@@ -116,13 +116,15 @@ document.getElementById("run").addEventListener('click', async function() {
         body: editor.getValue()
     }); 
     // Wait for the code to come back
-    const codeReturn = await response.text();                
-    
+    const codeReturn = await response.text();
+
+    var printReturn = codeReturn.replaceAll("\n","</br>");                
+    //add a new line between each output
 
     // Set the text color back to white in case it was red due to an error
     document.getElementById("console").style.color = "white";  
     // Set text context of console
-    document.getElementById("console").textContent = codeReturn;  
+    document.getElementById("console").textContent = printReturn;  
 
     // Call fail if there is an error.
     if(codeReturn.includes("ERROR!")) {
