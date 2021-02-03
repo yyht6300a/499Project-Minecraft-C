@@ -124,7 +124,7 @@ document.getElementById("run").addEventListener('click', async function() {
     // Set the text color back to white in case it was red due to an error
     document.getElementById("console").style.color = "white";  
     // Set text context of console
-    document.getElementById("console").textContent = printReturn;  
+    document.getElementById("console").innerHTML = printReturn;  
 
     // Call fail if there is an error.
     if(codeReturn.includes("ERROR!")) {
