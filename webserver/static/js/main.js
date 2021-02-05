@@ -14,6 +14,7 @@ var lessonPart = [0, 0, 0];
 comms = new Comms();
 
 
+
 // Run on load
 window.onload = load();
 
@@ -171,7 +172,7 @@ async function displayLessonData() {
     part = lessonPart[currentLesson];
 
     // Input data into editor and instructions area
-    document.getElementById("instructions").textContent = lesson[part].instructions;
+    document.getElementById("instructions").innerHTML = lesson[part].instructions;
     editor.setValue(lesson[part].code);
 
     // Check if back or next buttons should be locked or not
