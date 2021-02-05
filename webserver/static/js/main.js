@@ -87,6 +87,7 @@ document.getElementById("next").addEventListener('click', function() {
     playBtnClick();
     lessonPart[currentLesson]++;
     document.getElementById("console").innerHTML =""
+    document.getElementById("graph").innerHTML = "";
     displayLessonData();
 });
 
@@ -96,6 +97,7 @@ document.getElementById("back").addEventListener('click', function() {
     playBtnClick();
     lessonPart[currentLesson]--;
     document.getElementById("console").innerHTML =""
+    document.getElementById("graph").innerHTML = "";
     displayLessonData();
 });
 
