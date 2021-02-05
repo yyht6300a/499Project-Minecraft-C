@@ -126,7 +126,7 @@ document.getElementById("run").addEventListener('click', async function() {
     // Wait for the code to come back
     const codeReturn = await response.text();
 
-    var printReturn = codeReturn.replaceAll("\n","</br>");                
+    var printReturn = codeReturn.replace(/\n/g,"</br>");       
     //add a new line between each output
 
     // Set the text color back to white in case it was red due to an error

@@ -1,30 +1,56 @@
 [
     {
-        "instructions": "Test<br/><img src='../static/img/lesson1/ChickenFarm.png' width='100' height='100'/>",
+        "instructions": "<h1>Chicken Farm</h1><br/> <h3>Hi welcome to the Chicken Farm lesson.<br/>In this lesson you will use Linear Regression algorithm and your robot to build a chicken farm!</h3> <br/><img src='../static/img/lesson1/ChickenFarm.png' class='relative'/> </br>(this is a tutorial page please click NEXT to the next page)",
         "starterCode": "print()",
-        "code": "print(\"Hi\")",
+        "code": "print(\"hi\")",
         "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
         "nextLocked": false
     },
     {
-        "instructions": "This is loaded from JSON for lesson 1 part 2",
+        "instructions": "<h3>Background:</h3><p>There is a village that needs to build a chicken farm. There are now 87 chickens in the village, but no one knows how big the farm should be. You are the builder of this chicken farm, and you need to use your robot to build a proper chicken farm for the village. The farm should not be too large (villagers do not want to waste money) or too small (because it will affect the growth of the chickens). Therefore, you need to find a proper size by your self. Here are some data from other chicken farms, please use this data to predict the size of this farm and help the villagers to build it.</p></br><p>Farm size: [20, 40, 60, 80, 100, 120, 140, 40, 50, 60, 105, 48, 54, 63, 72, 103, 108, 93, 90, 68, 36, 90, 88]</p></br><p>N of Chickens: [15, 28, 50, 68, 75, 93, 130, 35, 38, 78, 81, 33, 40, 45, 75, 70, 100, 95, 60, 70, 70, 110, 52]</p></br><p>If you never learn statistics or machine learning before, you might be wondering How ??? Let's see an example first</p></br><p>(this is a tutorial page please click NEXT to the next page) </p>",
         "starterCode": "print()",
         "code": "print(\"Hello World!\")",
         "answer": "Hello World from part 2!",
+        "plotname": "",
+        "haveplot": false,
         "nextLocked": false
     },
     {
-        "instructions": "This is loaded from JSON for lesson 1 part 3",
+        "instructions": "<h3>Data Visualization</h3></br><p>If you want to extract some useful information from a set of data, the most common way to do this is to make a graph. Graph makes the data more natural for us to understand and help us identify trends and patterns easily. Now Let's learn How to use Python to print and analyze data.</p></br><p>(this is a coding page please run the code before go to next page)</p>",
         "starterCode": "print()",
-        "code": "print(hi)",
+        "code": "\r\n\r\n#Let's assume that we have some price and size of houses in a city\r\nprint(\"hello\")\r\nsize = [50,60,70,80,90,100,110,120,130,140,150,160] \r\n# size in square meter\r\n\r\nprice= [130,250,210,298,258,330,412,420,370,425,443,520] \r\n# price in hundred thousands\r\n\r\n# We can use a python library called matplotlib to visualize our data \r\nplt.plot(size,price, \"o\")\r\n#plt.show()\r\n#plt.savefig(\"./userFolder/lessonplot/gp1.png\", bbox_inches='tight')\r\nplt.savefig(\"./static/img/matplot/L1gp1.png\", bbox_inches='tight')\r\nplt.clf()\r\n\r\n# when we print our data, we can easily find that our data shows a linear trend\r\n# We learned in math that the equation of a straight line is y= mx+b, so let's find a line that can fit our data.",
         "answer": "Hello World!",
+        "plotname": "L1gp1.png",
+        "haveplot": true,
         "nextLocked": false
     },
     {
-        "instructions": "This is loaded from JSON for lesson 1 part 4",
+        "instructions": "<h3>Data Visualization</h3></br><p>Now let's print the trend line of our data</p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "print()",
+        "code": "\r\n#Let's assume that we have some price and size of houses in a city\r\n\r\nsize = [50,60,70,80,90,100,110,120,130,140,150,160] \r\n# size in square meter\r\n\r\nprice= [130,250,210,298,258,330,412,420,370,425,443,520] \r\n# price in hundred thousands\r\n\r\n\r\n#Here we use m=3 and b=28\r\n# m is the slope of the line\r\n# b is the intercept of the line\r\ny=[3*x+28 for x in size]\r\n# the equation of the line \r\n\r\n\r\nplt.plot(size,price,\"o\")\r\n\r\nplt.plot(size,y)\r\n\r\nplt.savefig(\"./static/img/matplot/L1gp2.png\", bbox_inches='tight')\r\nplt.clf()",
+        "answer": "Hello World from part 2!",
+        "plotname": "L1gp2.png",
+        "haveplot": true,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Data Visualization</h3></br><p>Now let's print our chicken farm data</p></br><p>From the graph, we can see that our data also shows a linear trend. But how can we find a line that best fit this dataset, how can we find M and B?</p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "print()",
+        "code": "import matplotlib.pyplot as plt\r\n\r\n\r\nsize=[20,40,60,80,100,120,140,40,50,60,105,48,54,63,72,103,108,93,90,68,36,90,88]\r\n# farm size\r\n\r\nNum_Chickens= [15,28,50,68,75,93,130,35,38,78,81,33,40,45,75,70,100,95,60,70,70,110,52]\r\n# number of chickens\r\n\r\n# We can use a python library called matplotlib to visualize our data \r\nplt.plot(size,Num_Chickens, \"o\")\r\n\r\nplt.savefig(\"./static/img/matplot/L1gp3.png\", bbox_inches='tight')\r\nplt.clf()",
+        "answer": "Hello World!",
+        "plotname": "L1gp3.png",
+        "haveplot": true,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Classification and Regression</h3><p>Let's learn some background before we start to build our linear regression model.</p></br><h5>Machine Learning and Linear regression:</h5></br><p>Machine learning algorithms build a model based on sample data, in order to make predictions or decisions without being explicitly programmed to do so (Wikipedia). We can distinguish ML algorithms to two types by their output, classification and Regression (more detials see below). Linear regression is one of the regression Machine Learning algorithm. We can use it to find the line that best fits the data.</p></br><p>(this is a tutorial page please click NEXT to the next page)</p>",
         "starterCode": "print()",
         "code": "print()",
-        "answer": "Hello World from part 2!",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
         "nextLocked": false
     },
     {
@@ -32,6 +58,26 @@
         "starterCode": "print()",
         "code": "print()",
         "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "This is loaded from JSON for lesson 1 part 5 (final).",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "This is loaded from JSON for lesson 1 part 5 (final).",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
         "nextLocked": true
     }
 ]
