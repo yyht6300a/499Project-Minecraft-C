@@ -9,6 +9,8 @@
     width: 35%;
     display: flex;
     flex-direction: column;
+
+
 }
 .instructions {
     width: 100%;
@@ -28,7 +30,6 @@
     background-color: black;
     border: 1px solid white;
     overflow-y: auto;
-    transition: border 0.3s linear;
 }
 
 .instructions p {
@@ -77,3 +78,8 @@
 .btn-area .btn {
     width: 100px;
 }
+
+.relative{
+    width: 90%;
+    height:auto;
+  }
