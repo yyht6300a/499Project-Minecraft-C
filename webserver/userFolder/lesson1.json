@@ -1,47 +1,137 @@
 [
     {
-        "instructions": "Lets learn about the print() statement. Print will write anything you want to the console. To print words to the console, they must be enclosed in apostrophes. Try printing \"Hello World!\" to the console.",
+        "instructions": "<h1>Chicken Farm</h1><br/> <h3>Hi welcome to the Chicken Farm lesson.<br/>In this lesson you will use Linear Regression algorithm and your robot to build a chicken farm!</h3> <br/><img src='../static/img/lesson1/ChickenFarm.png' class='relative'/> </br>(this is a tutorial page please click NEXT to the next page)",
         "starterCode": "print()",
-        "code": "print(\"hello\")",
+        "code": "print(\"hi\")",
         "answer": "Hello World!",
         "plotname": "",
         "haveplot": false,
         "nextLocked": false
     },
     {
-        "instructions": "This is loaded from JSON for lesson 1 part 2",
+        "instructions": "<h3>Background:</h3><p>There is a village that needs to build a chicken farm. There are now 87 chickens in the village, but no one knows how big the farm should be. You are the builder of this chicken farm, and you need to use your robot to build a proper chicken farm for the village. The farm should not be too large (villagers do not want to waste money) or too small (because it will affect the growth of the chickens). Therefore, you need to find a proper size by your self. Here are some data from other chicken farms, please use this data to predict the size of this farm and help the villagers to build it.</p></br><p>Farm size: [20, 40, 60, 80, 100, 120, 140, 40, 50, 60, 105, 48, 54, 63, 72, 103, 108, 93, 90, 68, 36, 90, 88]</p></br><p>N of Chickens: [15, 28, 50, 68, 75, 93, 130, 35, 38, 78, 81, 33, 40, 45, 75, 70, 100, 95, 60, 70, 70, 110, 52]</p></br><p>If you never learn statistics or machine learning before, you might be wondering How ??? Let's see an example first</p></br><p>(this is a tutorial page please click NEXT to the next page) </p>",
         "starterCode": "print()",
         "code": "print(\"Hello World!\")",
         "answer": "Hello World from part 2!",
         "plotname": "",
         "haveplot": false,
-        "nextLocked": true
+        "nextLocked": false
     },
     {
-        "instructions": "This is loaded from JSON for lesson 1 part 3",
+        "instructions": "<h3>Data Visualization</h3></br><p>If you want to extract some useful information from a set of data, the most common way to do this is to make a graph. Graph makes the data more natural for us to understand and help us identify trends and patterns easily. Now Let's learn How to use Python to print and analyze data.</p></br><p>(this is a coding page please run the code before go to next page)</p>",
         "starterCode": "print()",
-        "code": "print(hi)",
+        "code": "\r\n\r\n#Let's assume that we have some price and size of houses in a city\r\nprint(\"hello\")\r\nsize = [50,60,70,80,90,100,110,120,130,140,150,160] \r\n# size in square meter\r\n\r\nprice= [130,250,210,298,258,330,412,420,370,425,443,520] \r\n# price in hundred thousands\r\n\r\n# We can use a python library called matplotlib to visualize our data \r\nplt.plot(size,price, \"o\")\r\n#plt.show()\r\n#plt.savefig(\"./userFolder/lessonplot/gp1.png\", bbox_inches='tight')\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()\r\n\r\n# when we print our data, we can easily find that our data shows a linear trend\r\n# We learned in math that the equation of a straight line is y= mx+b, so let's find a line that can fit our data.",
         "answer": "Hello World!",
-        "plotname": "",
-        "haveplot": false,
-        "nextLocked": true
+        "plotname": "L1gp1.png",
+        "haveplot": true,
+        "nextLocked": false
     },
     {
-        "instructions": "This is loaded from JSON for lesson 1 part 4",
+        "instructions": "<h3>Data Visualization</h3></br><p>Now let's print the trend line of our data</p></br><p>(this is a coding page please run the code before go to next page)</p>",
         "starterCode": "print()",
-        "code": "print()",
+        "code": "\r\n#Let's assume that we have some price and size of houses in a city\r\n\r\nsize = [50,60,70,80,90,100,110,120,130,140,150,160] \r\n# size in square meter\r\n\r\nprice= [130,250,210,298,258,330,412,420,370,425,443,520] \r\n# price in hundred thousands\r\n\r\n\r\n#Here we use m=3 and b=28\r\n# m is the slope of the line\r\n# b is the intercept of the line\r\ny=[3*x+28 for x in size]\r\n# the equation of the line \r\n\r\n\r\nplt.plot(size,price,\"o\")\r\n\r\nplt.plot(size,y)\r\n\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()",
         "answer": "Hello World from part 2!",
-        "plotname": "",
-        "haveplot": false,
-        "nextLocked": true
+        "plotname": "L1gp2.png",
+        "haveplot": true,
+        "nextLocked": false
     },
     {
-        "instructions": "This is loaded from JSON for lesson 1 part 5 (final).",
+        "instructions": "<h3>Data Visualization</h3></br><p>Now let's print our chicken farm data</p></br><p>From the graph, we can see that our data also shows a linear trend. But how can we find a line that best fit this dataset, how can we find M and B?</p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "print()",
+        "code": "import matplotlib.pyplot as plt\r\n\r\n\r\nsize=[20,40,60,80,100,120,140,40,50,60,105,48,54,63,72,103,108,93,90,68,36,90,88]\r\n# farm size\r\n\r\nNum_Chickens= [15,28,50,68,75,93,130,35,38,78,81,33,40,45,75,70,100,95,60,70,70,110,52]\r\n# number of chickens\r\n\r\n# We can use a python library called matplotlib to visualize our data \r\nplt.plot(size,Num_Chickens, \"o\")\r\n\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()",
+        "answer": "Hello World!",
+        "plotname": "L1gp3.png",
+        "haveplot": true,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Classification and Regression</h3><p>Let's learn some background before we start to build our linear regression model.</p></br><h5>Machine Learning and Linear regression:</h5></br><p>Machine learning algorithms build a model based on sample data, in order to make predictions or decisions without being explicitly programmed to do so (Wikipedia). We can distinguish ML algorithms to two types by their output, classification and Regression (more detials see below). Linear regression is one of the regression Machine Learning algorithm. We can use it to find the line that best fits the data.</p></br><p>(this is a tutorial page please click NEXT to the next page)</p>",
+        "starterCode": "print()",
+        "code": "#This page does not support printing images\r\nprint(\"Hi\")",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Classification and Regression</h3> </br><h5>What is Classification</h5><p>Classification is the process of finding or discovering a model or function which helps in separating the data into multiple categorical classes(GeeksforGeeks). For example, classify if an email is spam or not. (the output is discrete value)</p></br><h5>What is Regression</h5><p>Regression is the process of finding a model or function for distinguishing the data into continuous real values instead of using classes or discrete values(GeeksforGeeks). For example, we have a dataset that contains some data pairs on the price of a house vs. the size of a house. Then we can train the model and predict the price of a new house based on the given size. (the output is continuous)</p>.</br><p>(this is a tutorial page please click NEXT to the next page)</p>",
         "starterCode": "print()",
         "code": "print()",
         "answer": "Hello World!",
         "plotname": "",
         "haveplot": false,
-        "nextLocked": true
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Classification and Regression</h3> </br> <p>We call the process of finding the minimum loss value as optimization, in this lesson we will learn how to implement an optimization algorithm called Ordinary Least Squares (OLS):</p> </br> <p>To minimizes the loss, we need to minimize the mean squared error (MSE) of our model.</p> </br> <p>Formula for mean squared error: MSE= 1/n Sigma (square(y - y'))</p> </br> <p>N= number of elements in our dataset</p> </br> <p>Y= The Y-intercept value corresponding to the given x value in the data (red dots in the previous graph)</p> </br> <p>Y'= The Y-intercept value corresponding to the given x value on our prediction line. (purple dots in the previous graph)</p> </br> <p>Through some math we get the following formula to help us to find M and B</p> </br> <p>M=( Mean(Sigma(XY)) - (Mean(Sigma(X))*Mean(Sigma(Y))) ) / (Mean(Sigma(square(X))) - (square(Mean(Sigma(X)))))</p> </br> <p>B= Mean(Sigma(Y)) - M (Mean(Sigma(X)))</p> </br> <p>We're not going to get into the math behind the formula in this lesson, but if you're interested check out this article: https://www.freecodecamp.org/news/machine-learning-mean-squared-error-regression-line-c7dde9a26b93/</p>",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>OLS python implimentation:</h3></br><p>Now let's learn how to impliment OLS by python</p> </br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "print()",
+        "code": "def calculate_MB(x,y):\r\n    \r\n    x=np.array(x)\r\n    #convert list to numpy array\r\n    y=np.array(y)\r\n    \r\n\r\n    Mean_x=np.mean(x)\r\n    #Mean(\u03a3X)\r\n    \r\n    Mean_y=np.mean(y)\r\n    #Mean(\u03a3Y)\r\n    \r\n    Mean_xy=np.mean(x*y)\r\n    #Mean(\u03a3XY)\r\n    \r\n    x_sqr=[point**2 for point in x]\r\n    #Sqr(X)\r\n    \r\n    Mean_x_sqr=np.mean(x_sqr)\r\n    #Mean(Sqr(\u03a3X))\r\n    \r\n    M=(Mean_xy-(Mean_x*Mean_y))/(Mean_x_sqr-(Mean_x**2))\r\n    \r\n    B=Mean_y-(M*Mean_x)\r\n    \r\n    return M,B\r\n\r\n#Now Let's test our OLS function, we can reuse the data above. \r\n#In the house price example, we calculate the M and B value by Excel and get M=3 and B=28\r\n\r\nsize = [50,60,70,80,90,100,110,120,130,140,150,160] \r\n\r\nprice= [130,250,210,298,258,330,412,420,370,425,443,520]\r\n\r\nM,B=calculate_MB(size,price)\r\nprint(\"M=\"+str(M))\r\nprint(\"B=\"+str(B))\r\n\r\n# we get the same output as above",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>OLS python implimentation:</h3></br><p>We have the slope and intercept now, let's predict a point by our model</p> </br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "print()",
+        "code": "def calculate_MB(x,y):\r\n    \r\n    x=np.array(x)\r\n    #convert list to numpy array\r\n    y=np.array(y)\r\n    \r\n\r\n    Mean_x=np.mean(x)\r\n    #Mean(\u03a3X)\r\n    \r\n    Mean_y=np.mean(y)\r\n    #Mean(\u03a3Y)\r\n    \r\n    Mean_xy=np.mean(x*y)\r\n    #Mean(\u03a3XY)\r\n    \r\n    x_sqr=[point**2 for point in x]\r\n    #Sqr(X)\r\n    \r\n    Mean_x_sqr=np.mean(x_sqr)\r\n    #Mean(Sqr(\u03a3X))\r\n    \r\n    M=(Mean_xy-(Mean_x*Mean_y))/(Mean_x_sqr-(Mean_x**2))\r\n    \r\n    B=Mean_y-(M*Mean_x)\r\n    \r\n    return M,B\r\n\r\nsize = [50,60,70,80,90,100,110,120,130,140,150,160] \r\n\r\nprice= [130,250,210,298,258,330,412,420,370,425,443,520]\r\n\r\nM,B=calculate_MB(size,price)\r\nprint(\"M=\"+str(M))\r\nprint(\"B=\"+str(B))\r\n\r\n\r\npredict=68\r\n\r\nY=[2.9*X+28.2 for X in size]\r\n\r\n# the equation of the line\r\n\r\npre=M*predict+B\r\n\r\nprint(\"prediction: \"+str(pre))\r\n#print the prediction of your point\r\nplt.plot(size,price,\"o\")\r\n\r\nplt.plot(size,Y)\r\n\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()\r\n\r\n\r\n#based on our model, if we have a house with size 68 then, the price could be 229.4 \r\n\r\n\r\n",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": true,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Scikit-learn Linear regression implementation</h3></br><p>Yeah! We implemented a linear regression model!! However, it would be a lot of works if we had to implement the algorithm every time when we want to use linear regression. Fortunately, Python's Scikit-learn library provides us with linear regression models that we can use whenever we need.</p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "print()",
+        "code": "\r\n#we still use the house price example above\r\n\r\nsize = [50,60,70,80,90,100,110,120,130,140,150,160] \r\n\r\nprice= [130,250,210,298,258,330,412,420,370,425,443,520]\r\n\r\n#you can call LinearRegression model in sklearn library\r\nourmodel=LinearRegression()\r\n\r\n'''\r\nHere we will call ourmodel.fit() function to fit our data \r\n.fit() will take two parameters (X(2D array),y(1D array))\r\nso we have to reshape our size to:\r\n\r\n[[ 50]\r\n [ 60]\r\n [ 70]\r\n [ 80]\r\n [ 90]\r\n [100]\r\n [110]\r\n [120]\r\n [130]\r\n [140]\r\n [150]\r\n [160]]\r\n \r\n'''\r\nnpsize=np.array(size)\r\n#here we convert our list to numpy array\r\n\r\nnpsize=npsize.reshape(-1,1)\r\n#and we use numpy.reshape function to conver list to a 2D array\r\n\r\nprint(\"new array: \",'\\n',npsize)\r\n#let's print our array\r\n\r\n#now we are good to fit our model\r\nourmodel.fit(npsize,price)\r\n\r\n#after we fit the data we can call ourmodel.coef_ to check the slope and ourmodel.intercept_ to check intercept\r\nprint(\"-------------------------\")\r\nprint(\"slope: \"+str(ourmodel.coef_))\r\nprint(\"intercept: \"+str(ourmodel.intercept_))\r\n\r\n\r\n#we can use .predict() function to predict the Y value by input x value\r\nprint(\"predict:\",ourmodel.predict([[68]]))# note here input x should be a 2D array\r\n\r\n# the output from sklearn library is same as our OLS model\r\n\r\n# you can use same way to print the graph\r\nplt.plot(npsize,ourmodel.predict(npsize))\r\nplt.plot(npsize,price,'o')\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": true,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Now it's your turn</h3></br><p>you can choose either way to implement the algorithm and solve the chicken farm problem</p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "print()",
+        "code": "size=[20,40,60,80,100,120,140,40,50,60,105,48,54,63,72,103,108,93,90,68,36,90,88]\r\n# farm size\r\n\r\nNum_Chickens= [15,28,50,68,75,93,130,35,38,78,81,33,40,45,75,70,100,95,60,70,70,110,52]\r\n\r\n#TODO: predict the farm size for 87 chickens\r\n\r\n\r\n\r\n\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": true,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Let's programming your agent </h3></br><p>Now you have the proper size of the farm, let's learn how to program your agent to build the farm.</p></br><p>But first let's learn some basic function in our Agent class</p></br>(this is a tutorial page please click NEXT to the next page)",
+        "starterCode": "print()",
+        "code": "'''\r\ngive(item, quantity, slot number)\r\n#\tPuts a block or item in the agent's inventory slot\r\n\r\n\r\n\r\nmove(direction)\r\n#\tAttempts to move the agent in the given direction\r\n\r\n\r\n\r\nsay(...)\r\n#\tMakes the agent say something\r\n\r\n\r\n\r\nturn(turn direction)\r\n#\tTurns the agent in the given direction\r\n\r\n\r\n\r\nteleport([location])\r\n#\tTeleports the agent to a location if specified, or else to the player\r\n\r\n\r\n\r\nplace(slot number, direction)\r\n#\tPlaces a block or uses an item from the agent's inventory\r\n'''",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Let's programming your agent</h3></br><p>please try to program your agent in this page, if you need help, see the answers on the next page </p>",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3> Answer </h3></br><p>Here is a sample code for building a farm</p></br><h3>Congratulation!! you have finished this course</h3>",
+        "starterCode": "print()",
+        "code": "agent.give('fence',100,1)\r\nagent.give('fence gate',10,2)\r\n#give agent some fences and fence gates\r\n\r\n#agent.say(agent.get_item(2))\r\n\r\ndef build_gate():\r\n    agent.turn('left')\r\n    agent.move('forward')\r\n    agent.turn('left')\r\n    agent.move('forward')\r\n    agent.turn('left')\r\n    agent.place(2,'forward')\r\n    \r\ndef move_back():\r\n    for x in range(5):\r\n        agent.move(\"back\")\r\n        \r\n        \r\ndef build(x):                  \r\n\r\n    for i in range(4):           \r\n        #4 edges\r\n        agent.turn(\"right\")\r\n        \r\n        for z in range(x):     \r\n        #place fence\r\n            agent.move(\"forward\")\r\n            agent.place(1,'back')\r\n    #build a gate         \r\n    build_gate()\r\n    move_back()\r\n    agent.say(\"finished\")\r\n    \r\n\r\n\r\nbuild(4)",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
     }
 ]
