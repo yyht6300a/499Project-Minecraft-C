@@ -62,9 +62,13 @@ class Comms{
     }
 
     queueCommand(cmd, whenDone){
-        if (!window.ipcRenderer) whenDone ()
+        if (!window.ipcRenderer) { 
+            console.log("Couldn't queue command.");
+            whenDone()
+        }
         else {
         //	console.log ('queueCommand', cmd.line, this.commandInProgress)
+            console.log("queued command");
             this.commandQueue.push({command: cmd, fcn: whenDone})
             this.processQueue();
         }
@@ -78,28 +82,36 @@ class Comms{
         if (this.commandQueue.length == 0) return;
         let next = this.commandQueue.shift();
         if (!next) return;
-    //	console.log ('processQueue', next.command.line, next.command.purpose != "subscribe")
+    	// console.log ('processQueue', next.command.line, next.command.purpose != "subscribe")
         if (next.command.purpose != "subscribe" ) this.commandInProgress = true;
-        this.sendToMinecraft(next)
+        console.log("Processed queue.");
+        this.sendToMinecraft(next);
     }
 
     sendToMinecraft(data){
         var cmd = data.command;
         var fcn = data.fcn;
-        var mp = cmd.purpose;
+        // var mp = cmd.purpose;
         var id = this.getUUID()
         this.responseFcn[id] = fcn;
-        var json = {header: {version: this.version, requestId: id, messagePurpose: mp, messageType: "commandRequest"}, body: {}}
-        if (cmd.trigger) json.body.eventName = cmd.trigger;
-        else {
-            json.body.commandLine = cmd.line;
-            json.body.version = 1;
-            if (cmd.origin) json.body.origin = cmd.origin;
-        }
+        var json = {header: {version: this.version, requestId: id, messagePurpose: "commandRequest", messageType: "commandRequest"}, body: {}}
+
+        // if (cmd.trigger) json.body.eventName = cmd.trigger;
+        // else {
+        //     json.body.commandLine = cmd.line;
+        //     json.body.version = 1;
+        //     if (cmd.origin) json.body.origin = cmd.origin;
+        // }
+        json.body.commandLine = cmd;
+        json.body.version = 1;
+        if (cmd.origin) json.body.origin = cmd.origin;
     //	window.ipcRenderer.sendToHost('sendToMinecraft', json);
+
+        console.log(json);
+
         window.ipcRenderer.sendToHost('sendToApp', json);
         //	window.ipcRenderer.send('sendToMinecraft', JSON.stringify(json));
-
+        console.log("Sent!");
     }
 
     getUUID(){

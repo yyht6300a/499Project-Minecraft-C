@@ -1,7 +1,11 @@
+# Server modules
 from flask import Flask, request, jsonify, render_template   
 import json
 import sys
 import io
+
+# Agent module for agent commands
+import agentModule
 
 app = Flask(__name__)
 
@@ -57,6 +61,8 @@ def getLesson3Info():
 
 @app.route('/runLesson', methods=['POST'])
 def runLesson():
+    agent = agentModule.agent()            # Make agent object
+
     data = request.data.decode('utf-8')    # Receive the data and decode it from bytes to string
 
     # How I captured stdout: https://www.kite.com/python/answers/how-to-redirect-print-output-to-a-variable-in-python
@@ -69,7 +75,7 @@ def runLesson():
     # This exception handling code be better
     # This may have some errors
     # TODO: Make sure the kids can't break anything - there may be some security flaws here.
-    # Docs on exec: https://www.programiz.com/python-programming/methods/built-in/exec
+    # Docs on exec: https://www.programiz.com/python-programming/methods/built-in/exec    
     try:
         exec(data)
     except Exception as e:
@@ -78,8 +84,14 @@ def runLesson():
     output = new_stdout.getvalue()  # Get value from stdout
     sys.stdout = old_stdout         # Restore current stdout to old version
 
-    return output
+    print(agent.getQueue())
+    print(output)
 
+    # Return list of commands and console output in JSON format
+    return jsonify (
+        consoleOutput = output,
+        commands = agent.getQueue()
+    )
 
 
 

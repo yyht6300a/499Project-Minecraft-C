@@ -28,7 +28,7 @@ async function load() {
     // Set their max value to global vars
     lesson1max = Object.keys(lesson1).length - 1;
     lesson2max = Object.keys(lesson2).length - 1;
-    lesson3max = Object.keys(lesson3).length -1 ;
+    lesson3max = Object.keys(lesson3).length - 1;
 
     lessonMax = [lesson1max , lesson2max, lesson3max];
 }
@@ -107,7 +107,6 @@ document.getElementById("run").addEventListener('click', async function() {
     lesson[part].code = editor.getValue();
     sendJSONData();
 
-
     // Run the code
     // Send monaco editor value to server
     // TODO: May need to change this to work with Yash's code, will see
@@ -115,11 +114,15 @@ document.getElementById("run").addEventListener('click', async function() {
         method: "POST",
         body: editor.getValue()
     }); 
-    // Wait for the code to come back
-    const codeReturn = await response.text();
+    // Wait for the code and console output to come back
+    const serverReturn = await response.json();
+    console.log(serverReturn);
 
+    // Store console output in codeReturn
+    const codeReturn = serverReturn.consoleOutput;
+
+     //add a new line between each output
     var printReturn = codeReturn.replaceAll("\n","</br>");                
-    //add a new line between each output
 
     // Set the text color back to white in case it was red due to an error
     document.getElementById("console").style.color = "white";  
@@ -130,12 +133,22 @@ document.getElementById("run").addEventListener('click', async function() {
     if(codeReturn.includes("ERROR!")) {
         fail();
     } else {
-        success();     // THIS IS JUST FOR TESTING. Only for testing next button
+        runCommands(serverReturn.commands)  // THIS IS JUST FOR TESTING. Only for testing sending commands to game
+        success();                          // THIS IS JUST FOR TESTING. Only for testing next button
     }
-
 });
 
 
+// This function takes in a list of Minecraft Education Commands
+// It then queues them into the comms.QueueCommand function
+function runCommands(cmds) {
+    cmds.forEach(cmd => comms.queueCommand(cmd, cmdRan));
+}
+
+// This is just to satisfy comms.queueCommand 2nd param requirement
+function cmdRan() {
+    console.log("Command sent to game!");
+}
 
 
 // Network Functions
