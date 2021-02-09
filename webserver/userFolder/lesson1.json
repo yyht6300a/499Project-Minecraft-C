@@ -126,7 +126,7 @@
         "nextLocked": false
     },
     {
-        "instructions": "<h3> Answer </h3></br><p>Here is a sample code for building a farm</p></br><h3>Congratulation!! you have finished this course</h3>",
+        "instructions": "<h3> Answer </h3></br><p>Here is a sample code for building a farm</p></br><h3>Congratulation!! you have finished this course</h3></br><p>Reference: </br> https://www.freecodecamp.org/news/machine-learning-mean-squared-error-regression-line-c7dde9a26b93/ </br></br> https://www.geeksforgeeks.org/ml-classification-vs-regression/#:~:text=Classification%20and%20Regression%20are%20two,categorical%20classes%20i.e.%20discrete%20values. </p>",
         "starterCode": "print()",
         "code": "agent.give('fence',100,1)\r\nagent.give('fence gate',10,2)\r\n#give agent some fences and fence gates\r\n\r\n#agent.say(agent.get_item(2))\r\n\r\ndef build_gate():\r\n    agent.turn('left')\r\n    agent.move('forward')\r\n    agent.turn('left')\r\n    agent.move('forward')\r\n    agent.turn('left')\r\n    agent.place(2,'forward')\r\n    \r\ndef move_back():\r\n    for x in range(5):\r\n        agent.move(\"back\")\r\n        \r\n        \r\ndef build(x):                  \r\n\r\n    for i in range(4):           \r\n        #4 edges\r\n        agent.turn(\"right\")\r\n        \r\n        for z in range(x):     \r\n        #place fence\r\n            agent.move(\"forward\")\r\n            agent.place(1,'back')\r\n    #build a gate         \r\n    build_gate()\r\n    move_back()\r\n    agent.say(\"finished\")\r\n    \r\n\r\n\r\nbuild(4)",
         "answer": "Hello World!",
