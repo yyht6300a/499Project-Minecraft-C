@@ -161,6 +161,13 @@ button {
   margin-top: 2rem;
 }
 
+
+
+.consolerelative{
+  width: 40%;
+  height:auto;
+}
+
 #lesson-page {
   position: fixed;
   z-index: 1;

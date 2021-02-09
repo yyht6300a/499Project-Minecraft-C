@@ -1,4 +1,7 @@
 # Server modules
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 from flask import Flask, request, jsonify, render_template   
 import json
 import sys

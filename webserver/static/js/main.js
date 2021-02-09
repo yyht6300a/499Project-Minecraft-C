@@ -14,6 +14,7 @@ var lessonPart = [0, 0, 0];
 comms = new Comms();
 
 
+
 // Run on load
 window.onload = load();
 
@@ -85,6 +86,9 @@ document.getElementById("homepage").addEventListener('click', function() {
 document.getElementById("next").addEventListener('click', function() {
     playBtnClick();
     lessonPart[currentLesson]++;
+    document.getElementById("console").innerHTML =""
+    document.getElementById("graph").innerHTML = "";
+    //clean console when button is clicked
     displayLessonData();
 });
 
@@ -93,6 +97,9 @@ document.getElementById("next").addEventListener('click', function() {
 document.getElementById("back").addEventListener('click', function() {
     playBtnClick();
     lessonPart[currentLesson]--;
+    document.getElementById("console").innerHTML =""
+    document.getElementById("graph").innerHTML = "";
+    //clean console when button is clicked
     displayLessonData();
 });
 
@@ -106,6 +113,7 @@ document.getElementById("run").addEventListener('click', async function() {
     part = lessonPart[currentLesson];
     lesson[part].code = editor.getValue();
     sendJSONData();
+
 
     // Run the code
     // Send monaco editor value to server
@@ -121,13 +129,33 @@ document.getElementById("run").addEventListener('click', async function() {
     // Store console output in codeReturn
     const codeReturn = serverReturn.consoleOutput;
 
-     //add a new line between each output
-    var printReturn = codeReturn.replaceAll("\n","</br>");                
+    var printReturn = codeReturn.replace(/\n/g,"</br>");       
+    //add a new line between each output
 
     // Set the text color back to white in case it was red due to an error
     document.getElementById("console").style.color = "white";  
     // Set text context of console
-    document.getElementById("console").innerHTML = printReturn;  
+
+    var image=""
+    //check if current part have a plot 
+    if (lesson[part].haveplot===true){
+        image="<img src='./static/img/matplot/"+lesson[part].plotname+"' class='relative'/></br>"
+    }
+    //read the graph from matplot folder
+    /*
+    
+    Note  for read image to the console you need to do following steps
+    1. in lesson.json file, for example: if you want to print in part 2 then in the second part change 
+    have plot=true and put plotname=lesson number+graph number (L1gp1.png)
+    
+    2.in the coding part make your output file name as same as plotname in the json file and
+    out put directory shoudl always be ./static/img/matplot/<file name>
+
+    */
+    
+    document.getElementById("console").innerHTML = printReturn;
+    document.getElementById("graph").innerHTML = image;
+      
 
     // Call fail if there is an error.
     if(codeReturn.includes("ERROR!")) {
@@ -183,8 +211,9 @@ async function displayLessonData() {
     lesson = lessons[currentLesson];
     part = lessonPart[currentLesson];
 
+
     // Input data into editor and instructions area
-    document.getElementById("instructions").textContent = lesson[part].instructions;
+    document.getElementById("instructions").innerHTML = lesson[part].instructions;
     editor.setValue(lesson[part].code);
 
     // Check if back or next buttons should be locked or not

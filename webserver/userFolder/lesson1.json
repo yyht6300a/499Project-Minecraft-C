@@ -2,8 +2,10 @@
     {
         "instructions": "Lets learn about the print() statement. Print will write anything you want to the console. To print words to the console, they must be enclosed in apostrophes. Try printing \"Hello World!\" to the console.",
         "starterCode": "print()",
-        "code": "agent.place(1, \"forward\")\n\nprint(\"Moving Agent Demo\")",
+        "code": "print(\"hello\")",
         "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
         "nextLocked": false
     },
     {
@@ -11,13 +13,17 @@
         "starterCode": "print()",
         "code": "print(\"Hello World!\")",
         "answer": "Hello World from part 2!",
-        "nextLocked": false
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": true
     },
     {
         "instructions": "This is loaded from JSON for lesson 1 part 3",
         "starterCode": "print()",
         "code": "print(hi)",
         "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
         "nextLocked": true
     },
     {
@@ -25,6 +31,8 @@
         "starterCode": "print()",
         "code": "print()",
         "answer": "Hello World from part 2!",
+        "plotname": "",
+        "haveplot": false,
         "nextLocked": true
     },
     {
@@ -32,6 +40,8 @@
         "starterCode": "print()",
         "code": "print()",
         "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
         "nextLocked": true
     }
 ]
