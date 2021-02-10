@@ -139,17 +139,19 @@ document.getElementById("run").addEventListener('click', async function() {
     var image=""
     //check if current part have a plot 
     if (lesson[part].haveplot===true){
-        image="<img src='./static/img/matplot/"+lesson[part].plotname+"' class='relative'/></br>"
+        image="<img src='./static/img/matplot/temp.png' class='relative'/></br>"
     }
     //read the graph from matplot folder
     /*
     
     Note  for read image to the console you need to do following steps
-    1. in lesson.json file, for example: if you want to print in part 2 then in the second part change 
-    have plot=true and put plotname=lesson number+graph number (L1gp1.png)
+    1. in lesson.json file, for example: if you want to print in Lesson 1 part 2 then in the second object change 
+    have plot=true
     
-    2.in the coding part make your output file name as same as plotname in the json file and
-    out put directory shoudl always be ./static/img/matplot/<file name>
+    2.in the coding part always use
+    plt.savefig("./static/img/matplot/temp.png", bbox_inches='tight')
+    plt.clf()
+    instead of plt.show()
 
     */
     

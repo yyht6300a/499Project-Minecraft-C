@@ -3,9 +3,11 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from flask import Flask, request, jsonify, render_template   
+from sklearn.linear_model import LinearRegression
 import json
 import sys
 import io
+import numpy as np
 
 # Agent module for agent commands
 import agentModule
