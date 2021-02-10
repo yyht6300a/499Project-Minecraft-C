@@ -46,3 +46,26 @@ class agent:
     # Teleport to player
     def tp(self):
         self.cmdQueue.append("agent tp")
+
+
+    # Teleport and Wait (EXPERIMENTAL)
+    def follow(self):
+        self.cmdQueue.append("agent follow")
+
+    def wait(self):
+        self.cmdQueue.append("agent wait")
+    
+
+    # Collect items (all will collect all itmes)
+    def collect(self, items):
+        self.cmdQueue.append("agent collect " + items)
+    
+
+    # Drop items
+    def drop(self, slotNum, quantity, agentDirection):
+        self.cmdQueue.append("agent drop " + slotNum + " " + quantity + " " + agentDirection)
+
+
+    # Transfer items (move them to a different slot)
+    def transfer(self, slotNum, quantity, destinationSlot):
+        self.cmdQueue.append("agent transfer " + slotNum + " " + quantity + " " + destinationSlot)

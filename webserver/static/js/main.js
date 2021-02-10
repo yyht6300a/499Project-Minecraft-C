@@ -117,7 +117,6 @@ document.getElementById("run").addEventListener('click', async function() {
 
     // Run the code
     // Send monaco editor value to server
-    // TODO: May need to change this to work with Yash's code, will see
     const response = await fetch("/runLesson", {
         method: "POST",
         body: editor.getValue()
