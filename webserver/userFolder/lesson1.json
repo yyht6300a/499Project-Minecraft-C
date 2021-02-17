@@ -119,7 +119,7 @@
     {
         "instructions": "<h3>Let's programming your agent</h3></br><p>please try to program your agent in this page, if you need help, see the answers on the next page </p>",
         "starterCode": "print()",
-        "code": "agent.moveForward()",
+        "code": "agent.moveForward()\r\nagent.give('fence',2,5)\r\nagent.wait()",
         "answer": "Hello World!",
         "plotname": "",
         "haveplot": false,
