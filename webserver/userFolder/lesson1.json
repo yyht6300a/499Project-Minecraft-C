@@ -2,7 +2,7 @@
     {
         "instructions": "<h1>Chicken Farm</h1><br/> <h3>Hi welcome to the Chicken Farm lesson.<br/>In this lesson you will use Linear Regression algorithm and your robot to build a chicken farm!</h3> <br/><img src='../static/img/lesson1/ChickenFarm.png' class='relative'/> </br>(this is a tutorial page please click NEXT to the next page)",
         "starterCode": "print()",
-        "code": "print(\"hi\")",
+        "code": "print(\"hi\")\r\n",
         "answer": "Hello World!",
         "plotname": "",
         "haveplot": false,
@@ -119,7 +119,7 @@
     {
         "instructions": "<h3>Let's programming your agent</h3></br><p>please try to program your agent in this page, if you need help, see the answers on the next page </p>",
         "starterCode": "print()",
-        "code": "print()",
+        "code": "agent.moveForward()",
         "answer": "Hello World!",
         "plotname": "",
         "haveplot": false,

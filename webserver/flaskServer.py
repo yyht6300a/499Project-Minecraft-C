@@ -1,9 +1,13 @@
 # Server modules
+
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+
 from flask import Flask, request, jsonify, render_template   
 from sklearn.linear_model import LinearRegression
+
+
 import json
 import sys
 import io
@@ -12,7 +16,10 @@ import numpy as np
 # Agent module for agent commands
 import agentModule
 
+
 app = Flask(__name__)
+app.config['CACHE_TYPE'] = 'null'
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
 # Loads the main website
@@ -42,6 +49,7 @@ def getLesson1Info():
         f.write(data)
         f.close()
         return 'POST request complete.'
+
 
 # TODO: Add send and save functions for lesson 1 and 2. Maybe just turn this into 1 function? (idk how)
 
@@ -98,6 +106,13 @@ def runLesson():
         commands = agent.getQueue()
     )
 
+#clean cache
+@app.after_request
+def add_header(res):
+    res.headers["Cache-Control"] = "no-cache, no-store, must-revalidate,public, max-age=0"
+    res.headers["Pragma"] = "no-cache"
+    res.headers["Expires"] = "0"
+    return res
 
 
 # Helper functions
