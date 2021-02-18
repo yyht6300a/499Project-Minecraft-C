@@ -41,6 +41,10 @@ class agent:
     # Place blocks
     def place(self, slotNum, direction):
         self.cmdQueue.append("agent place " + str(slotNum) + " " + str(direction))
+
+    
+    def give(self,item,quantity,slotNum):
+        self.cmdQueue.append("agent setitem "+str(slotNum)+" "+item+" "+str(quantity)+" "+str(10))
     
 
     # Teleport to player
