@@ -86,6 +86,7 @@ class Comms{
         if (next.command.purpose != "subscribe" ) this.commandInProgress = true;
         console.log("Processed queue.");
         this.sendToMinecraft(next);
+        sleep(200);
     }
 
     sendToMinecraft(data){
@@ -126,6 +127,12 @@ class Comms{
         uuid = uuid.replace(/y/, ychar) 
         return uuid; 
     } 
-
 }
-    
+
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
