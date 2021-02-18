@@ -83,7 +83,7 @@ tree=dict()
 for loop for all elements in nodes:
     let each node connect with itself (we will deal with this later.)
 '''
-trees=dict()
+trees = dict()
 for i in nodes:
     trees[i]=i
 # ================================================================================================================================================================
