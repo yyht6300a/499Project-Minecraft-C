@@ -16,14 +16,17 @@ For create a new Lesson in the game
    run the server on browser and write your code in the code editor, each time you 
    press the run button, the server will upload code to lesson.json automatically.
 
+5. You should also put your start code in the startercode element, if player click reset button the server will
+   read startercode element and display
 
-5.  If you want to print a graph in any part of your lesson, for example: if you want to print a graph in Lesson 1 part 2 then in lesson1 change second block have plot=true     in your code always use 
+
+6.  If you want to print a graph in any part of your lesson, for example: if you want to print a graph in Lesson 1 part 2 then in lesson1 change second block have plot=true     in your code always use 
     plt.savefig("./static/img/matplot/temp.png", bbox_inches='tight')
     plt.clf() 
     instead of regular plt.show()
 
 
-6.Keep nextLocked=false
+7.Keep nextLocked=false
 
 you can check this doc: https://docs.google.com/document/d/16W12bG9bANv6WLtaMhdTbCYG98rabqI3HQdqpHe8nFw/edit?usp=sharing
 """
