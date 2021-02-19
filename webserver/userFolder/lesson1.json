@@ -1,6 +1,6 @@
 [
     {
-        "instructions": "<h1>Chicken Farm</h1><br/> <h3>Hi welcome to the Chicken Farm lesson.<br/>In this lesson you will use Linear Regression algorithm and your robot to build a chicken farm!</h3> <br/><img src='../static/img/lesson1/ChickenFarm.png' class='relative'/> </br>(this is a tutorial page please click NEXT to the next page)",
+        "instructions": "<h1>Chicken Farm</h1><br/> <h3>Hi welcome to the Chicken Farm lesson.<br/>In this lesson you will use Linear Regression algorithm and your robot to build a chicken farm!</h3> <br/><img src='../static/img/lesson1/ChickenFarm.png' class='relative'/> </br><p>Please check this video demo</p></br><iframe width='420' height='315' src='https://www.youtube.com/embed/x1oVIUvn1ww' allowfullscreen></iframe>(this is a tutorial page please click NEXT to the next page)",
         "starterCode": "print()",
         "code": "print()",
         "answer": "Hello World!",
