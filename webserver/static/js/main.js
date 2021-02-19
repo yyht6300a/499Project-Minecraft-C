@@ -103,6 +103,18 @@ document.getElementById("back").addEventListener('click', function() {
     displayLessonData();
 });
 
+// Reset button
+document.getElementById("reset").addEventListener('click', function() {
+    playBtnClick();
+
+    // Reset code back to starter code
+    lesson = lessons[currentLesson];
+    part = lessonPart[currentLesson];
+    lesson[part].code = lesson[part].starterCode
+    sendJSONData();
+
+    displayLessonData();
+});
 
 // Run button
 document.getElementById("run").addEventListener('click', async function() {
