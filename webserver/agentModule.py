@@ -51,6 +51,10 @@ class agent:
     def tp(self):
         self.cmdQueue.append("agent tp")
 
+    # tp to given position
+    def tpto(self,x,y,z):
+        self.cmdQueue.append("agent tp " + str(x)+" "+str(y)+" "+str(z))
+
 
     # Teleport and Wait (EXPERIMENTAL)
     def follow(self):
