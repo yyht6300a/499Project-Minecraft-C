@@ -90,7 +90,7 @@ def runLesson():
     # TODO: Make sure the kids can't break anything - there may be some security flaws here.
     # Docs on exec: https://www.programiz.com/python-programming/methods/built-in/exec    
     try:
-        exec(data)
+        exec(data,{'agent':agent,'plt':plt,'np':np,'LinearRegression':LinearRegression})
     except Exception as e:
         print("ERROR!\n", e)
 
