@@ -79,6 +79,14 @@
     width: 100px;
 }
 
+#reset {
+    border-top: 3px solid lightcoral;
+    border-right: 3px solid lightcoral;
+    border-bottom: 3px solid darkred;
+    border-left: 3px solid darkred;
+    background-color: red;
+}
+
 .relative{
     width: 100%;
     height:auto;
