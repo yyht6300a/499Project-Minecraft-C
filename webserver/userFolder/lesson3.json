@@ -45,7 +45,7 @@
         "nextLocked": false
     },
     {
-        "instructions": "<h1>Step 5:</h1><br/> <h3>Let's initialize our minimum spanning tree in this step by using :<br/>'mst=[]n=len(nodes)-1'</h3>",
+        "instructions": "<h1>Step 5:</h1><br/> <h3>Let's initialize our minimum spanning tree in this step by using :<br/>'mst=[]  n=len(nodes)-1'. It created a blank dictionary. This step is just a preparation  for next step</h3>",
         "starterCode": "mst=[]\r\nn=len(nodes)-1",
         "code": "Map = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\nMap.sort(key=lambda x:x[2])\r\n'''\r\ntree=dict()\r\nfor loop for all elements in nodes:\r\n    let each node connect with itself (we will deal with this later.)\r\n'''\r\ntrees=dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\nmst=[]\r\nn=len(nodes)-1",
         "answer": "Hello World!",
