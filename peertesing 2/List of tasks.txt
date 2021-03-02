@@ -1,0 +1,34 @@
+User group:
+
+High school students:
+The high school student who wants to learn Python and AI by Minecraft Education. 
+We assume that our users have some basic Python programming skills, such as defining a variable, 
+using  loops and functions. The users will learn the theory and how to use Python to implement AI and ML algorithms in our lessons.
+
+Teachers:
+The teacher who wants to use a novel and engaging way to teach the concepts of AI and ML. 
+They will run our courses as students and decide whether to use them in their teaching.
+
+
+
+List of Tasks:
+
+Linear Regression Lesson:
+
+Task 1.      Watch Demo video
+
+Task 2.      Test Next, Back, Reset and Run button in the lesson page                                                        
+
+Task 2.       Read lesson background and find the tasks                 
+
+Task 3.       Read the data visualization part, and use matplotlib to visualize the data we provided.                                                                                          
+
+Task 4.       Read Classification and Regression section                
+
+Task 5        Learn OLS python implementation                               
+
+Task 6        Learn Scikit-learn Linear regression implementation    
+
+Task 7        Use linear regression to solve chicken farm problem   
+
+Task 8        Learn agent command and use agent to build a farm   
