@@ -13,6 +13,7 @@ They will run our courses as students and decide whether to use them in their te
 
 List of Tasks:
 
+
 Linear Regression Lesson:
 
 Task 1.      Watch Demo video
