@@ -1,0 +1,23 @@
+Issue: Felt overwhelmed when it came to coding the Agent.
+Severity: 3 (Severe confusion).
+Violation: Learnability problem.
+Description: Users felt that it was overwhelming to code the Agent without much starter code. Coming from fourth year computer science students, this is bad.
+Modification: Add some code to give students an idea of where to go, and let them fill in the code.
+
+Issue: Not sure how Lesson 3 relates to AI or ML.
+Severity: 2 (Lesson confusion)
+Violation: Learnability problem.
+Description: User’s did not think that a Shortest Path Algorithm taught them much about AI or ML. Additionally, they didn’t see how they could relate this back to a regular Minecraft world. 
+Modification: Either a) Switch to a different lesson idea or b) reinforce how Kruskal’s Shortest Path relates to AI/ML, and how it relates to Minecraft.
+
+Issue: Not interactive enough.
+Severity: 2 (Causes boredom).
+Violation: Learnability problem.
+Description: Users felt for the majority of the lesson that they were just reading code, and not actually interacting with it. 
+Modification: Don’t fully complete each lesson page, give users a task on each page so they can get some hands-on experience with each part of the lesson.
+
+Issue: Lesson 3 hard to see what’s going on
+Severity: 1 (World cosmetic)
+Violation: Visibility.
+Description: Users had a hard time seeing the Agent move in the suggested location.
+Modification: Move the viewing area to the top using glass blocks or barrier blocks, so users can get a top-down view of the Agent working.
