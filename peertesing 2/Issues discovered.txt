@@ -1,0 +1,91 @@
+1.
+Issue: The code in the lesson 3 have no comments
+
+Severity: 3 (major usability problem; important to fix)
+
+Violation: Learnability problem
+
+Description:
+It is important to have clear comments in the code, especially in a lesson, 
+otherwise it’s hard for students to understand the code and learn the algorithm. 
+
+Modification: add more comments in the lesson
+
+2.
+Issue: The instruction pages in the lesson 1 are inconsistent
+
+Severity: 2 (Causes slight confusion)
+
+Violation: Consistency and standards
+
+Description:
+The instructions in lesson 1 should be consistent, for example the second page needs 
+to tell the user that they need to run the code or go to the next page directly after reading the tutorial,
+otherwise the user will be confused about what to do next.
+
+Modification: make sure all page have same format, and avoid confusion
+
+3.
+Issue: Need more explanation on what is mean squared error in lesson 1
+
+Severity: 2 (Causes slight confusion)
+
+Violation: Learnability problem
+
+Description:
+We need a more detailed description of mean squared error, 
+otherwise students will find it difficult to understand the rest of the content.
+
+Modification:
+Add a graph of mean squared error to help students visualize it.
+
+4.
+Issue: The formula in the lesson is hard to read
+
+Severity: 1 (cosmetic problem)
+
+Violation: Aesthetic design and visibility
+
+Description:
+There are so many parenthesis in the formula, it is hard to read and understand
+
+Modification:
+Write the formula by using mathematical symbols (it’s hard to write mathematical formulas in the instruction page,
+so we are planning to use pictures to replace the text.)
+
+5.
+Issue: It’s hard to find the  important information in the lesson
+
+Severity: 1 (cosmetic problem)
+
+Violation: Aesthetic design and visibility
+
+Description: All text in the instruction part is in white,
+it would be better if the important information can be highlighted. And users can find it easily.
+
+Modification: Highlight important information in the instruction block.
+
+6.
+
+Issue: Need more explanation on what is mean squared error in lesson 1
+
+Severity: 2 (Causes slight confusion)
+
+Violation: Learnability problem
+
+Description: We need a more detailed description of mean squared error, otherwise students will find it difficult to understand the rest of the content.
+
+Modification:
+Add a graph of mean squared error to help students visualize it.
+
+7.
+
+Issue: Need a confirmation before reset the code
+
+Severity: 3 (major usability problem; important to fix)
+
+Violation: Error prevention
+
+Description: When the user clicks the reset button, the code is reset without any confirmation process, so if the user accidentally clicks the button the code will be overwritten.
+
+Modification: Add a confirmation process, like a pop-up window.
