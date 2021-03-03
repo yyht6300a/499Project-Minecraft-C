@@ -1,0 +1,38 @@
+Home page
+	3 lessons which the user can click ‘play’ on to start a lesson.
+	Features Linear Regression and Kruskal’s Algorithm
+
+Lesson Page
+	Features dynamic HTML page that pulls lesson data from JSON on Flask server.
+	Has the instructions tab on the left.
+	Has a PyPlot pane in the bottom left.
+	Has Monaco Editor for coding.
+		Code from Monaco Editor is sent to Flask Server to be run.
+	Has console area
+		Console will show Python print statements, and highlight green on ‘good ‘code.’
+		On errors, the console will show what the error is and where, and highlight red.
+	Has Reset, Back, Next, and Run buttons.
+		Reset button pulls code from Flask server to reset code back to how it originally was set up.
+		Back button will go back to the last page.
+		Next button will go to the next lesson page. Unlocked once the lesson page has been run correctly. 
+		The Run button sends code in Monaco Editor to the backend.
+
+Lessons
+	Linear Regression Lesson
+		The lesson uses a number of chickens as features and fence areas as targets as the dataset. The goal is to use linear regression to take in a number of chickens and predict a proper fence area.
+		Features it’s own Minecraft World, which can be imported into the game.
+		Teaches students linear regression from the ground up, starting low level and then working up by using Scikit-Learn modules.
+		Implements PyPlot for visualization.
+		Implements Agent Module to program the in game Minecraft Agent.
+	Kruskal’s Algorithm Lesson
+		Teaches students how to use Kruskal’s Shortest Path algorithm to navigate the Minecraft Agent through a course.
+		Features it’s own Minecraft World, which can be imported into the game.
+		Implements Agent Module to program the in game Minecraft Agent.
+Backend
+	Features Python Flask server to send and receive data over localhost.
+	Supports GET and PUT requests
+		GET requests are supported for getting lesson JSON files.
+		PUT requests are supported for updating user progress into JSON files.
+		PUT requests are supported to run user’s code with exec command, and returns console output and agent commands as return call.
+		PUT requests support PyPlot and saves as an image when code is ran.
+	Features Agent Python Module, which is a class file that supports most Agent commands in Minecraft.
