@@ -65,3 +65,27 @@ it would be better if the important information can be highlighted. And users ca
 
 Modification: Highlight important information in the instruction block.
 
+6.
+
+Issue: Need more explanation on what is mean squared error in lesson 1
+
+Severity: 2 (Causes slight confusion)
+
+Violation: Learnability problem
+
+Description: We need a more detailed description of mean squared error, otherwise students will find it difficult to understand the rest of the content.
+
+Modification:
+Add a graph of mean squared error to help students visualize it.
+
+7.
+
+Issue: Need a confirmation before reset the code
+
+Severity: 3 (major usability problem; important to fix)
+
+Violation: Error prevention
+
+Description: When the user clicks the reset button, the code is reset without any confirmation process, so if the user accidentally clicks the button the code will be overwritten.
+
+Modification: Add a confirmation process, like a pop-up window.
