@@ -62,4 +62,21 @@ Use python to build a KNN classification model.
 
 Use your own model to predict which mine have emeralds.
 
+
+
+
+The difference between supervised learning and unsupervised learning:
+
+
+In supervised learning, we use a set of labeled data to train our model.
+For example, in a classification task, if we want our model to be able to distinguish between dogs and cats in a 
+set of photos, we can use a set of images and label them with cat or dog. After the training use this data,
+our model will be able to identify the new image and label it as a cat or a dog.
+
+In unsupervised learning, we use unlabeled data to train the model. The model will analyze the data and find
+patterns in it. For example, if we train a model by a set of pictures of cat and dog, but without any labels,
+the model could divide photos into two categories and if we provide a new image of cat,
+the model will put the picture in the same category as the cat.  
+
+
 see more on:https://docs.google.com/document/d/1GsarhwhJb40lT8EdWOMZbhQpEI7raVUWjBrplpFuZ4E/edit?usp=sharing
