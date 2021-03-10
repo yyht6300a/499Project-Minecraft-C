@@ -1,0 +1,82 @@
+[
+    {
+        "instructions": "<h1>Fish Pond</h1><br/> <h3>Hi welcome to the Fish Pond lesson.<br/>In this lesson you will use Non-linear Regression algorithm and your robot to build a fish pond!</h3> <br/><p>Please check this video demo</p></br>This is a tutorial page please click NEXT to the next page",
+        "starterCode": "print(\"hi\")\r\n\r\n",
+        "code": "print(\"hi\")\r\n\r\n",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Background:</h3><p>As in lesson 1 where you used linear regression to determine the ideal size of a chicken farm, in this lesson we will use non-linear regression to determine the ideal size of a fish pond. There is a village that needs to build a fish pond. There are now 64 fishes in the village, but no one knows how big the pond should be too keep the fishes happy and thriving. You are the builder of this fish pond, and you need to use your robot to dig and build a proper fish pond for the village. The pond should not be too large (villagers do not want to waste money) or too small (because it will affect the growth of the fishes). Therefore, you need to find a proper size by your self. Here are some data from other fish ponds from other villages, please use this data to predict the size of this pond and help the villagers to build it.</p></br><p>Pond radius size: [8, 3, 57, 75, 100, 10, 49, 106, 60, 63, 90, 80, 14, 78, 115, 110, 105, 53, 120, 90]</p></br><p>N of Fishes: [90, 41, 40, 74, 114, 81, 92, 21, 95, 9, 24, 99, 84, 120, 47, 86, 3, 23, 82, 8]</p></br><p>First, let's understand why we cannot use non-linear regression in this instance. To determine to size of a farm you need a single finite integer as the sides are straight but a pond is round! Non-linear regression can be used for any relationship between numbers that do not show as a staright line on a graph. Click on run to see what a non-linear relationship looks like on a graph.</p></br><p>(this is a tutorial page please click NEXT to the next page) </p>",
+        "code": "print(\"Hello World!\")",
+        "answer": "Hello World from part 2!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "Data Visualization</h3></br><p>Now Let's find the line of best fit, also known as the trend line of the data.</p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "nextLocked": true
+    },
+    {
+        "instructions": "<h3>Classification</h3><p><h5>Non-linear regression:</h5></br><p>(this is a tutorial page please click NEXT to the next page)</p>",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World from part 2!",
+        "nextLocked": true
+    },
+    {
+        "instructions": "<h3>Algorithm<h3> You are almost ready to code, first let's learn the 5 steps of a non-linear regression algorithm. [1] Figure out the range (minimum value to maximum value and intervale between values) [2] Determine the equation of your data [3] use the error variable (this account for error and/or very out of range data, do not worry about this for now we will give you the error equation so you do not need to find it). [4] Add the data equation and the error equation. [5] Plot!",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "nextLocked": true
+    },
+    {
+        "instructions": "<h3>OLS python implimentation:</h3></br><p>Now let's learn how to impliment OLS by python</p> </br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "nextLocked": true
+    },
+    {
+        "instructions": "<h3>OLS python implimentation:</h3></br><p>Now, let's predict our line of best fit</p> </br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "nextLocked": true
+    },
+    {
+        "instructions": "<h3>OLS python implimentation:</h3></br><p>Now, let's predict our line of best fit</p> </br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "nextLocked": true
+    },
+    {
+        "instructions": "<h3>Now it's your turn</h3></br><p>Let's use this algorithm to solve our fish pond problem</p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "nextLocked": true
+    },
+    {
+        "instructions": "<h3>Let's program the agent now and see this pond come to life!</h3></p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "nextLocked": true
+    },
+    {
+        "instructions": "<h3>Answer</h3></br>",
+        "starterCode": "print()",
+        "code": "print()",
+        "answer": "Hello World!",
+        "nextLocked": true
+    }
+]
