@@ -79,15 +79,70 @@
     width: 100px;
 }
 
-#reset {
+.btn-red {
     border-top: 3px solid lightcoral;
     border-right: 3px solid lightcoral;
     border-bottom: 3px solid darkred;
     border-left: 3px solid darkred;
     background-color: red;
+    transition: opacity 0.2s ease-out, top 0.2s ease-out;
+}
+
+.btn-red:hover {
+    border-top: 3px solid rgb(238, 102, 102);
+    border-right: 3px solid rgb(238, 102, 102);
+    border-bottom: 3px solid rgb(88, 0, 0);
+    border-left: 3px solid rgb(88, 0, 0);;
+    background-color: rgb(202, 0, 0);
+}
+
+.btn-red:active {
+    border-top: 3px solid rgb(231, 86, 86);
+    border-right: 3px solid rgb(231, 86, 86);
+    border-bottom: 3px solid rgb(70, 0, 0);
+    border-left: 3px solid rgb(70, 0, 0);
+    background-color: rgb(165, 0, 0);
 }
 
 .relative{
     width: 100%;
     height:auto;
-  }
+}
+
+#reset-pane {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    transition: visibility 0.4s ease-out, background-color 0.4s ease-out;
+}
+
+#reset-info {
+    position: fixed;
+    top: 30%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 15%;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    border-top: 3px solid var(--border-light);
+    border-right: 3px solid var(--border-light);
+    border-bottom: 3px solid var(--border-dark);
+    border-left: 3px solid var(--border-dark);
+    background: var(--card-background);
+    transition: opacity 0.4s ease-out, top 0.4s ease-out;
+}
+
+#reset-info p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#reset-info .btn {
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}

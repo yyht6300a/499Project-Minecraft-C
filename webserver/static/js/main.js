@@ -107,13 +107,47 @@ document.getElementById("back").addEventListener('click', function() {
 document.getElementById("reset").addEventListener('click', function() {
     playBtnClick();
 
+    document.getElementById("reset-pane").style.visibility = "visible";
+    document.getElementById("reset-pane").style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+
+    document.getElementById("reset-info").style.visibility = "visible";
+    document.getElementById("reset-info").style.opacity = "1";
+    document.getElementById("reset-info").style.top = "0px";
+});
+
+document.getElementById("reset-confirm").addEventListener('click', function() {
+    playBtnClick();
+
     // Reset code back to starter code
-    lesson = lessons[currentLesson];
-    part = lessonPart[currentLesson];
-    lesson[part].code = lesson[part].starterCode
-    sendJSONData();
+
+    try {
+        lesson = lessons[currentLesson];
+        part = lessonPart[currentLesson];
+        lesson[part].code = lesson[part].starterCode
+        sendJSONData();
+    } catch (error) {
+        console.log(error)
+    }
+    
+    document.getElementById("reset-pane").style.visibility = "hidden";
+    document.getElementById("reset-pane").style.backgroundColor = "rgba(0, 0, 0, 0)";
+
+    document.getElementById("reset-info").style.visibility = "hidden";
+    document.getElementById("reset-info").style.opacity = "0";
+    document.getElementById("reset-info").style.top = "30%";
 
     displayLessonData();
+});
+
+document.getElementById("reset-deny").addEventListener('click', function() {
+    playBtnClick();
+
+    document.getElementById("reset-pane").style.visibility = "hidden";
+    document.getElementById("reset-pane").style.backgroundColor = "rgba(0, 0, 0, 0)";
+
+    document.getElementById("reset-info").style.visibility = "hidden";
+    document.getElementById("reset-info").style.opacity = "0";
+    document.getElementById("reset-info").style.top = "30%";
 });
 
 // Run button

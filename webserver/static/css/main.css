@@ -77,6 +77,7 @@ button {
   border-bottom: 3px solid var(--darker-green);
   border-left: 3px solid var(--darker-green);
   transition: 0.2s;
+  transition: opacity 0.2s ease-out, top 0.2s ease-out;
 }
 
 .btn-locked {
@@ -143,7 +144,7 @@ button {
 .lesson-h1 {
   font-family: 'Mojang';
   margin-bottom: 1.5rem;
-  font-size: min(5vw, 2em);;
+  font-size: min(5vw, 2em);
   white-space: pre-wrap;
 }
 
@@ -160,8 +161,6 @@ button {
 .btn-play {
   margin-top: 2rem;
 }
-
-
 
 .consolerelative{
   width: 40%;
