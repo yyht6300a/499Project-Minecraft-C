@@ -1,0 +1,78 @@
+/* Media queries for responsiveness */
+@media all and (min-width: 905px) {
+    .lesson {
+      width: 25%;
+      max-width: 300px;
+      height: 625px;
+    }
+  
+    .lessons {
+      margin-top: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  @media all and (max-width: 905px) {
+    .lesson {
+      width: 80%;
+      display: flex;
+      align-self: center;
+    }
+  
+    .lessons {
+      flex-direction: column;
+    }
+  }
+
+.main-nav {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    border-bottom: 3px solid rgba(255,255,255,.3);
+}
+
+#logo {
+    width: 25%;
+    max-width: 400px;
+    min-width: 300px;
+    overflow: hidden;
+}
+
+.lessons {
+    width: 100%;
+    display: flex;
+}
+
+.lesson {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-top: 3px solid var(--border-light);
+    border-right: 3px solid var(--border-light);
+    border-bottom: 3px solid var(--border-dark);
+    border-left: 3px solid var(--border-dark);
+    background: var(--card-background);
+}
+
+.lesson-h1 {
+    font-family: 'Mojang';
+    margin-bottom: 1.5rem;
+    font-size: min(5vw, 2em);
+    white-space: pre-wrap;
+}
+
+.lesson-img {
+    width: 100%;
+}
+
+.lesson-desc {
+    padding-top: 1.5rem;
+    font-size: 1.2em;
+    flex-grow: 1;  /* Required to set btn-play to the bottom */
+}
