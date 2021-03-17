@@ -17,12 +17,21 @@ Lesson Goal:
 
 Background:
 
-Emeralds are very popular commodities among the villagers, so you decide to collect them through mining. 
-However, your robot can only mine one mine due to fuel problems, and you don’t know what ore is in each mine. 
-In this world, different kinds of ore will affect the growth of plants on the ground, so if you can find patterns in that,
-You can predict what ore is going to be in each mine. you could use your agent to collect plants from the mine and use the 
-data the company has collected to predict what ore the mine contains. Here’s some data collected by some miners. 
-Let’s use it to predict which mine has emeralds!
+Someone holds a machine learning competition in the village, and the winner could win a lot of emeralds. 
+There are four zones in the village, only one of which is buried with emeralds, and each contestant has only one 
+chance to dig for the treasure. The plants in each area are the key to determining the presence of emeralds. 
+Here is the data provided by the organizers so that contestants can find out the relationship between the plants 
+and the treasure. Let’s use your robot to collect plants and predict the location of the treasure!
+
+
+
+4 start points in the competition:
+
+Treasure 1: [49, 4, -24]
+Treasure 2: [36, 4, -26]
+Treasure 3: [37, 4, -8]
+Treasure 4: [50, 4, -7]
+
 
 
 Data: 
