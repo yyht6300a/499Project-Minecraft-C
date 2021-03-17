@@ -1,17 +1,20 @@
 #lesson-page {
+    position: fixed;
     width: 100%;
+    display: flex;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0.5;
+    top: 40%;
+    transition: visibility 0.4s ease-out, opacity 0.4s ease-out, top 0.4s ease-out;
 }
 
-.container {
-    display: flex;
-}
 .instruction-area{
     width: 35%;
     display: flex;
     flex-direction: column;
-
-
 }
+
 .instructions {
     width: 100%;
     padding: 1%;
@@ -21,7 +24,7 @@
     background-color: rgb(12, 12, 12);
 }
 
-.graph{
+.graph {
     width: 100%;
     padding: 1%;
     height: 30vh;
@@ -77,31 +80,6 @@
 
 .btn-area .btn {
     width: 100px;
-}
-
-.btn-red {
-    border-top: 3px solid lightcoral;
-    border-right: 3px solid lightcoral;
-    border-bottom: 3px solid darkred;
-    border-left: 3px solid darkred;
-    background-color: red;
-    transition: opacity 0.2s ease-out, top 0.2s ease-out;
-}
-
-.btn-red:hover {
-    border-top: 3px solid rgb(238, 102, 102);
-    border-right: 3px solid rgb(238, 102, 102);
-    border-bottom: 3px solid rgb(88, 0, 0);
-    border-left: 3px solid rgb(88, 0, 0);;
-    background-color: rgb(202, 0, 0);
-}
-
-.btn-red:active {
-    border-top: 3px solid rgb(231, 86, 86);
-    border-right: 3px solid rgb(231, 86, 86);
-    border-bottom: 3px solid rgb(70, 0, 0);
-    border-left: 3px solid rgb(70, 0, 0);
-    background-color: rgb(165, 0, 0);
 }
 
 .relative{

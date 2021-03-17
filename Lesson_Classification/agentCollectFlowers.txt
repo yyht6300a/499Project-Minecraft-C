@@ -1,0 +1,20 @@
+def breakMoveCollect():
+	agent.destroy('forward')
+	agent.moveForward()
+	agent.collect('all')
+
+agent.moveForward()
+
+for i in range(5):
+	for _ in range(4):
+		breakMoveCollect()
+	
+	if(i < 4):
+		if(i % 2 == 0):
+			agent.turnRight()
+			breakMoveCollect()
+			agent.turnRight()
+		else:
+			agent.turnLeft()
+			breakMoveCollect()
+			agent.turnLeft()

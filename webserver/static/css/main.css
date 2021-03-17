@@ -1,3 +1,4 @@
+/* Variables */
 :root {
   --primary-green: #34aa2f;
   --lighter-green: #a1d69f;
@@ -7,43 +8,19 @@
   --card-background: lightgray
 }
 
+/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Import font */
 @font-face {
   font-family: 'Mojang';
   src: url('../fonts/Mojang-Regular.ttf');
   font-weight: normal;
   font-style: normal;
-}
-
-@media all and (min-width: 905px) {
-  .lesson {
-    width: 25%;
-    max-width: 300px;
-    height: 625px;
-  }
-
-  .lessons {
-    margin-top: 1rem;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-@media all and (max-width: 905px) {
-  .lesson {
-    width: 80%;
-    display: flex;
-    align-self: center;
-  }
-
-  .lessons {
-    flex-direction: column;
-  }
 }
 
 body {
@@ -65,6 +42,7 @@ button {
   cursor: pointer;
 }
 
+/* Default button */
 .btn {
   font-family: 'Mojang';
   font-size: 1.3em;
@@ -78,15 +56,6 @@ button {
   border-left: 3px solid var(--darker-green);
   transition: 0.2s;
   transition: opacity 0.2s ease-out, top 0.2s ease-out;
-}
-
-.btn-locked {
-  background-color: gray;
-  border-top: 3px solid lightgray;
-  border-right: 3px solid lightgray;
-  border-bottom: 3px solid darkgray;
-  border-left: 3px solid darkgray;
-  pointer-events: none;
 }
 
 .btn:hover {
@@ -106,77 +75,48 @@ button {
   transition: none;
 }
 
-.main-nav {
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: black;
-  border-bottom: 3px solid rgba(255,255,255,.3);
+/* Warning button */
+.btn-red {
+  border-top: 3px solid lightcoral;
+  border-right: 3px solid lightcoral;
+  border-bottom: 3px solid darkred;
+  border-left: 3px solid darkred;
+  background-color: red;
+  transition: opacity 0.2s ease-out, top 0.2s ease-out;
 }
 
-#logo {
-  width: 25%;
-  max-width: 400px;
-  min-width: 300px;
-  overflow: hidden;
+.btn-red:hover {
+  border-top: 3px solid rgb(238, 102, 102);
+  border-right: 3px solid rgb(238, 102, 102);
+  border-bottom: 3px solid rgb(88, 0, 0);
+  border-left: 3px solid rgb(88, 0, 0);;
+  background-color: rgb(202, 0, 0);
 }
 
-.lessons {
-  width: 100%;
-  display: flex;
+.btn-red:active {
+  border-top: 3px solid rgb(231, 86, 86);
+  border-right: 3px solid rgb(231, 86, 86);
+  border-bottom: 3px solid rgb(70, 0, 0);
+  border-left: 3px solid rgb(70, 0, 0);
+  background-color: rgb(165, 0, 0);
 }
 
-.lesson {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  padding: 1.5rem;
-  border-top: 3px solid var(--border-light);
-  border-right: 3px solid var(--border-light);
-  border-bottom: 3px solid var(--border-dark);
-  border-left: 3px solid var(--border-dark);
-  background: var(--card-background);
+/* Button locked (disabled) */
+.btn-locked {
+  background-color: gray;
+  border-top: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-bottom: 3px solid darkgray;
+  border-left: 3px solid darkgray;
+  pointer-events: none;
 }
 
-.lesson-h1 {
-  font-family: 'Mojang';
-  margin-bottom: 1.5rem;
-  font-size: min(5vw, 2em);
-  white-space: pre-wrap;
-}
-
-.lesson-img {
-  width: 100%;
-}
-
-.lesson-desc {
-  padding-top: 1.5rem;
-  font-size: 1.2em;
-  flex-grow: 1;  /* Required to set btn-play to the bottom */
-}
-
+/* Btn on homepage */
 .btn-play {
   margin-top: 2rem;
 }
 
-.consolerelative{
-  width: 40%;
-  height:auto;
-}
-
-#lesson-page {
-  position: fixed;
-  z-index: 1;
-  visibility: hidden;
-  opacity: 0.5;
-  top: 40%;
-  transition: visibility 0.4s ease-out, opacity 0.4s ease-out, top 0.4s ease-out;
-}
-
-#lesson-nav {
+.lesson-nav {
   width: 100%;
   position: absolute;
   z-index: 0;

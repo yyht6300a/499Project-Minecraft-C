@@ -42,10 +42,15 @@ class agent:
     def place(self, slotNum, direction):
         self.cmdQueue.append("agent place " + str(slotNum) + " " + str(direction))
 
-    
+
+    #  Destroy Blocks
+    def destroy(self, direction):
+        self.cmdQueue.append("agent destroy " + str(direction))
+
+
+    # Give blocks
     def give(self,item,quantity,slotNum):
         self.cmdQueue.append("agent setitem "+str(slotNum)+" "+item+" "+str(quantity)+" "+str(10))
-    
 
     # Teleport to player
     def tp(self):
@@ -77,3 +82,9 @@ class agent:
     # Transfer items (move them to a different slot)
     def transfer(self, slotNum, quantity, destinationSlot):
         self.cmdQueue.append("agent transfer " + slotNum + " " + quantity + " " + destinationSlot)
+
+
+    # Say in chat
+    def say(self, chat):
+        self.cmdQueue.append("say " + str(chat))
+
