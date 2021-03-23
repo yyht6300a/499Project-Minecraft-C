@@ -1,0 +1,24 @@
+Quantitative Scores
+The graph below 
+indicates the average score given by the eight participants on the thirteen 
+questions that were asked to them. A score of five indicates that the participant strongly 
+agreed with a statement when a score of 1 indicates that the participants strongly disagreed with a statement.
+From this evaluation we can notice 2 main issues:
+
+
+The participants do not feel ready to apply those machine learning concepts on their own just by using those lessons.
+It can be hard to jump into those machine learning and AI concepts because it requires a lot of prior knowledge. 
+One of our participants noted “The only thing that wasn't fluid was the fact that 
+I didn't know python so I sort of got stuck when I had the task of writing the functions and stuff”.  
+Although teaching all the prerequisites is out of scope for our project it would be 
+good to have a list of concepts required to be able to advance to a certain lesson. 
+The Minecraft Education Edition library contains other computer science lessons like learning Python 
+(which would have helped that participant) so directing the student to those lessons first will make sure they have 
+the skills to advance to this lesson. 
+
+Sometimes the participants are unsure of what they need to accomplish. 	
+Participants noted things like, lessons do not give “instructions to every step: what you want the user to do”, 
+“People who have never played Minecraft probably do not know shortcuts in the game” or 
+“The instructions in the course are not clear enough”. Having more detailed instructions should definitely be a priority. 
+This could include things like more code samples, 
+explaining the code line by line or making sure that the user always knows what to click next. 
