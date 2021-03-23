@@ -1,5 +1,5 @@
 /* Media queries for responsiveness */
-@media all and (min-width: 905px) {
+@media all and (min-width: 1200px) {
     .lesson {
       width: 25%;
       max-width: 300px;
@@ -13,7 +13,7 @@
     }
   }
   
-  @media all and (max-width: 905px) {
+  @media all and (max-width: 1200px) {
     .lesson {
       width: 80%;
       display: flex;
