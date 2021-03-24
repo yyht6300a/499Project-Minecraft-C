@@ -63,9 +63,12 @@ document.getElementById("homepage").addEventListener('click', function() {
 document.getElementById("next").addEventListener('click', function() {
     playBtnClick();
     lessonPart[currentLesson]++;
-    document.getElementById("console").innerHTML =""
+
+    //clean console and graph when button is clicked
+    document.getElementById("console-text-area").innerHTML = ""
+    document.getElementById("console").style.border = "0px solid black";
+    document.getElementById("agentTNT").style.visibility = "hidden";
     document.getElementById("graph").innerHTML = "";
-    //clean console when button is clicked
     displayLessonData();
 });
 
@@ -74,9 +77,12 @@ document.getElementById("next").addEventListener('click', function() {
 document.getElementById("back").addEventListener('click', function() {
     playBtnClick();
     lessonPart[currentLesson]--;
-    document.getElementById("console").innerHTML =""
-    document.getElementById("graph").innerHTML = "";
+
     //clean console when button is clicked
+    document.getElementById("console-text-area").innerHTML =""
+    document.getElementById("console").style.border = "0px solid black";
+    document.getElementById("agentTNT").style.visibility = "hidden";
+    document.getElementById("graph").innerHTML = "";
     displayLessonData();
 });
 
@@ -157,8 +163,7 @@ document.getElementById("run").addEventListener('click', async function() {
     //add a new line between each output
 
     // Set the text color back to white in case it was red due to an error
-    document.getElementById("console").style.color = "white";  
-    // Set text context of console
+    document.getElementById("console-text-area").style.color = "white";  
 
     var image=""
     //check if current part have a plot 
@@ -179,7 +184,8 @@ document.getElementById("run").addEventListener('click', async function() {
 
     */
     
-    document.getElementById("console").innerHTML = printReturn;
+    // Set text context of console
+    document.getElementById("console-text-area").innerHTML = printReturn;
     document.getElementById("graph").innerHTML = image;
       
 
@@ -224,6 +230,8 @@ async function displayLessonData() {
 async function success() {
     // Transition border and unlock next button
     document.getElementById("console").style.border = "3px solid #34aa2f";
+    document.getElementById("agentTNT").src = "../static/img/agent.png";
+    document.getElementById("agentTNT").style.visibility = "visible";
 
     // Unlock next button
     lesson = lessons[currentLesson];
@@ -240,8 +248,10 @@ async function success() {
 // Run when code fails
 function fail() {
     document.getElementById("console").style.border = "3px solid orangered";
+    document.getElementById("agentTNT").src = "../static/img/tnt.png";
+    document.getElementById("agentTNT").style.visibility = "visible";
     setTimeout(() => { document.getElementById("console").style.border = "3px solid black"; }, 1000)
-    document.getElementById("console").style.color = "orangered";
+    document.getElementById("console-text-area").style.color = "orangered";
 }
 
 
