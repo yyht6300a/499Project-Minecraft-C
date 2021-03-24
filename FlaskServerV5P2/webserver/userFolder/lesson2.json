@@ -1,6 +1,6 @@
 [
     {
-        "instructions": "<h1>Fish Pond</h1><br/> <h3>Hi welcome to the Fish Pond lesson.<br/>In this lesson you will use Non-linear Regression algorithm and your robot to build a fish pond!</h3> <br/><p>Please check this video demo</p></br>This is a tutorial page please click NEXT to the next page",
+        "instructions": "<h1>Fish Pond</h1><br/> <h3>Hi welcome to the Fish Pond lesson.<br/>In this lesson you will use Non-linear Regression algorithm and your robot to build a fish pond!</h3> <br/></br>This is a tutorial page please click NEXT to the next page",
         "starterCode": "print(\"hi\")\r\n\r\n",
         "code": "print(\"hi\")\r\n\r\n",
         "answer": "Hello World!",
@@ -9,32 +9,21 @@
         "nextLocked": false
     },
     {
-        "instructions": "<h3>Background:</h3><p>As in lesson 1 where you used linear regression to determine the ideal size of a chicken farm, in this lesson we will use non-linear regression to determine the ideal size of a fish pond. There is a village that needs to build a fish pond. There are now 64 fishes in the village, but no one knows how big the pond should be too keep the fishes happy and thriving. You are the builder of this fish pond, and you need to use your robot to dig and build a proper fish pond for the village. The pond should not be too large (villagers do not want to waste money) or too small (because it will affect the growth of the fishes). Therefore, you need to find a proper size by your self. Here are some data from other fish ponds from other villages, please use this data to predict the size of this pond and help the villagers to build it.</p></br><p>Pond radius size: [8, 3, 57, 75, 100, 10, 49, 106, 60, 63, 90, 80, 14, 78, 115, 110, 105, 53, 120, 90]</p></br><p>N of Fishes: [90, 41, 40, 74, 114, 81, 92, 21, 95, 9, 24, 99, 84, 120, 47, 86, 3, 23, 82, 8]</p></br><p>First, let's understand why we cannot use non-linear regression in this instance. To determine to size of a farm you need a single finite integer as the sides are straight but a pond is round! Non-linear regression can be used for any relationship between numbers that do not show as a staright line on a graph. Click on run to see what a non-linear relationship looks like on a graph.</p></br><p>(this is a tutorial page please click NEXT to the next page) </p>",
-        "code": "print(\"Hello World!\")",
-        "answer": "Hello World from part 2!",
-        "plotname": "",
-        "haveplot": false,
+        "instructions": "<h3>Background:</h3><p>As in lesson 1 where you used linear regression to determine the ideal size of a chicken farm, in this lesson we will use non-linear regression to determine the ideal size of a fish pond. There is a village that needs to build a fish pond. There are now 64 fishes in the village, but no one knows how big the pond should be too keep the fishes happy and thriving. You are the builder of this fish pond, and you need to use your robot to dig and build a proper fish pond for the village. The pond should not be too large (villagers do not want to waste money) or too small (because it will affect the growth of the fishes). Therefore, you need to find a proper size by your self. Here are some data from other fish ponds from other villages, please use this data to predict the size of this pond and help the villagers to build it.</p></br><p>Pond radius size: [2, 12, 5, 19, 6, 8, 9, 10, 11, 14, 4, 15, 16, 7, 17, 18, 20, 26, 13, 21, 22, 1, 23, 24, 3, 25, 27]</p></br><p>N of Fishes: [11, 208, 48, 114, 59, 82, 109, 142, 173, 225, 31, 223, 203, 67, 178, 138, 92, 19, 221, 66, 52, 9, 43, 33, 26, 25, 3]</p></br><p>First, let's understand why we cannot use non-linear regression in this instance. To determine to size of the farm in lesson 1 you could use linear regression because the data formed a straight line on the graph. However, this data does not form a straight line! Non-linear regression can be used for any relationship between numbers that do not show as a staright line on a graph. Click on run to see what a non-linear relationship looks like on a graph.</p></br><p>(this is a tutorial page please click NEXT to the next page) </p>",
+        "starterCode": "\r\nprint(\"hello\")\r\npond_size = [2, 12, 5, 19, 6, 8, 9, 10, 11, 14, 4, 15, 16, 7, 17, 18, 20, 26, 13, 21, 22, 1, 23, 24, 3, 25, 27]; \r\nn_fish = [11, 208, 48, 114, 59, 82, 109, 142, 173, 225, 31, 223, 203, 67, 178, 138, 92, 19, 221, 66, 52, 9, 43, 33, 26, 25, 3]; \r\n# As in lesson 1, let's use matplotlib to visualize our data\r\nplt.plot(pond_size,n_fish, \"o\")\r\n#plt.show()\r\n#plt.savefig(\"./userFolder/lessonplot/gpl2-1.png\", bbox_inches='tight')\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()\r\n\r\n# As you can see our data forms a bell curve, we cannot find a straight line to predict our data.\r\n# You might know from math class that the equation of a bell curve is a polynomial of form ax^2+bx+c, let's see how to apply that to our data",
+        "code": "\r\nprint(\"hello\")\r\npond_size = [2, 12, 5, 19, 6, 8, 9, 10, 11, 14, 4, 15, 16, 7, 17, 18, 20, 26, 13, 21, 22, 1, 23, 24, 3, 25, 27]; \r\nn_fish = [11, 208, 48, 114, 59, 82, 109, 142, 173, 225, 31, 223, 203, 67, 178, 138, 92, 19, 221, 66, 52, 9, 43, 33, 26, 25, 3]; \r\n# As in lesson 1, let's use matplotlib to visualize our data\r\nplt.plot(pond_size,n_fish, \"o\")\r\n#plt.show()\r\n#plt.savefig(\"./userFolder/lessonplot/gpl2-1.png\", bbox_inches='tight')\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()\r\n\r\n# As you can see our data forms a bell curve, we cannot find a straight line to predict our data.\r\n# You might know from math class that the equation of a bell curve is a polynomial of form ax^2+bx+c, let's see how to apply that to our data",
+        "answer": "Hello World",
+        "plotname": "L2gp1.png",
+        "haveplot": true,
         "nextLocked": false
     },
     {
-        "instructions": "Data Visualization</h3></br><p>Now Let's find the line of best fit, also known as the trend line of the data.</p></br><p>(this is a coding page please run the code before go to next page)</p>",
-        "starterCode": "print()",
-        "code": "print()",
+        "instructions": "Prediction</h3></br><p>Now Let's find the line of best fit, also known as the trend line of the data.</p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "\r\nprint(\"hello\")\r\npond_size = [2, 12, 5, 19, 6, 8, 9, 10, 11, 14, 4, 15, 16, 7, 17, 18, 20, 26, 13, 21, 22, 1, 23, 24, 3, 25, 27]; \r\nn_fish = [11, 208, 48, 114, 59, 82, 109, 142, 173, 225, 31, 223, 203, 67, 178, 138, 92, 19, 221, 66, 52, 9, 43, 33, 26, 25, 3]; \r\n # ax*2 + bx + c, here we use a = 1.22, b = 34, c = 68.2, the equation of our line is 1.22x^2 + 34x + 68.2 \r\n y = [1.22x^2+34x+68.2]\r\n\r\n\r\nplt.plot(size,price,\"o\")\r\n\r\nplt.plot(size,y)\r\n\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()",
+        "code": "\r\nprint(\"hello\")\r\npond_size = [2, 12, 5, 19, 6, 8, 9, 10, 11, 14, 4, 15, 16, 7, 17, 18, 20, 26, 13, 21, 22, 1, 23, 24, 3, 25, 27]; \r\nn_fish = [11, 208, 48, 114, 59, 82, 109, 142, 173, 225, 31, 223, 203, 67, 178, 138, 92, 19, 221, 66, 52, 9, 43, 33, 26, 25, 3]; \r\n # ax*2 + bx + c, here we use a = 1.22, b = 34, c = 68.2, the equation of our line is 1.22x^2 + 34x + 68.2 \r\n y = [1.22x^2+34x+68.2]\r\n\r\n\r\nplt.plot(size,price,\"o\")\r\n\r\nplt.plot(size,y)\r\n\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()",
         "answer": "Hello World!",
-        "nextLocked": true
-    },
-    {
-        "instructions": "<h3>Classification</h3><p><h5>Non-linear regression:</h5></br><p>(this is a tutorial page please click NEXT to the next page)</p>",
-        "starterCode": "print()",
-        "code": "print()",
-        "answer": "Hello World from part 2!",
-        "nextLocked": true
-    },
-    {
-        "instructions": "<h3>Algorithm<h3> You are almost ready to code, first let's learn the 5 steps of a non-linear regression algorithm. [1] Figure out the range (minimum value to maximum value and intervale between values) [2] Determine the equation of your data [3] use the error variable (this account for error and/or very out of range data, do not worry about this for now we will give you the error equation so you do not need to find it). [4] Add the data equation and the error equation. [5] Plot!",
-        "starterCode": "print()",
-        "code": "print()",
-        "answer": "Hello World!",
+        "plotname": "L2gp2.png",
+        "haveplot": true,
         "nextLocked": true
     },
     {
