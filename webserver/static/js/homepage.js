@@ -18,6 +18,12 @@ document.getElementById("lesson3").addEventListener('click', function() {
     showLessonPage();
 });
 
+document.getElementById("lesson4").addEventListener('click', function() {
+    currentLesson = 3;
+    displayLessonData();
+    showLessonPage();
+});
+
 // Btn click and CSS to bring up lesson page
 function showLessonPage() {
     playBtnClick()

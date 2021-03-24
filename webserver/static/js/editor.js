@@ -8,7 +8,7 @@ let lessonMax;
 var currentLesson;
 
 // These store this session's current lesson part, index matching to lesson
-var lessonPart = [0, 0, 0];
+var lessonPart = [0, 0, 0, 0];
 
 // Comms object
 comms = new Comms();
@@ -21,15 +21,17 @@ async function load() {
     lesson1 = await getJSONData(1);
     lesson2 = await getJSONData(2);
     lesson3 = await getJSONData(3);
+    lesson4 = await getJSONData(4);
 
-    lessons = [lesson1, lesson2, lesson3];
+    lessons = [lesson1, lesson2, lesson3, lesson4];
 
     // Set their max value to global vars
     lesson1max = Object.keys(lesson1).length - 1;
     lesson2max = Object.keys(lesson2).length - 1;
     lesson3max = Object.keys(lesson3).length - 1;
+    lesson4max = Object.keys(lesson4).length - 1;
 
-    lessonMax = [lesson1max , lesson2max, lesson3max];
+    lessonMax = [lesson1max , lesson2max, lesson3max, lesson4max];
 }
 
 // Code for editor
