@@ -1,0 +1,40 @@
+agent.tpto(50,5,-20)
+# Remember to adjust your direction.
+agent.wait()\r\nfor i in range(2):
+      agent.moveForward()
+agent.place(1,'back')
+agent.moveForward()
+agent.moveForward()
+agent.place(1,'back')
+agent.tpto(51,5,-19)
+agent.wait()
+agent.turnRight()
+for i in range(3):
+      agent.moveForward()
+agent.wait()
+agent.place(1,'back')
+agent.wait()
+agent.turnLeft()
+agent.wait()
+for a in range(8):
+    agent.moveForward()
+    agent.moveRight()
+for i in range(2):
+      agent.moveForward()
+agent.turnRight()
+agent.wait()
+agent.moveForward()
+agent.place(1,'back')
+for a in range(4):
+    agent.moveForward()
+    agent.moveRight()
+agent.wait()
+agent.turnRight()
+agent.moveForward()
+agent.wait()
+agent.moveForward()
+agent.wait()
+agent.place(1,'back')
+for a in range(4):
+    agent.moveForward()
+agent.place(1,'back')
