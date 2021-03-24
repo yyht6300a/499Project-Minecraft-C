@@ -69,6 +69,14 @@ def getLesson3Info():
     elif request.method == 'POST':
         return "ECHO: POST\n"
 
+@app.route('/lessonData4', methods = ['POST', 'GET'])
+def getLesson4Info():
+    if request.method == 'GET':
+        return(getLessonInfo(4))
+
+    elif request.method == 'POST':
+        return "ECHO: POST\n"
+
 
 
 
@@ -119,6 +127,7 @@ def add_header(res):
 # Opens JSON lesson file and returns
 def getLessonInfo(lesson):
     print("Lesson GET Request")
+    print("Lesson: ", lesson);
     f = open('userFolder/lesson' + str(lesson) + '.json')
     return f.read()
 
