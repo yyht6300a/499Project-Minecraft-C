@@ -1,0 +1,123 @@
+/* Variables */
+:root {
+  --primary-green: #34aa2f;
+  --lighter-green: #a1d69f;
+  --darker-green: #237b1f;
+  --border-light: lightslategray;
+  --border-dark: darkgray;
+  --card-background: lightgray
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Import font */
+@font-face {
+  font-family: 'Mojang';
+  src: url('../fonts/Mojang-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-image: url('../img/background.png');
+  background-size: 200px;
+  background-repeat: repeat;
+} 
+
+a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+button {
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Default button */
+.btn {
+  font-family: 'Mojang';
+  font-size: 1.3em;
+  padding: 1rem;
+  width: 200px;
+  height: 2.5em;
+  background-color: var(--primary-green);
+  border-top: 3px solid var(--lighter-green);
+  border-right: 3px solid var(--lighter-green);
+  border-bottom: 3px solid var(--darker-green);
+  border-left: 3px solid var(--darker-green);
+  transition: 0.2s;
+  transition: opacity 0.2s ease-out, top 0.2s ease-out;
+}
+
+.btn:hover {
+  background-color: #2b8d28;
+  border-top: 3px solid #93c492;
+  border-right: 3px solid #93c492;
+  border-bottom: 3px solid #1d6419;
+  border-left: 3px solid #1d6419;
+}
+
+.btn:active {
+  background-color: #288325;
+  border-top: 3px solid #85b484;
+  border-right: 3px solid #85b484;
+  border-bottom: 3px solid #185315;
+  border-left: 3px solid #185315;
+  transition: none;
+}
+
+/* Warning button */
+.btn-red {
+  border-top: 3px solid lightcoral;
+  border-right: 3px solid lightcoral;
+  border-bottom: 3px solid darkred;
+  border-left: 3px solid darkred;
+  background-color: red;
+  transition: opacity 0.2s ease-out, top 0.2s ease-out;
+}
+
+.btn-red:hover {
+  border-top: 3px solid rgb(238, 102, 102);
+  border-right: 3px solid rgb(238, 102, 102);
+  border-bottom: 3px solid rgb(88, 0, 0);
+  border-left: 3px solid rgb(88, 0, 0);;
+  background-color: rgb(202, 0, 0);
+}
+
+.btn-red:active {
+  border-top: 3px solid rgb(231, 86, 86);
+  border-right: 3px solid rgb(231, 86, 86);
+  border-bottom: 3px solid rgb(70, 0, 0);
+  border-left: 3px solid rgb(70, 0, 0);
+  background-color: rgb(165, 0, 0);
+}
+
+/* Button locked (disabled) */
+.btn-locked {
+  background-color: gray;
+  border-top: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-bottom: 3px solid darkgray;
+  border-left: 3px solid darkgray;
+  pointer-events: none;
+}
+
+/* Btn on homepage */
+.btn-play {
+  margin-top: 2rem;
+}
+
+.lesson-nav {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}

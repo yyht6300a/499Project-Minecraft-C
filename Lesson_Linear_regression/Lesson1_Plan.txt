@@ -1,0 +1,116 @@
+Lesson Goal:
+
+•	Learn the idea of Classification and Regression.
+
+•	Learn the idea of Linear regression.
+
+•	Learn how to use python matplotlib library to print and analyse data.
+
+•	what is a line (y=mx+b)
+
+•	what is best fit.
+
+•	what is Ordinary Least Squares.
+
+•	Learn how to use Python Skit-learn Library. 
+
+
+Background:
+
+There is a village that needs to build a chicken farm. There are now 87 chickens in the village, 
+but no one knows how big the farm should be. You are the builder of this chicken farm, 
+and you need to use your robot to build a proper chicken farm for the village. 
+The farm should not be too large (villagers do not want to waste money) or too small 
+(because it will affect the growth of the chickens). Therefore, you need to find a proper size by your self.
+Here are some data from other chicken farms, please use this data to predict the size of this farm and 
+help the villagers to build it.
+
+
+Sample Data:
+
+Farm size: [20,40,60,80,100,120,140,40,50,60,105,48,54,63,72,103,108,93,90,68,36,90,88]
+
+N of Chickens: [15,28,50,68,75,93,130,35,38,78,81,33,40,45,75,70,100,95,60,70,70,110,52]
+
+
+Student Objectives:
+
+Use Python to find the line that best fits the sample data.
+
+Use your own model to predict the farm size for 87 chickens.
+
+Use your agent to help the villager to build a chicken farm with proper size.
+
+
+
+What is Classification:
+
+Classification is the process of finding or discovering a model or function which helps in separating
+the data into multiple categorical classes. For example, classify if an email is spam or not. (the output is discrete value)
+
+
+
+What is Regression:
+
+Regression is the process of finding a model or function for distinguishing the data
+into continuous real values instead of using classes or discrete values. For example, we have a dataset
+that contains some data on the price of a house vs. the size of a house. 
+Then we can predict the price of a new house based on the size. (the output is continuous)
+
+(GeeksforGeeks)
+
+
+
+Linear regression:
+This is one of the simplest Machine Learning model. We can use it to find the line that best fits the data.
+
+
+
+Squared Distance (Loss):
+
+In math, the equation of a straight line is Y=mx + b 
+(X and Y are the value on the axis, m= slope or gradient and b is the value of y when x=0 or intercept). 
+So, we should find the best m value and b value for our data, but what is the best and how to find the value?
+
+See graph SD
+
+In this graph, the red dots represent our data. 
+
+The blue line is the prediction line. 
+
+The purple points represent the corresponding Y value.
+
+The green line shows the distance between our data and the prediction line.
+
+We use loss to determine whether a model is good or bad. 
+In our graph the loss is the squared distance between red dots and the blue line. 
+And our goal is to find the best m and b value for the prediction line that minimizes our loss.
+
+
+
+Ordinary Least Squares:
+
+We call the process of finding the minimum loss value as optimization, in this lesson we will learn how to implement
+an algorithm called Ordinary Least Squares (OLS):
+
+To minimizes the loss, we need to minimize the mean squared error (MSE) of our model.
+
+Formula for mean squared error: MSE= 1/n Σ (y - y’)2
+N= number of elements in our dataset
+Y= The Y-intercept value corresponding to the given x value in the data (red dots in the previous graph)
+Y’= The Y-intercept value corresponding to the given x value on our prediction line. (purple dots in the previous graph)
+And there are equations to help us to find M and B
+M=(Mean(ΣX) - Mean(Σ(XY))) / (Mean(ΣX2) - (Mean(ΣX))2)
+B= Mean(ΣY) – M (Mean(ΣX))
+
+We’re not going to get into the math behind the formula in this lesson, 
+but if you’re interested check out this article: 
+https://www.freecodecamp.org/news/machine-learning-mean-squared-error-regression-line-c7dde9a26b93/
+
+
+
+Python implementation:...
+
+
+Please check google doc for better view:
+https://docs.google.com/document/d/1ay__9wfrkNTJe1EysAcX1yB7Xpwp3WhYG3WujhghBeM/edit?usp=sharing

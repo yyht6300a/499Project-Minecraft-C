@@ -1,0 +1,91 @@
+Lesson Goal:
+
+•	Learn the idea of Classification (Unsupervised and Supervised learning).
+
+•	Learn how to use pandas to read a csv dataset.
+
+•	Learn how to use python matplotlib library to print and analyse data.
+
+•	Learn how to calculate the distance between vectors (points)
+
+•	Learn Normalization
+
+•	Implement K-nearest neighbors by python.
+
+•	Learn how to use Python Skit-learn Library to perform KNN.
+
+
+Background:
+
+Someone holds a machine learning competition in the village, and the winner could win a lot of emeralds. 
+There are four zones in the village, only one of which is buried with emeralds, and each contestant has only one 
+chance to dig for the treasure. The plants in each area are the key to determining the presence of emeralds. 
+Here is the data provided by the organizers so that contestants can find out the relationship between the plants 
+and the treasure. Let’s use your robot to collect plants and predict the location of the treasure!
+
+
+
+4 start points in the competition:
+
+Treasure 1: [49, 4, -24]
+Treasure 2: [36, 4, -26]
+Treasure 3: [37, 4, -8]
+Treasure 4: [50, 4, -7]
+
+
+
+Data: 
+
+Total 220 lines 9:1->train:val
+
+training set: 198 lines
+
+validation set: 22 lines.
+
+Some examples:
+
+Oxeye_daisy   allium   blue_orchid   red_tulip   label
+
+    5            9           10          7         0
+  
+    11           3           4           10        1
+    
+    10           5           3           11        1
+
+    4            8           10          7         0
+
+...........
+
+
+ 
+Label 1= Emeralds                  Label 0= iron ore
+
+
+
+Data to predict: Students will collect the data in the game and use the model to predict the value
+
+
+Student Objectives:
+
+Use python to build a KNN classification model. 
+
+Use your own model to predict which mine have emeralds.
+
+
+
+
+The difference between supervised learning and unsupervised learning:
+
+
+In supervised learning, we use a set of labeled data to train our model.
+For example, in a classification task, if we want our model to be able to distinguish between dogs and cats in a 
+set of photos, we can use a set of images and label them with cat or dog. After the training use this data,
+our model will be able to identify the new image and label it as a cat or a dog.
+
+In unsupervised learning, we use unlabeled data to train the model. The model will analyze the data and find
+patterns in it. For example, if we train a model by a set of pictures of cat and dog, but without any labels,
+the model could divide photos into two categories and if we provide a new image of cat,
+the model will put the picture in the same category as the cat.  
+
+
+see more on:https://docs.google.com/document/d/1GsarhwhJb40lT8EdWOMZbhQpEI7raVUWjBrplpFuZ4E/edit?usp=sharing

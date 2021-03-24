@@ -1,3 +1,4 @@
+
 Quantitative Scores
 The graph below 
 indicates the average score given by the eight participants on the thirteen 
@@ -8,8 +9,8 @@ From this evaluation we can notice 2 main issues:
 
 The participants do not feel ready to apply those machine learning concepts on their own just by using those lessons.
 It can be hard to jump into those machine learning and AI concepts because it requires a lot of prior knowledge. 
-One of our participants noted �The only thing that wasn't fluid was the fact that 
-I didn't know python so I sort of got stuck when I had the task of writing the functions and stuff�.  
+One of our participants noted The only thing that wasn't fluid was the fact that 
+I didn't know python so I sort of got stuck when I had the task of writing the functions and stuff.  
 Although teaching all the prerequisites is out of scope for our project it would be 
 good to have a list of concepts required to be able to advance to a certain lesson. 
 The Minecraft Education Edition library contains other computer science lessons like learning Python 
@@ -17,8 +18,32 @@ The Minecraft Education Edition library contains other computer science lessons 
 the skills to advance to this lesson. 
 
 Sometimes the participants are unsure of what they need to accomplish. 	
-Participants noted things like, lessons do not give �instructions to every step: what you want the user to do�, 
-�People who have never played Minecraft probably do not know shortcuts in the game� or 
-�The instructions in the course are not clear enough�. Having more detailed instructions should definitely be a priority. 
+Participants noted things like, lessons do not give instructions to every step: what you want the user to do, 
+People who have never played Minecraft probably do not know shortcuts in the game or 
+The instructions in the course are not clear enough. Having more detailed instructions should definitely be a priority. 
 This could include things like more code samples, 
 explaining the code line by line or making sure that the user always knows what to click next. 
+
+Non-Linear Regression
+	Lesson Goal:
+·       Understand what non-linear regression is.
+·       Understand the difference between linear and non-linear regression and when to use one versus the other
+·       Learn how to use python matplotlib to plot non-linear graphs and analysis data.
+·       Learn what logarithms and exponential functions are.
+·       Learn how to use logarithm to turn a nonlinear function into a linear function.
+·       Learn how to use Python Scikit-learn Library for non-linear regression.
+ 
+Background:
+In the previous lesson (on linear regression) the students calculated the perfect size for a farm of 87 chicken. In this lesson the village acquires 67 sea turtles and we want to build a circular pond for them to live. The farm should not be too large (villagers do not want to waste money) or too small (because the sea turtle should have enough space to grow). Below is some of the data used by other villages use this to determine the ideal pond size. Remember the pond should be circular. 
+Hint: The area of circle is calculated ?r^2
+
+Sample Data:
+Pond size: [ ]
+N of Fishes: [ ]
+ 
+Graph:
+ 
+Student Objectives:
+
+
+

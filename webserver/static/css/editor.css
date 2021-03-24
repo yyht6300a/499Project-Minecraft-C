@@ -1,0 +1,142 @@
+#lesson-page {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0.5;
+    top: 40%;
+    transition: visibility 0.4s ease-out, opacity 0.4s ease-out, top 0.4s ease-out;
+}
+
+.instruction-area{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.instructions {
+    width: 100%;
+    padding: 1%;
+    height: 70vh;
+    color: white;
+    overflow-y: auto;
+    background-color: rgb(12, 12, 12);
+}
+
+.graph {
+    width: 100%;
+    padding: 1%;
+    height: 30vh;
+    color: white;
+    font-family: 'Courier New', monospace;
+    background-color: black;
+    border: 1px solid white;
+    overflow-y: auto;
+}
+
+.instructions p {
+    margin: 2%;
+    line-height: 1.3;
+}
+
+.work-area {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor {
+    width: 100%;
+    height: 70vh;
+    border-top: 3px solid var(--border-light);
+    border-right: 3px solid var(--border-light);
+    border-bottom: 3px solid var(--border-dark);
+    border-left: 3px solid var(--border-dark);
+}
+
+.console {
+    display: flex;
+    width: 100%;
+    height: 20vh;
+    padding: 1%;
+    background-color: black;
+    border: 3px solid black;
+    transition: border 0.3s linear;
+}
+
+.console-text {
+    height: 100%;
+    overflow-x: scroll;
+    color: white;
+    font-family: 'Courier New', monospace;
+}
+
+.icon-area {
+    width: 50px;
+    margin-right: 10px;
+}
+
+#agentTNT {
+    width: 50px;
+    height: 50px;
+    visibility: hidden;
+}
+
+.btn-area {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: black;
+}
+
+.btn-area .btn {
+    width: 100px;
+}
+
+.relative{
+    width: 100%;
+    height:auto;
+}
+
+#reset-pane {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    transition: visibility 0.4s ease-out, background-color 0.4s ease-out;
+}
+
+#reset-info {
+    position: fixed;
+    top: 30%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 15%;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    border-top: 3px solid var(--border-light);
+    border-right: 3px solid var(--border-light);
+    border-bottom: 3px solid var(--border-dark);
+    border-left: 3px solid var(--border-dark);
+    background: var(--card-background);
+    transition: opacity 0.4s ease-out, top 0.4s ease-out;
+}
+
+#reset-info p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#reset-info .btn {
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}

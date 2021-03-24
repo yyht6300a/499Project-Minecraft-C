@@ -1,0 +1,128 @@
+[
+    {
+        "instructions": "<h1>Shortest Path</h1><br/> <h3>Hi welcome to the Chicken Farm lesson.<br/>It is too hard to deliver all the parcels in person. A courier asks you to help him develop a program that makes a robot to deliver automatically. But remember, the fuel of a robot is limited. <br/>You have to be careful when you design a route for the robot. Try to make it as short as possible!</h3> <br/></br>(this is a tutorial page please click NEXT to the next page)<br/><img src='../static/img/lesson3/lesson3title.png' class='relative'/>",
+        "starterCode": "# Click next to continue",
+        "code": "# Click next to continue",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h1>Step 1:</h1><br/> <h3>Now here shows the map, there are multiple choice from one house to another. To simplify the question,we can consider each house as a node and each path between them as an edge. And now we need to convert the mapinto something that computer can read. Create a list to store every edge in it, including start node and end node. And also a list contains all nodes.</h3> <br/><img src='../static/img/lesson3/sample1.png' class='relative'/><br/><h5>Source:https://wax8280.github.io/2016/10/10/%E8%B0%88%E8%B0%88Kruskal%E4%B8%8EPrim%E8%BF%99%E4%B8%A4%E7%A7%8D%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%AE%97%E6%B3%95%EF%BC%88Python%E5%AE%9E%E7%8E%B0%EF%BC%89/#prim<br/>",
+        "starterCode": "'''\r\nHint: To start your convertion, you may use the following pseudo code:\r\n  Map = [(House name1,House name2, value),...]  \r\n  //[House name1] is the current location. The [House name2] is another house which directly \r\nconnected with the current. [value] is the distance between these two house. \r\nRemember you need to make sure every house is included.)\r\n'''\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\nprint(Map)\r\nprint(nodes)",
+        "code": "'''\r\nHint: To start your convertion, you may use the following pseudo code:\r\n  Map = [(House name1,House name2, value),...]  \r\n  //[House name1] is the current location. The [House name2] is another house which directly \r\nconnected with the current. [value] is the distance between these two house. \r\nRemember you need to make sure every house is included.)\r\n'''\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\nprint(Map)\r\nprint(nodes)",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h1>Step 2:</h1><br/> <h3>Well done! Now it's time to prepair for next code. Finish the following readding before we continue. </h3><br/> <img src='../static/img/lesson3/treesample.png' class='relative'/> <br/><h5>Source:https://wax8280.github.io/2016/10/10/%E8%B0%88%E8%B0%88Kruskal%E4%B8%8EPrim%E8%BF%99%E4%B8%A4%E7%A7%8D%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%AE%97%E6%B3%95%EF%BC%88Python%E5%AE%9E%E7%8E%B0%EF%BC%89/#prim",
+        "starterCode":"'''\r\n1. What is Minimum Spanning Tree?\r\n    'Given a connected and undirected graph, a spanning tree of that graph is a subgraph that is a tree and connects all the vertices together.'\r\n    The number of spanning tree on a graph is not limited. However, to solve the problem in this lesson, we need to find the minimum spanning tree.\r\n    A minimum spanning tree has the smallest weight compared with all other spanning trees for a graph. \r\n    'The weight of a spanning tree is the sum of weights given to each edge of the spanning tree.'\r\n    In this lesson, the weight of an edge represents the distance between two house. \r\n    There will be only (number of nodes -1) edges in a minimum spanning tree.\r\n2. How does a Kruskal's algorithm work?\r\n\r\n    i. The algorithm sorts all the edges in increasing order of their weight.\r\n\r\n    ii. Start with the smallest edge. If it can not form a cycle with the tree we have so far, then add this edge to the tree.\r\n    Otherwise we discard it.\r\n\r\n    iii. Repeat step2 until there are [(number of nodes) - 1] edges in the tree.\r\n\r\n It's ok if you do not totally understand. We will explain more in the next step.'''",
+        "code": "'''\r\n1. What is Minimum Spanning Tree?\r\n    'Given a connected and undirected graph, a spanning tree of that graph is a subgraph that is a tree and connects all the vertices together.'\r\n    The number of spanning tree on a graph is not limited. However, to solve the problem in this lesson, we need to find the minimum spanning tree.\r\n    A minimum spanning tree has the smallest weight compared with all other spanning trees for a graph. \r\n    'The weight of a spanning tree is the sum of weights given to each edge of the spanning tree.'\r\n    In this lesson, the weight of an edge represents the distance between two house. \r\n    There will be only (number of nodes -1) edges in a minimum spanning tree.\r\n2. How does a Kruskal's algorithm work?\r\n\r\n    i. The algorithm sorts all the edges in increasing order of their weight.\r\n\r\n    ii. Start with the smallest edge. If it can not form a cycle with the tree we have so far, then add this edge to the tree.\r\n    Otherwise we discard it.\r\n\r\n    iii. Repeat step2 until there are [(number of nodes) - 1] edges in the tree.\r\n\r\n It's ok if you do not totally understand. We will explain more in the next step.'''",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h1>Step 3:</h1><br/> <h3>In this part, we need to sort edges in increasing order by using sort(). <br/>In python, function sort() looks like<br/> sort(key=None,reverse=False)<br/>key is the compaire function. In this part, we will use key=lambda s: s[t], where s means each iteration and t means the column. </h3> ",
+        "starterCode":"#here is an example \r\nstudents = [('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]\r\n# we have a list which stored students' names, grades, and ages\r\n# if we want to sort it by ages, then we need to set t=2 (it starts with 0)\r\n# it should be like:\r\nstudents.sort(key=lambda s: s[2])\r\nprint('Sorted by age:')\r\nprint(students)\r\n# if we want to sort it by grades, it should be like:\r\nstudents.sort(key=lambda s: s[1])\r\nprint('Sorted by grade:')\r\nprint(students)",
+        "code": "#here is an example \r\nstudents = [('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]\r\n# we have a list which stored students' names, grades, and ages\r\n# if we want to sort it by ages, then we need to set t=2 (it starts with 0)\r\n# it should be like:\r\nstudents.sort(key=lambda s: s[2])\r\nprint('Sorted by age:')\r\nprint(students)\r\n# if we want to sort it by grades, it should be like:\r\nstudents.sort(key=lambda s: s[1])\r\nprint('Sorted by grade:')\r\nprint(students)",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>For now, let's sort Map by distance</h3>",
+        "starterCode": "\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\nMap.sort(key=lambda x:x[2])\r\nprint(Map)",
+        "code": "\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\nMap.sort(key=lambda x:x[2])\r\nprint(Map)",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h1>Step 4:</h1><br/> <h3>To initialize a new tree, We will use a new data structure 'Dictionary'. Data in dictionary will be like {[key]:[value]}, where key is the name of data and value is the data stored. We want the current node be the key and the nodes connected with the current is the value",
+        "starterCode": "# Use the following pseudo code:\r\n'''\r\ntree=dict()\r\nfor loop for all elements in nodes:\r\n    let each node connect with itself (we will deal with this later.)\r\n'''\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\nprint(trees)",
+        "code": "# Use the following pseudo code:\r\n'''\r\ntree=dict()\r\nfor loop for all elements in nodes:\r\n    let each node connect with itself (we will deal with this later.)\r\n'''\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\nprint(trees)",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h1>Step 5:</h1><br/> <h3>Now let's start with build a function named find(). It is used to find the root nodes. So that this tree will record connected nodes. </h3>",
+        "starterCode": "\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\nprint(trees)\r\ndef find_node(x):\r\n    if trees[x]!=x:\r\n        trees[x]=find_node(trees[x])\r\n    return trees[x]\r\n# let's see what will happen if we use this funtion on origin trees with node A\r\nprint(find_node('A'))",
+        "code": "\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\nprint(trees)\r\ndef find_node(x):\r\n    if trees[x]!=x:\r\n        trees[x]=find_node(trees[x])\r\n    return trees[x]\r\n# let's see what will happen if we use this funtion on origin trees with node A\r\nprint(find_node('A'))",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>It returns A because when initializing the trees, we set A is connected to A because it's not connected to anything yet. But if we made some changes, what will happen?</h3>",
+        "starterCode": "\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\nprint(trees)\r\ntrees['A']='B'\r\ntrees['B']='C'\r\nprint(trees)",
+        "code": "\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\nprint(trees)\r\ntrees['A']='B'\r\ntrees['B']='C'\r\nprint(trees)",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Now A is connected to B and B is connected to C. Let's try again with find_node</h3><br/><br/><br/><h3>This function tell us the root node of A is C, because the A and C are two ends of a path. Remember when we adding edges, we don't want they form a cycle. So if the find_nodes return the same node, it means a cycle exists.</h3>",
+        "starterCode": "\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\nprint(trees)\r\ntrees['B']='C'\r\ntrees['A']='B'\r\nprint(trees)\r\ndef find_node(x):\r\n    if trees[x]!=x:\r\n        trees[x]=find_node(trees[x])\r\n    return trees[x]\r\nprint(find_node('A'))",
+        "code": "\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\nprint(trees)\r\ntrees['B']='C'\r\ntrees['A']='B'\r\nprint(trees)\r\ndef find_node(x):\r\n    if trees[x]!=x:\r\n        trees[x]=find_node(trees[x])\r\n    return trees[x]\r\nprint(find_node('A'))",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h1>Step 6:</h1><h3>Let's initialize our minimum spanning tree at the beginning of this step. And also define how many edges we need.</h3>",
+        "starterCode": "\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\nprint(trees)\r\nmst=[]\r\nn=len(nodes)-1\r\n# You are ready to go next.",
+        "code": "\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\nprint(trees)\r\nmst=[]\r\nn=len(nodes)-1\r\n# You are ready to go next.",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h1>Step 7:</h1><h3>The last step to create our algorithm is to write a loop which traverse all edge in Map. Remember in Step 2.2.ii, before we add edges in mst[], use find() to check if this edge will form a cycle. If both two nodes of the new edge do not have the same root, then we add it into MST. </h3>",
+        "starterCode": "\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\nprint(trees)\r\nMap.sort(key=lambda x:x[2])\r\nmst=[]\r\nn=len(nodes)-1\r\ndef find_node(x):\r\n    if trees[x]!=x:\r\n        trees[x]=find_node(trees[x])\r\n    return trees[x]\r\nfor edge in Map:\r\n    v1,v2,_=edge\r\n    if find_node(v1)!=find_node(v2):\r\n        #if two edges do not have the same root nodes.\r\n        trees[find_node(v2)]=find_node(v1)\r\n        #set new root node for the tree. \r\n        mst.append(edge)\r\n        #add the edge into minimum spanning tree.\r\n        print('edge '+str(len(nodes)-n)+' added')\r\n        #print added edges\r\n        n-=1\r\n        print(trees)\r\n        print(mst)\r\n        if n==0:\r\n        # MST only have n edges, if it reaches the limit, break the loop.\r\n            break",
+        "code": "\r\nMap = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\nprint(trees)\r\nMap.sort(key=lambda x:x[2])\r\nmst=[]\r\nn=len(nodes)-1\r\ndef find_node(x):\r\n    if trees[x]!=x:\r\n        trees[x]=find_node(trees[x])\r\n    return trees[x]\r\nfor edge in Map:\r\n    v1,v2,_=edge\r\n    if find_node(v1)!=find_node(v2):\r\n        #if two edges do not have the same root nodes.\r\n        trees[find_node(v2)]=find_node(v1)\r\n        #set new root node for the tree. \r\n        mst.append(edge)\r\n        #add the edge into minimum spanning tree.\r\n        print('edge '+str(len(nodes)-n)+' added')\r\n        #print added edges\r\n        n-=1\r\n        print(trees)\r\n        print(mst)\r\n        if n==0:\r\n        # MST only have n edges, if it reaches the limit, break the loop.\r\n            break",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h1>Step 8:</h1><br/> <h3>Congratulation! Now you have a minimum spanning tree of our map.<br/> Run the code and see what will return in console. It shows exactly the shortest path to go over every house.<br/> To finish the task, in this step, we need to programme our agent.<br/> The following start code is for you to control the agent.<br/>The picture here exactly shows how algorithm adds edges into MST.</h3><br/><img src='../static/img/lesson3/step1.png' class='relative'/><br/><img src='../static/img/lesson3/step2.png' class='relative'/><br/><h5>Source:https://wax8280.github.io/2016/10/10/%E8%B0%88%E8%B0%88Kruskal%E4%B8%8EPrim%E8%BF%99%E4%B8%A4%E7%A7%8D%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%AE%97%E6%B3%95%EF%BC%88Python%E5%AE%9E%E7%8E%B0%EF%BC%89/#prim</h5><h3>In this test, A sample answer will be provided. </h3><br/><h5>Reference: https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/</h5><br/><br/><h5>enter print('give me answer sheet') to have cheat sheet.",
+        "starterCode": "Map = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\nMap.sort(key=lambda x:x[2])\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\ndef find_node(x):\r\n    if trees[x]!=x:\r\n       trees[x]=find_node(trees[x])\r\n    return trees[x]\r\nmst=[]\r\nn=len(nodes)-1\r\nfor edge in Map:\r\n    v1,v2,_=edge\r\n    if find_node(v1)!=find_node(v2):\r\n        trees[find_node(v2)]=find_node(v1)\r\n        mst.append(edge)\r\n        print('edge '+str(len(nodes)-n)+' added')\r\n        n-=1\r\n        print(trees)\r\n        print(mst)\r\n        if n==0:\r\n            break",
+        "code": "Map = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\nMap.sort(key=lambda x:x[2])\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\ndef find_node(x):\r\n    if trees[x]!=x:\r\n       trees[x]=find_node(trees[x])\r\n    return trees[x]\r\nmst=[]\r\nn=len(nodes)-1\r\nfor edge in Map:\r\n    v1,v2,_=edge\r\n    if find_node(v1)!=find_node(v2):\r\n        trees[find_node(v2)]=find_node(v1)\r\n        mst.append(edge)\r\n        print('edge '+str(len(nodes)-n)+' added')\r\n        n-=1\r\n        print(trees)\r\n        print(mst)\r\n        if n==0:\r\n            break",
+        "answer": "give me answer sheet",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": true
+    },
+    {
+        "instructions": "<h3>Secret cheat sheet</h3>",
+        "starterCode": "Map = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\nMap.sort(key=lambda x:x[2])\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\ndef find_node(x):\r\n    if trees[x]!=x:\r\n       trees[x]=find_node(trees[x])\r\n    return trees[x]\r\nmst=[]\r\nn=len(nodes)-1\r\nfor edge in Map:\r\n    v1,v2,_=edge\r\n    if find_node(v1)!=find_node(v2):\r\n        trees[find_node(v2)]=find_node(v1)\r\n        mst.append(edge)\r\n        print('edge '+str(len(nodes)-n)+' added')\r\n        n-=1\r\n        print(trees)\r\n        print(mst)\r\n        if n==0:\r\n            break\r\nagent.tpto(50,5,-20)\r\n# Remember to adjust your direction.\r\nagent.wait()\r\nfor i in range(2):\r\n      agent.moveForward()\r\nagent.place(1,'back')\r\nagent.moveForward()\r\nagent.moveForward()\r\nagent.place(1,'back')\r\nagent.tpto(51,5,-19)\r\nagent.wait()\r\nagent.turnRight()\r\nfor i in range(3):\r\n      agent.moveForward()\r\nagent.wait()\r\nagent.place(1,'back')\r\nagent.wait()\r\nagent.turnLeft()\r\nagent.wait()\r\nfor a in range(8):\r\n    agent.moveForward()\r\n    agent.moveRight()\r\nfor i in range(2):\r\n      agent.moveForward()\r\nagent.turnRight()\r\nagent.wait()\r\nagent.moveForward()\r\nagent.place(1,'back')\r\nfor a in range(4):\r\n    agent.moveForward()\r\n    agent.moveRight()\r\nagent.wait()\r\nagent.turnRight()\r\nagent.moveForward()\r\nagent.wait()\r\nagent.moveForward()\r\nagent.wait()\r\nagent.place(1,'back')\r\nfor a in range(4):\r\n    agent.moveForward()\r\nagent.place(1,'back')",
+        "code": "Map = [\r\n    ('A','B',1),('A','C',2),\r\n    ('B','C',6),('B','D',11),\r\n    ('C','D',9),('C','E',13),\r\n    ('D','E',7),('D','F',3),\r\n    ('E','F',4)\r\n    ]\r\nnodes = ('ABCDEF')\r\nMap.sort(key=lambda x:x[2])\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\ndef find_node(x):\r\n    if trees[x]!=x:\r\n       trees[x]=find_node(trees[x])\r\n    return trees[x]\r\nmst=[]\r\nn=len(nodes)-1\r\nfor edge in Map:\r\n    v1,v2,_=edge\r\n    if find_node(v1)!=find_node(v2):\r\n        trees[find_node(v2)]=find_node(v1)\r\n        mst.append(edge)\r\n        print('edge '+str(len(nodes)-n)+' added')\r\n        n-=1\r\n        print(trees)\r\n        print(mst)\r\n        if n==0:\r\n            break\r\nagent.tpto(50,5,-20)\r\n# Remember to adjust your direction.\r\nagent.wait()\r\nfor i in range(2):\r\n      agent.moveForward()\r\nagent.place(1,'back')\r\nagent.moveForward()\r\nagent.moveForward()\r\nagent.place(1,'back')\r\nagent.tpto(51,5,-19)\r\nagent.wait()\r\nagent.turnRight()\r\nfor i in range(3):\r\n      agent.moveForward()\r\nagent.wait()\r\nagent.place(1,'back')\r\nagent.wait()\r\nagent.turnLeft()\r\nagent.wait()\r\nfor a in range(8):\r\n    agent.moveForward()\r\n    agent.moveRight()\r\nfor i in range(2):\r\n      agent.moveForward()\r\nagent.turnRight()\r\nagent.wait()\r\nagent.moveForward()\r\nagent.place(1,'back')\r\nfor a in range(4):\r\n    agent.moveForward()\r\n    agent.moveRight()\r\nagent.wait()\r\nagent.turnRight()\r\nagent.moveForward()\r\nagent.wait()\r\nagent.moveForward()\r\nagent.wait()\r\nagent.place(1,'back')\r\nfor a in range(4):\r\n    agent.moveForward()\r\nagent.place(1,'back')",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h1>Bonus step:</h1><br/> <h3>Well done! If you want to test more on the algorithm, here is extra map for you. <br/><img src='../static/img/lesson3/samplemap2.png' class='relative'/></h3>",
+        "starterCode": "#TODO:\r\nCreate a new map here\r\nMap = [\r\n    ]\r\n#TODO: add nodes\r\nnodes = ('')\r\nMap.sort(key=lambda x:x[2])\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\ndef find_node(x):\r\n    if trees[x]!=x:\r\n       trees[x]=find_node(trees[x])\r\n    return trees[x]\r\nmst=[]\r\nn=len(nodes)-1\r\nfor edge in Map:\r\n    v1,v2,_=edge\r\n    if find_node(v1)!=find_node(v2):\r\n        trees[find_node(v2)]=find_node(v1)\r\n        mst.append(edge)\r\n        print('edge '+str(len(nodes)-n)+' added')\r\n        n-=1\r\n        print(trees)\r\n        print(mst)\r\n        if n==0:\r\n            break",
+        "code": "#TODO:\r\nCreate a new map here\r\nMap = [\r\n    ]\r\n#TODO: add nodes\r\nnodes = ('')\r\nMap.sort(key=lambda x:x[2])\r\ntrees = dict()\r\nfor i in nodes:\r\n    trees[i]=i\r\ndef find_node(x):\r\n    if trees[x]!=x:\r\n       trees[x]=find_node(trees[x])\r\n    return trees[x]\r\nmst=[]\r\nn=len(nodes)-1\r\nfor edge in Map:\r\n    v1,v2,_=edge\r\n    if find_node(v1)!=find_node(v2):\r\n        trees[find_node(v2)]=find_node(v1)\r\n        mst.append(edge)\r\n        print('edge '+str(len(nodes)-n)+' added')\r\n        n-=1\r\n        print(trees)\r\n        print(mst)\r\n        if n==0:\r\n            break",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    }
+]

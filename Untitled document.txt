@@ -1,0 +1,44 @@
+﻿Non-Linear Regression
+          Lesson Goal:
+·       Understand what non-linear regression is.
+·       Understand the difference between linear and non-linear regression and when to use one versus the other
+·       Learn how to use python matplotlib to plot non-linear graphs and analysis data.
+·       Learn what logarithms and exponential functions are.
+·       Learn how to use logarithm to turn a nonlinear function into a linear function.
+·       Learn how to use Python Scikit-learn Library for non-linear regression.
+ 
+Background:
+In the previous lesson (on linear regression) the students calculated the perfect size for a farm of 87 chicken. In this lesson the village acquires 67 sea turtles and we want to build a circular pond for them to live. The farm should not be too large (villagers do not want to waste money) or too small (because the sea turtle should have enough space to grow). Below is some of the data used by other villages use this to determine the ideal pond size. Remember the pond should be circular.
+Hint: The area of circle is calculated ?r^2
+ 
+Sample Data:
+Pond radius size: [8, 3, 57, 75, 100, 10, 49, 106, 60, 63, 90, 80, 14, 78, 115, 110, 105, 53, 120, 90]
+N of Fishes: [90, 41, 40, 74, 114, 81, 92, 21, 95, 9, 24, 99, 84, 120, 47, 86, 3, 23, 82, 8]
+ 
+Graph:
+ 
+Student Objectives:
+Use python to find the line of best fit of the sample data.
+Use your own model to predict the pond size of 67 sea turtles.
+What makes non-linear regression different from linear regression? Non linear regression has the same goal as linear regression in that it aims to use previous data to predict the Y or X variable of new data. However, non linear regression can execute prediction on data that do not form a linear line (such as a bell curve), any curve that contains a polynomial for example is not linear and therefore if your data presents that curve you will have to use non-linear regression
+Linear regression: y = mx + b | Non linear regression: y = b o + b1x1 + b2*
+Nonlinear least squares:
+The nonlinear least square uses linear functions to approximate a nonlinear function using iterations until the best fit is found. 
+Step 1: Find the error for each variable, denoted i (Note: You learnt about errors in lesson 1 on linear regression).
+
+Step 2: Find a function, denoted f, that is the sum of the squares of the errors
+
+Step 3: Calculate the partial derivative of f with respect to each of the 4 parameters, denoted F
+
+
+//I stopped writing the math here cause it might be too complex for high school students (let me know your thoughts) 
+
+
+Now we have a set of 4 nonlinear equations and a set of 4 unknown parameters. 
+
+
+Step 4: We optimize or minimize F. To do that we want to find a vector Y such that F(Y) = 0.
+
+
+Implementation in Python: 
+This would be very tedious to implement every time so we will expand on your knowledge of Sklearn and learn to use this library to perform nonlinear regression.

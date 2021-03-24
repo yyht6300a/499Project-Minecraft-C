@@ -1,0 +1,5 @@
+webserver/venv/
+webserver/static/node_modules/
+webserver/__pycache__
+webserver/.DS_Store
+.DS_Store
