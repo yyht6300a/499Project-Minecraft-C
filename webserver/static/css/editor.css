@@ -56,15 +56,31 @@
 }
 
 .console {
+    display: flex;
     width: 100%;
     height: 20vh;
     padding: 1%;
-    overflow-x: scroll;
-    color: white;
-    font-family: 'Courier New', monospace;
     background-color: black;
     border: 3px solid black;
     transition: border 0.3s linear;
+}
+
+.console-text {
+    height: 100%;
+    overflow-x: scroll;
+    color: white;
+    font-family: 'Courier New', monospace;
+}
+
+.icon-area {
+    width: 50px;
+    margin-right: 10px;
+}
+
+#agentTNT {
+    width: 50px;
+    height: 50px;
+    visibility: hidden;
 }
 
 .btn-area {
