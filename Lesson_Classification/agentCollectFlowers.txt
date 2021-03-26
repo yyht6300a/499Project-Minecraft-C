@@ -1,20 +1,31 @@
+def turnback():
+	agent.turnLeft()
+	agent.turnLeft()
+
 def breakMoveCollect():
 	agent.destroy('forward')
 	agent.moveForward()
 	agent.collect('all')
 
-agent.moveForward()
+#agent.moveForward()
 
-for i in range(5):
-	for _ in range(4):
-		breakMoveCollect()
-	
-	if(i < 4):
-		if(i % 2 == 0):
-			agent.turnRight()
+
+def collect(x,y):
+	for i in range(x):
+		for _ in range(y):
 			breakMoveCollect()
-			agent.turnRight()
-		else:
-			agent.turnLeft()
-			breakMoveCollect()
-			agent.turnLeft()
+		
+		if(i < x):
+			if(i % 2 == 0):
+				agent.turnRight()
+				breakMoveCollect()
+				agent.turnRight()
+			else:
+				agent.turnLeft()
+				breakMoveCollect()
+				agent.turnLeft()
+	agent.moveForward()
+
+agent.tpto(50, 4, -7)
+turnback()
+collect(5,6)
