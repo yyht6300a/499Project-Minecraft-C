@@ -12,6 +12,7 @@ import json
 import sys
 import io
 import numpy as np
+import pandas as pd
 
 # Agent module for agent commands
 import agentModule
@@ -98,7 +99,7 @@ def runLesson():
     # TODO: Make sure the kids can't break anything - there may be some security flaws here.
     # Docs on exec: https://www.programiz.com/python-programming/methods/built-in/exec    
     try:
-        exec(data,{'agent':agent,'plt':plt,'np':np,'LinearRegression':LinearRegression})
+        exec(data,{'agent':agent,'plt':plt,'np':np,'pd':pd,'LinearRegression':LinearRegression})
     except Exception as e:
         print("ERROR!\n", e)
 

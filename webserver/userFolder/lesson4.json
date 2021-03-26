@@ -1,0 +1,128 @@
+[
+    {
+        "instructions": "<h1>Emerald Collection Competition (K-nearest neighbors)</h1><br/> <h3>Hi welcome to the Emerald Collection Competition lesson.<br/>In this lesson you will use `K-nearest neighbors (KNN)` algorithm and your agent to to win Emerald!</h3> <br/><img src='../static/img/lesson4/Background.png' class='relative'/> </br>(this is a tutorial page please click NEXT to the next page)",
+        "starterCode": "print(\"hi\")\r\n\r\n",
+        "code": "print(\"hi\")\r\n\r\n",
+        "answer": "Hello World!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Background:</h3><p>Someone holds a machine learning competition in the village, and the winner could win a lot of emeralds. There are four zones in the village, only one of which is buried with emeralds, and each contestant has only one chance to dig for the treasure. The plants in each area are the key to determining the presence of emeralds. Here is the data provided by the organizers so that contestants can find out the relationship between the plants and the treasure. Let's use your robot to collect plants and predict the location of the treasure!</p> </br><p>4 start points in the competition </br>Treasure 1: [49, 4, -24]</br>Treasure 2: [36, 4, -26]</br>Treasure 3: [37, 4, -8]</br>Treasure 4: [50, 4, -7]</p> </br><p>If you never learn classification before, you might be wondering How ??? Let's learn some background first</p></br><p>(this is a tutorial page please click NEXT to the next page) </p>",
+        "starterCode": "print(\"Hello World!\")",
+        "code": "print(\"Hello World!\")",
+        "answer": "Hello World from part 2!",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Supervised Learning and Unsupervised learning</h3></br><h4>Supervised Learning</h4></br><p>In supervised learning, we use a set of labeled data to train our model. For example, in a classification task, if we want our model to be able to distinguish between dogs and cats in a set of photos, we can use a set of images and label them with cat or dog. After the training use this data, our model will be able to identify the new image and label it as a cat or a dog.</p></br><h4>Unsupervised Learning</h4></br><p>In unsupervised learning, we use unlabeled data to train the model. The model will analyze the data and find patterns in it. For example, if we train a model by a set of pictures of cat and dog, but without any labels, the model could divide photos into two categories and if we provide a new image of cat, the model will put the picture in the same category as the cat. </p></br><p>(this is a tutorial page please click NEXT to the next page)</p>",
+        "starterCode": " ",
+        "code": "",
+        "answer": "",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>K-nearest neighbors (KNN)</h3></br><p>In this lesson we are going to learn a supervised learning algorithm called K-nearst neighbors. The idea of this algorithm is very simple, given an input point, find the nearest K neighbors to this point, and predict the type of the input point based on the type of the neighbor. For example, the red dot in the figure below is the input value, and we find the 3 nearest neighbors.</p></br><img src='../static/img/lesson4/KNN.jpg' class='relative'/></br><p>(this is a tutorial page please click NEXT to the next page)</p>",
+        "starterCode": " ",
+        "code": "",
+        "answer": "",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3>Euclidean Distance</h3></br><p>You might be wondering how do we calculate the distance between two data points, and the answer is Euclidean distance. Here is the Formula:</p> </br><img src='../static/img/lesson4/Euclidean.png' class='relative'/> </br><p>a and b in the formula are two points (vector) on the vector space, and we can easily visualize their distance in a two-dimensional coordinate system (see graph) </p> </br><img src='../static/img/lesson4/Distance graph.jpg' class='relative'/> </br><p></p> </br><p>When vectors have more dimensions, it's hard to visualize on a graph. But the distance formula also works for higher dimensional vectors.So for implement KNN, the first step is calculate distance for all vectors.</p> </br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": " ",
+        "code": "",
+        "answer": "",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3></h3></br><p></p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": " ",
+        "code": "",
+        "answer": "",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3></h3></br><p></p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": " ",
+        "code": "",
+        "answer": "",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3></h3></br><p></p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": " ",
+        "code": "",
+        "answer": "",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3></h3></br><p></p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": " ",
+        "code": "",
+        "answer": "",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3></h3></br><p></p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": " ",
+        "code": "",
+        "answer": "",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3></h3></br><p></p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": " ",
+        "code": "",
+        "answer": "",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3></h3></br><p></p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": " ",
+        "code": "",
+        "answer": "",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3></h3></br><p></p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": " ",
+        "code": "",
+        "answer": "",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    },
+    {
+        "instructions": "<h3></h3></br><p></p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": " ",
+        "code": "",
+        "answer": "",
+        "plotname": "",
+        "haveplot": false,
+        "nextLocked": false
+    }
+]
