@@ -60,7 +60,18 @@ def getLesson2Info():
         return(getLessonInfo(2))
 
     elif request.method == 'POST':
-        return "ECHO: POST\n"
+        print('Post request recieved.')
+
+        data = request.data.decode('utf-8')                  # Receive the data and decode it from bytes to string
+        data = json.loads(data)                              # Load in JSON object
+        data = json.dumps(data, indent=4, sort_keys=False)   # Pretty it up (add indenting and new lines)
+
+        # Write data to file
+        f = open('userFolder/lesson2.json', 'w')
+        f.write(data)
+        f.close()
+        return 'POST request complete.'
+
 
 @app.route('/lessonData3', methods = ['POST', 'GET'])
 def getLesson3Info():
@@ -68,7 +79,18 @@ def getLesson3Info():
         return(getLessonInfo(3))
 
     elif request.method == 'POST':
-        return "ECHO: POST\n"
+        print('Post request recieved.')
+
+        data = request.data.decode('utf-8')                  # Receive the data and decode it from bytes to string
+        data = json.loads(data)                              # Load in JSON object
+        data = json.dumps(data, indent=4, sort_keys=False)   # Pretty it up (add indenting and new lines)
+
+        # Write data to file
+        f = open('userFolder/lesson3.json', 'w')
+        f.write(data)
+        f.close()
+        return 'POST request complete.'
+
 
 @app.route('/lessonData4', methods = ['POST', 'GET'])
 def getLesson4Info():
@@ -76,8 +98,17 @@ def getLesson4Info():
         return(getLessonInfo(4))
 
     elif request.method == 'POST':
-        return "ECHO: POST\n"
+        print('Post request recieved.')
 
+        data = request.data.decode('utf-8')                  # Receive the data and decode it from bytes to string
+        data = json.loads(data)                              # Load in JSON object
+        data = json.dumps(data, indent=4, sort_keys=False)   # Pretty it up (add indenting and new lines)
+
+        # Write data to file
+        f = open('userFolder/lesson4.json', 'w')
+        f.write(data)
+        f.close()
+        return 'POST request complete.'
 
 
 
@@ -128,7 +159,7 @@ def add_header(res):
 # Opens JSON lesson file and returns
 def getLessonInfo(lesson):
     print("Lesson GET Request")
-    print("Lesson: ", lesson);
+    print("Lesson: ", lesson)
     f = open('userFolder/lesson' + str(lesson) + '.json')
     return f.read()
 

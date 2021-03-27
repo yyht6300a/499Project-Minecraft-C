@@ -36,9 +36,9 @@
         "nextLocked": false
     },
     {
-        "instructions": "<h3>Euclidean Distance</h3></br><p>You might be wondering how do we calculate the distance between two data points, and the answer is Euclidean distance. Here is the Formula:</p> </br><img src='../static/img/lesson4/Euclidean.png' class='relative'/> </br><p>a and b in the formula are two points (vector) on the vector space, and we can easily visualize their distance in a two-dimensional coordinate system (see graph) </p> </br><img src='../static/img/lesson4/Distance graph.jpg' class='relative'/> </br><p></p> </br><p>When vectors have more dimensions, it's hard to visualize on a graph. But the distance formula also works for higher dimensional vectors.So for implement KNN, the first step is calculate distance for all vectors.</p> </br><p>(this is a coding page please run the code before go to next page)</p>",
+        "instructions": "<h3>Euclidean Distance</h3></br><p>You might be wondering how do we calculate the distance between two data points, and the answer is Euclidean distance. Here is the Formula:</p> </br><img src='../static/img/lesson4/Euclidean.png' class='relative'/> </br><p>a and b in the formula are two points (vector) on the vector space, and we can easily visualize their distance in a two-dimensional coordinate system (see graph) </p> </br><img src='../static/img/lesson4/Distance graph.jpg' class='relative'/> </br><p></p> </br><p>When vectors have more dimensions, it's hard to visualize on a graph. But the distance formula also works for higher dimensional vectors.So for implement KNN, the first step is calculate distance for all vectors.</p> </br><p>Now please use the Euclidean distance to find the distance between point[2,5] and [2,8]</p></br><p>(this is a coding page please run the code before go to next page)</p>",
         "starterCode": " ",
-        "code": "",
+        "code": "# Euclidean distance Python implementation \r\ndef Euclidean_dis(mine1,mine2):\r\n    diff=0\r\n    for x in range(len(mine1)):\r\n        diff+=(mine1[x]-mine2[x])**2\r\n    return diff**0.5",
         "answer": "",
         "plotname": "",
         "haveplot": false,
