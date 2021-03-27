@@ -27,30 +27,9 @@
         "nextLocked": true
     },
     {
-        "instructions": "<h3>OLS python implimentation:</h3></br><p>Now let's learn how to impliment OLS by python</p> </br><p>(this is a coding page please run the code before go to next page)</p>",
-        "starterCode": "print()",
-        "code": "print()",
-        "answer": "Hello World!",
-        "nextLocked": true
-    },
-    {
-        "instructions": "<h3>OLS python implimentation:</h3></br><p>Now, let's predict our line of best fit</p> </br><p>(this is a coding page please run the code before go to next page)</p>",
-        "starterCode": "print()",
-        "code": "print()",
-        "answer": "Hello World!",
-        "nextLocked": true
-    },
-    {
-        "instructions": "<h3>OLS python implimentation:</h3></br><p>Now, let's predict our line of best fit</p> </br><p>(this is a coding page please run the code before go to next page)</p>",
-        "starterCode": "print()",
-        "code": "print()",
-        "answer": "Hello World!",
-        "nextLocked": true
-    },
-    {
-        "instructions": "<h3>Now it's your turn</h3></br><p>Let's use this algorithm to solve our fish pond problem</p></br><p>(this is a coding page please run the code before go to next page)</p>",
-        "starterCode": "print()",
-        "code": "print()",
+        "instructions": "<h3>OLS python implimentation:</h3></br><p>Now let's learn how to impliment OLS by python</p> </br><p>As in lesson 1 we will use Scikit-learn library instead of implementing the whole algorithm which would be too long.</p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "\r\n #first we need to import all the libraries we will need that includes panda (a data analysis libary we will use since we are working with data sets), numpy (since we will be doing some math) and sklearn (our scikit-learn library for our non-linear regression)\r\n\r\nimport pandas as pd\r\nimport numpy as np\r\n import sklearn\r\n\r\n#Read the data\r\n#Let create an numpy 2d array to store our data each inner array will represente [pond_size, n_fish]\r\nnumpy_array = np.array() = [[2, 11], [12, 208], [5, 48], [19, 114], [6, 59], [8, 82], [9, 109], [10, 142], [11, 173], [14, 225], [4, 31], [15, 223], [16, 203], [7, 67], [17, 178], [18, 138], [20, 92], [26, 19], [13, 221], [21, 66], [22, 52], [1, 9], [23, 43], [24, 33], [3, 26], [25, 25], [27, 3]];\r\n#and now let's store it in a dataframe so we can manipulate it\r\ndf = pd.DataFrame(numpy_array)\r\n\r\n# Now it is time to but our data in a trainable form, training the data simply means to teach our data how to make prediction based on previous data\r\n X = df[predictors].values;\r\n y = df[target_column].values; \r\n X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1, random_state=27);\r\n\r\n #We are going to use a decision tree, the decision tree is use for the algorithm to learn about the previous data and make predictions\r\ndecisiontree = DecisionTreeRegressor(max_depth=27, min_samples_leaf=1, random_state=3);\r\ndecisiontree.fit(X_train, y_train);\r\nprediction_train_tree= decisiontree.predict(X_train);\r\nprediction_test_tree= decisiontree.predict(X_test);\r\ndtree1 = DecisionTreeRegressor(max_depth=2);\r\ndtree2 = DecisionTreeRegressor(max_depth=5);\r\n dtree1.fit(X_train, y_train);\r\n dtree2.fit(X_train, y_train);\r\ntr1 = dtree1.predict(X_train);\r\ntr2 = dtree2.predict(X_train);\r\ny1 = dtree1.predict(X_test);\r\ny2 = dtree2.predict(X_test)\r\nprint(np.sqrt(mean_squared_error(y_train,tr1)));\r\n\r\nprint(r2_score(y_train, tr1));\r\nprint(np.sqrt(mean_squared_error(y_test,y1)));\r\n\r\nprint(r2_score(y_test, y1));\r\nprint(np.sqrt(mean_squared_error(y_train,tr2)));\r\nprint(r2_score(y_train, tr2));\r\n\r\nprint(np.sqrt(mean_squared_error(y_test,y2))); \r\n print(r2_score(y_test, y2))\r\n", 
+        "code": "\r\n #first we need to import all the libraries we will need that includes panda (a data analysis libary we will use since we are working with data sets), numpy (since we will be doing some math) and sklearn (our scikit-learn library for our non-linear regression)\r\n\r\nimport pandas as pd\r\nimport numpy as np\r\n import sklearn\r\n\r\n#Read the data\r\n#Let create an numpy 2d array to store our data each inner array will represente [pond_size, n_fish]\r\nnumpy_array = np.array() = [[2, 11], [12, 208], [5, 48], [19, 114], [6, 59], [8, 82], [9, 109], [10, 142], [11, 173], [14, 225], [4, 31], [15, 223], [16, 203], [7, 67], [17, 178], [18, 138], [20, 92], [26, 19], [13, 221], [21, 66], [22, 52], [1, 9], [23, 43], [24, 33], [3, 26], [25, 25], [27, 3]];\r\n#and now let's store it in a dataframe so we can manipulate it\r\ndf = pd.DataFrame(numpy_array)\r\n\r\n# Now it is time to but our data in a trainable form, training the data simply means to teach our data how to make prediction based on previous data\r\n X = df[predictors].values;\r\n y = df[target_column].values; \r\n X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1, random_state=27);\r\n\r\n #We are going to use a decision tree, the decision tree is use for the algorithm to learn about the previous data and make predictions\r\ndecisiontree = DecisionTreeRegressor(max_depth=27, min_samples_leaf=1, random_state=3);\r\ndecisiontree.fit(X_train, y_train);\r\nprediction_train_tree= decisiontree.predict(X_train);\r\nprediction_test_tree= decisiontree.predict(X_test);\r\ndtree1 = DecisionTreeRegressor(max_depth=2);\r\ndtree2 = DecisionTreeRegressor(max_depth=5);\r\n dtree1.fit(X_train, y_train);\r\n dtree2.fit(X_train, y_train);\r\ntr1 = dtree1.predict(X_train);\r\ntr2 = dtree2.predict(X_train);\r\ny1 = dtree1.predict(X_test);\r\ny2 = dtree2.predict(X_test)\r\nprint(np.sqrt(mean_squared_error(y_train,tr1)));\r\n\r\nprint(r2_score(y_train, tr1));\r\nprint(np.sqrt(mean_squared_error(y_test,y1)));\r\n\r\nprint(r2_score(y_test, y1));\r\nprint(np.sqrt(mean_squared_error(y_train,tr2)));\r\nprint(r2_score(y_train, tr2));\r\n\r\nprint(np.sqrt(mean_squared_error(y_test,y2))); \r\n print(r2_score(y_test, y2))\r\n", 
         "answer": "Hello World!",
         "nextLocked": true
     },
