@@ -18,12 +18,28 @@
         "nextLocked": false
     },
     {
-        "instructions": "Prediction</h3></br><p>Now Let's find the line of best fit, also known as the trend line of the data.</p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "instructions": "Prediction - Second Degree Polynomial</h3></br><p>Now Let's find the line of best fit, also known as the trend line of the data.</p></br><p>(this is a coding page please run the code before go to next page)</p>",
         "starterCode": "\r\nprint(\"hello\")\r\npond_size = [2, 12, 5, 19, 6, 8, 9, 10, 11, 14, 4, 15, 16, 7, 17, 18, 20, 26, 13, 21, 22, 1, 23, 24, 3, 25, 27]; \r\nn_fish = [11, 208, 48, 114, 59, 82, 109, 142, 173, 225, 31, 223, 203, 67, 178, 138, 92, 19, 221, 66, 52, 9, 43, 33, 26, 25, 3]; \r\n # ax*2 + bx + c, here we use a = 1.22, b = 34, c = 68.2, the equation of our line is 1.22x^2 + 34x + 68.2 \r\n y = [1.22x^2+34x+68.2]\r\n\r\n\r\nplt.plot(size,price,\"o\")\r\n\r\nplt.plot(size,y)\r\n\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()",
         "code": "\r\nprint(\"hello\")\r\npond_size = [2, 12, 5, 19, 6, 8, 9, 10, 11, 14, 4, 15, 16, 7, 17, 18, 20, 26, 13, 21, 22, 1, 23, 24, 3, 25, 27]; \r\nn_fish = [11, 208, 48, 114, 59, 82, 109, 142, 173, 225, 31, 223, 203, 67, 178, 138, 92, 19, 221, 66, 52, 9, 43, 33, 26, 25, 3]; \r\n # ax*2 + bx + c, here we use a = 1.22, b = 34, c = 68.2, the equation of our line is 1.22x^2 + 34x + 68.2 \r\n y = [1.22x^2+34x+68.2]\r\n\r\n\r\nplt.plot(size,price,\"o\")\r\n\r\nplt.plot(size,y)\r\n\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()",
         "answer": "Hello World!",
         "plotname": "L2gp2.png",
         "haveplot": true,
+        "nextLocked": true
+    },
+    {
+        "instructions": "Prediction - Understanding Graphic Representation of Second Degree Polynomials</h3></br><p>The equation of a second degree polynomial (ax^2+bx+c) cangive us indications of how the graph of our equation will look.</br> The first factor,a , let's us know if the tip of the bell will be upward or downward. If a is negative the vell will tip upward (looking like a mountain), if a, is negative the bell will tip downward (looking like a smile).</br> The second factor, b, lets' us know how far from the x axis the tip of the bell curve is. If b is 5 and a is -1, the bell curve will pick upward and the top will be 5 units above the x-axis.</br> Finally, we can also find when the two sides of the bell curve will connect with the x-axis by performing ax^2+bx+c = 0. For instance if we find ax^2 + bx + c = 3 and -3 we know that the left side of the curve will connect the x-axis at x = -3 and the right side at x = 3.</br></br> All those infromation allow us to have a feel what the graph of our equation will look like.</p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "\r\nprint(\"hello\")\r\npond_size = [2, 12, 5, 19, 6, 8, 9, 10, 11, 14, 4, 15, 16, 7, 17, 18, 20, 26, 13, 21, 22, 1, 23, 24, 3, 25, 27]; \r\nn_fish = [11, 208, 48, 114, 59, 82, 109, 142, 173, 225, 31, 223, 203, 67, 178, 138, 92, 19, 221, 66, 52, 9, 43, 33, 26, 25, 3]; \r\n # ax*2 + bx + c, here we use a = 1.22, b = 34, c = 68.2, the equation of our line is 1.22x^2 + 34x + 68.2 \r\n y = [1.22x^2+34x+68.2]\r\n\r\n\r\nplt.plot(size,price,\"o\")\r\n\r\nplt.plot(size,y)\r\n\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()",
+        "code": "\r\nprint(\"hello\")\r\npond_size = [2, 12, 5, 19, 6, 8, 9, 10, 11, 14, 4, 15, 16, 7, 17, 18, 20, 26, 13, 21, 22, 1, 23, 24, 3, 25, 27]; \r\nn_fish = [11, 208, 48, 114, 59, 82, 109, 142, 173, 225, 31, 223, 203, 67, 178, 138, 92, 19, 221, 66, 52, 9, 43, 33, 26, 25, 3]; \r\n # ax*2 + bx + c, here we use a = 1.22, b = 34, c = 68.2, the equation of our line is 1.22x^2 + 34x + 68.2 \r\n y = [1.22x^2+34x+68.2]\r\n\r\n\r\nplt.plot(size,price,\"o\")\r\n\r\nplt.plot(size,y)\r\n\r\nplt.savefig(\"./static/img/matplot/temp.png\", bbox_inches='tight')\r\nplt.clf()",
+        "answer": "Hello World!",
+        "plotname": "L2gp2.png",
+        "haveplot": true,
+        "nextLocked": true
+    },
+    {
+        "instructions": "Prediction - Fiding the equation of any curve</h3></br><p>Finding the equation of a curve can be a complex mathematical problem if the curve is not a neat bell curve (the equation is not a second degree polynomial). However, like many complex mathematical problem it can be solved with some lines of code. Finding the equation of a curve is also known as curve fitting, in Python it can be performed using the SciPy librairy. This library will required 2 arrays, one for all the x values and one for all the y values. Let's see how the code works</p></br><p>(this is a coding page please run the code before go to next page)</p>",
+        "starterCode": "\r\n x_values = array([12,11,13,15,16,16,15,14,15,12,11,12,8,10,9,7,6]); \r\n y_values = array(range(len(y_values))) \r\n #now we have our cloud of points, let's find the equation \r\n equationParameters = curve_fit(x_values, y_values) \r\n print(\"equation of the curve is: \" + equationParameters\");",
+        "code": "\r\n x_values = array([12,11,13,15,16,16,15,14,15,12,11,12,8,10,9,7,6]); \r\n y_values = array(range(len(y_values))) \r\n #now we have our cloud of points, let's find the equation \r\n equationParameters = curve_fit(x_values, y_values) \r\n print(\"equation of the curve is: \" + equationParameters\");",
+        "answer": "Hello World!",
         "nextLocked": true
     },
     {
