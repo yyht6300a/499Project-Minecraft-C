@@ -60,7 +60,7 @@
         "instructions": "<h3> Answer </h3></br><p>Here is a sample code for building a plantation</p></br><h3>Congratulation!! you have finished this course</h3>",
         "starterCode": "agent.give('fence',100,1)\r\nagent.give('fence_gate',10,2)\r\n#give agent some fences and fence gates\r\n\r\ndef build_gate():\r\n\tagent.turnLeft()\r\n\tagent.moveForward()\r\n\tagent.turnLeft()\r\n\tagent.moveForward()\r\n\tagent.turnLeft()\r\n\tagent.place(2,'forward')\r\n     \r\ndef move_back():\r\n\tfor x in range(5):\r\n\t\tagent.moveBack()\r\n\r\ndef build(x):\t\t\r\n\tfor i in range(4):           \r\n\t\t#4 edges\r\n\t\tagent.turnRight()\r\n\t\t\r\n\t\tfor z in range(8):     \r\n\t\t#place fence\r\n\t\t\tagent.moveForward()\r\n\t\t\tagent.place(1,'back')\r\n\t#build a gate\r\n\tbuild_gate()\r\n\tmove_back()\r\n\r\nbuild(5)\r\n\r\n\r\n\r\n",
         "code": "agent.give('fence',100,1)\r\nagent.give('fence_gate',10,2)\r\n#give agent some fences and fence gates\r\n\r\ndef build_gate():\r\n\tagent.turnLeft()\r\n\tagent.moveForward()\r\n\tagent.turnLeft()\r\n\tagent.moveForward()\r\n\tagent.turnLeft()\r\n\tagent.place(2,'forward')\r\n     \r\ndef move_back():\r\n\tfor x in range(5):\r\n\t\tagent.moveBack()\r\n\r\ndef build(x):\t\t\r\n\tfor i in range(4):           \r\n\t\t#4 edges\r\n\t\tagent.turnRight()\r\n\t\t\r\n\t\tfor z in range(x):     \r\n\t\t#place fence\r\n\t\t\tagent.moveForward()\r\n\t\t\tagent.place(1,'back')\r\n\t#build a gate\r\n\tbuild_gate()\r\n\tmove_back()\r\n\r\nbuild(10)\r\n\r\n\r\n\r\n",
-        "answer": "Hello World!",
+        "answer": "Hello World! ",
         "plotname": "",
         "haveplot": false,
         "nextLocked": false
