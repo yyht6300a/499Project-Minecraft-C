@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Minecraft Machine Learning</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/editor.css">
+    <audio id="btn_press_sound">
+      <source src="../static/sounds/btn_press.wav" type="audio/wav">
+    </audio>
+  </head>
+  <body>
+    <!-- Homepage -->
+    <div id="lesson-nav">
+      <nav class="main-nav">
+        <img src="../static/img/logo.png" alt="Minecraft Education" id="logo">
+      </nav>    
+
+      <div class="lessons">
+        <div class="lesson">
+          <h1 class="lesson-h1">Linear Regression</h1>
+          <img src="../static/img/lesson1.png" alt="lesson1" class="lesson-img">
+          <p class="lesson-desc">Learn linear regression to help the villagers build a chicken fence!</p>
+          <button class="btn btn-play" id="lesson1">Play</button>
+        </div>
+
+        <div class="lesson">
+          <h1 class="lesson-h1">Non-Linear Regression</h1>
+          <img src="../static/img/lesson2.png" alt="lesson2" class="lesson-img">
+          <p class="lesson-desc">Use non-linear regression to build a pond for turtles!</p>
+          <button class="btn btn-play" id="lesson2">Play</button>
+        </div>
+
+        <div class="lesson">
+          <h1 class="lesson-h1">Shortest Path</h1>
+          <img src="../static/img/lesson3.png" alt="lesson3" class="lesson-img">
+          <p class="lesson-desc">Use Kruskal's Algorithm to calculate a shortest path!</p>
+          <button class="btn btn-play" id="lesson3">Play</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Editor and lesson -->
+    <div id="lesson-page">
+      <div class="container">
+        <div class="instruction-area">
+          <div class="instructions">
+            <button id="homepage" class="btn">&#60; Homepage</button>
+            <p id="instructions">Instructions go here</p>
+          </div>
+          <div class="graph" id="graph"></div>
+        </div>
+        <div class="work-area">
+          <div class="editor" id="editor"></div>
+          <div class="console" id="console"></div>
+          <div class="btn-area">
+            <div class="next-back" style="flex-shrink: 2;">
+              <button class="btn" id="reset">Reset</button>
+              <button class="btn" id="back">Back</button>
+              <button class="btn btn-locked" id="next">Next
+            </div>
+            <button class="btn" id="run">Run</button>
+          </div>
+        </div>
+      </div>
+  
+    <script src="../static/node_modules/monaco-editor/min/vs/loader.js"></script>
+    <script src="../static/js/comms.js"></script>
+    <script src="../static/js/main.js"></script>
+    
+    </div>
+  </body>
+</html>
