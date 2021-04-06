@@ -52,7 +52,7 @@ def getLesson1Info():
         return 'POST request complete.'
 
 
-# TODO: Add send and save functions for lesson 1 and 2. Maybe just turn this into 1 function? (idk how)
+
 
 @app.route('/lessonData2', methods = ['POST', 'GET'])
 def getLesson2Info():
@@ -92,23 +92,7 @@ def getLesson3Info():
         return 'POST request complete.'
 
 
-@app.route('/lessonData4', methods = ['POST', 'GET'])
-def getLesson4Info():
-    if request.method == 'GET':
-        return(getLessonInfo(4))
 
-    elif request.method == 'POST':
-        print('Post request recieved.')
-
-        data = request.data.decode('utf-8')                  # Receive the data and decode it from bytes to string
-        data = json.loads(data)                              # Load in JSON object
-        data = json.dumps(data, indent=4, sort_keys=False)   # Pretty it up (add indenting and new lines)
-
-        # Write data to file
-        f = open('userFolder/lesson4.json', 'w')
-        f.write(data)
-        f.close()
-        return 'POST request complete.'
 
 
 
