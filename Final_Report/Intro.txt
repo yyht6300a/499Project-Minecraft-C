@@ -1,0 +1,43 @@
+	Our project is a flask server containing three lessons that is used to teach high school
+ 
+students AI and machine learning in Python. Web pages will be presented on a code builder 
+
+in the Minecraft game. In each lesson page, a monaco editor is implemented, which is a 
+
+code editor that allows users to edit code just like a normal IDE. Students are allowed to run 
+
+the code and see the output. When running the code, it will be sent to the flask server and 
+
+the server will generate an output in console and then send back to the page. Also a reset 
+
+button is provided to reset all the changes from users. Through this server, users can
+
+control their agent robot in the game by sending commands to it. After each lesson, students will be
+
+able to programme the robot to complete tasks by using the knowledge they just learned.
+
+	The first lesson is to teach students classification.In this lesson, students will have 
+
+a basic understanding about the K-nearest-neighbour algorithm which is one of the fundamental 
+
+algorithms of classification. The goal of this lesson is to let student know the math behind the 
+
+algorithm.
+
+	The second lesson is designed to let students know what linear regression is and how to use a 
+
+Python Sklearn library. To complete this lesson students need to code the agent to build a chicken 
+
+farm with proper size based on the amount of chicken. The size of the farm will be predicted by a linear 
+
+model built in the lesson.
+
+	The third lesson is to teach students what is a Kruskal Algorithm and use it to find the 
+
+shortest path in a graph. Students will see how the algorithm is built step by step. At the end 
+
+students need to control an agent to deliver cakes to the red spots, which are nodes in the graph,
+
+ following the output of the algorithm.
+
+
