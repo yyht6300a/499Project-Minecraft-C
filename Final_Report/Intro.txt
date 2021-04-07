@@ -24,9 +24,9 @@ algorithms of classification. The goal of this lesson is to let student know the
 
 algorithm.
 
-	The second lesson is designed to let students know what linear regression is and how to use a 
+	The second lesson is designed to let students know what linear regression is and how to visualize 
 
-Python Sklearn library. To complete this lesson students need to code the agent to build a chicken 
+their data. To complete this lesson students need to code the agent to build a chicken 
 
 farm with proper size based on the amount of chicken. The size of the farm will be predicted by a linear 
 
