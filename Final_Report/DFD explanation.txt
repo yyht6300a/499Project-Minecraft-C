@@ -1,0 +1,38 @@
+DFD Level 0
+
+This diagram briefly shown the data flow in the game.
+
+• The player(student) can run the game and choose a lesson they are interested in, 
+then the content of our lessons will be displayed in the in-game code editor. 
+Students can follow the lesson and write some code, and they can see the game state change and the output of the code.
+
+• Our other target user is teachers, they will basically do the same thing as a student,
+they can run the game and check the content of the lesson, then decide which lesson they want to use to teach their students.
+
+
+DFD Level 1
+
+This diagram shows more details of our system.
+
+• P1
+  o Users can choose a world in the game (different maps)
+
+
+• P2
+  o Users can choose the lesson corresponding to the world of their choice in the built-in code editor.
+  
+  o All lesson data are hosted on our server, when user make a lesson request, our server will return the corresponding lesson data.
+
+
+• P3
+  o Users can follow the tutorial and use Python code as input to complete programming tasks.
+  
+  o The result will be displayed in the console of the code editor.
+
+
+• P4.1/4.2
+  o We provided a module that allows users to directly control the robots in the game using Python code. 
+  
+  o Our system will compile the user’s input into in-game commands, and then the user will see how the robot changes in the game.
+
+
