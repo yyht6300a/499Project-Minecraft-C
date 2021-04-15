@@ -91,8 +91,23 @@ def getLesson3Info():
         f.close()
         return 'POST request complete.'
 
+#this is for unit test
 
+@app.route('/lessonData0', methods = ['POST', 'GET']) 
+def getLesson0Info():
+    if request.method == 'GET':
+        return(getLessonInfo(0))
 
+    elif request.method == 'POST':
+        data=request.data.decode('utf-8')
+        data = json.loads(data)                              # Load in JSON object
+        data = json.dumps(data, indent=4, sort_keys=False)   # Pretty it up (add indenting and new lines)
+
+        # Write data to file
+        f = open('userFolder/lesson0.json', 'w')
+        f.write(data)
+        f.close()
+        return 'POST request complete.'
 
 
 
