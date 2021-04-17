@@ -12,6 +12,8 @@ The project runs as a localhost Python Flask server on port 3000. Minecraft Educ
   * Run `pip install flask` for the flask server.
   * Run `pip install matplotlib` for matplotlib.
   * Run `pip install scikit-learn` for Scikit-Learn (imported as sklearn)
+  * Run `pip install pandas` for pandas
+  * Run `pip install numpy` for numpy
 
 ## Startup
 Run ./python flaskServer.py in `./webserver` to start the webserver.
